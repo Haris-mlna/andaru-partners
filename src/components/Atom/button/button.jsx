@@ -12,4 +12,13 @@ const ButtonView = ({ text }) => {
   return <button className={styles.buttonViewProfile}>{text}</button>;
 };
 
-export { ButtonPrimary, ButtonDanger, ButtonView };
+const ButtonJoined = ({text}) => {
+  return <button className={styles.buttonJoined}>{text}</button>
+}
+
+const ButtonInvite = ({text}) => {
+  return <button className={styles.buttonInvite}>{text}</button>
+}
+
+
+export { ButtonPrimary, ButtonDanger, ButtonView, ButtonJoined, ButtonInvite };
