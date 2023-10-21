@@ -6,6 +6,8 @@ import {
   ButtonView,
 } from "../../components/Atom/button/button.jsx";
 
+import { Ptag16, Ptag18, Atag181, Atag182, Atag16, H4tag, H6tag  } from "../../components/Atom/text/text.jsx";
+
 import {
   TigaRoda,
   ConfirmFriend,
@@ -45,6 +47,13 @@ const Home = () => {
         <PagesCover/>
         <PagesAvatar/>
         <ButtonPrimary text={liked}/>
+        <Ptag16 text={'p tag 16'}/>
+        <Ptag18 text={'p tag 18'}/>
+        <Atag181 link={'#'} text={ 'a tag 181'}/>
+        <Atag182 link={"#"} text={ 'a tag 182'}/>
+        <Atag16 link={'#'} text={'a tag 16'}/>
+        <H4tag text={'h4 tag'}/>
+        <H6tag text={'h6 tag'}/>
       </div>
     </div>
   );
