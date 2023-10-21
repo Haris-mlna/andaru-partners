@@ -13,7 +13,7 @@ const SiteLink = ({ className, icon, url }) => {
 const Navbar = () => {
   return (
     <div className={styles.container}>
-      <nav>
+      <nav className={styles.nav}>
 
       </nav>
     </div>
