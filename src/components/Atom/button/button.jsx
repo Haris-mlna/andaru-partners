@@ -1,12 +1,15 @@
 import styles from "./button.module.css";
 
-const ButtonPrimary = ({text}) => {
+const ButtonPrimary = ({ text }) => {
   return <button className={styles.buttonPrimary}>{text}</button>;
 };
 
-const ButtonDanger = ({text}) => {
+const ButtonDanger = ({ text }) => {
   return <button className={styles.buttonDanger}>{text}</button>;
 };
 
+const ButtonView = ({ text }) => {
+  return <button className={styles.buttonViewProfile}>{text}</button>;
+};
 
-export { ButtonPrimary, ButtonDanger };
+export { ButtonPrimary, ButtonDanger, ButtonView };

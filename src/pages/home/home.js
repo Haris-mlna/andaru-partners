@@ -1,5 +1,6 @@
-import { ButtonDanger, ButtonPrimary } from "../../components/button/button.jsx";
-import Navbar from "../../components/navbar/navbar.jsx";
+import { ButtonDanger, ButtonPrimary, ButtonView } from "../../components/Atom/button/button.jsx";
+import IconsFA from "../../components/Atom/icons/icons.jsx";
+import Navbar from "../../components/Molekul/navbar/navbar.jsx";
 import styles from "./home.module.css";
 
 const Home = () => {
@@ -9,6 +10,9 @@ const Home = () => {
       <div className={styles.content}>
         <ButtonPrimary text={'Confirm'}/>
         <ButtonDanger text={'Delete'}/>
+        <ButtonView text={'View Profile'}/>
+        <IconsFA title={'home'}/>
+        <IconsFA title={'feed'}/>
       </div>
     </div>
   );

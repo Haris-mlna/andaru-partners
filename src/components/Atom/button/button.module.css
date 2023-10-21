@@ -1,3 +1,5 @@
+/* Primary Button */
+
 .buttonPrimary {
   font-size: 14px;
   font-family: var(--font-inter);
@@ -8,7 +10,17 @@
   border: none;
 
   cursor: pointer;
+
+  transition: 150ms ease-in-out;
 }
+
+.buttonPrimary:hover {
+  transform: scale(98%);
+}
+
+/* Primary Button Ends */
+
+/* Danger Button */
 
 .buttonDanger {
   background-color: var(--highlight-2nd-color);
@@ -26,3 +38,10 @@
   background-color: var(--highlight-color);
   color: var(--bs-white);
 }
+
+/* Danger Button Ends */
+
+/* ButtonView */
+
+
+/* ButtonView Ends */
