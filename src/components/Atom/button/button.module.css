@@ -43,5 +43,46 @@
 
 /* ButtonView */
 
+.buttonViewProfile {
+  background-color: var(--bs-gray-300);
+  font-family: var(--font-inter);
+  padding: 8px 12px;
+  border: none;
+  color: var(--bs-primary);
+
+  cursor: pointer;
+}
 
 /* ButtonView Ends */
+
+/* Button Joined */
+.buttonJoined {
+  background-color: var(--btn-2nd-color);
+  border-radius: 4px;
+  color: var(--para-4th-color);
+  font-family: var(--font-inter);
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+
+  transition: 150ms ease-in-out;
+}
+
+.buttonJoined:hover {
+  background-color: var(--para-4th-color);
+  color: var(--bs-white);
+}
+
+/* Buttom Joined Ends */
+
+/* Button Invite */
+
+.buttonInvite {
+  background-color: var(--btn-1st-color);
+  color: var(--para-5th-color);
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: none;
+}
+
+/* Button Invite Ends */

@@ -1,0 +1,13 @@
+.tiga_roda {
+  display: flex;
+}
+
+.tiga_roda img {
+  width: 25px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.margin {
+  margin-left: -10px;
+}

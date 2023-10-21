@@ -4,4 +4,4 @@ const IconsFA = ({title}) => {
   )
 }
 
-export default IconsFA
+export {IconsFA}
