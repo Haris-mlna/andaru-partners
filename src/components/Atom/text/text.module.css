@@ -1,0 +1,54 @@
+.tagP16{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: inter;
+    color: var(--para-1st-color) ;
+    padding: 0;
+}
+
+.tagp18{
+    font-size: 18px;
+    font-weight: 500;
+    color: var( --heading-1st-color) ;
+    font-family: inter;
+    padding: 0;
+}
+
+.tagA181{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--heading-1st-color);
+    font-family: inter;
+    text-decoration: none;
+}
+
+.tagA182{
+    font-size: 18px;
+    font-weight: 500;
+    color: var( --para-1st-color);
+    font-family: inter;
+    text-decoration: none;
+}
+
+.tagA16{
+    font-size: 16px;
+    font-weight: 600;
+    color: var( --heading-1st-color);
+    font-family: inter;
+    text-decoration: none;
+}
+
+.h4tag{
+    font-size: 32px;
+    font-weight: 600;
+    color: var( --heading-1st-color);
+    font-family: inter;
+}
+
+.h6tag{
+    font-size: 18px;
+    font-weight: 600;
+    color: var( --heading-1st-color);
+    font-family: inter;
+}
+
