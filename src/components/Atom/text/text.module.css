@@ -52,3 +52,10 @@
     font-family: inter;
 }
 
+.spanTag{
+    font-size: 16px;
+    color: var(--para-1st-color);
+    font-family: inter;
+    font-weight: 500;
+}
+

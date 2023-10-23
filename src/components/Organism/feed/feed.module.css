@@ -1,0 +1,17 @@
+.feed{
+    background-color: var(--bs-white);
+    flex: 2;
+    padding: 1rem;
+}
+
+.headfeed{
+    display: flex;
+    gap: 1rem;
+}
+
+.texthead{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+

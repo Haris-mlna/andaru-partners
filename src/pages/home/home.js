@@ -7,7 +7,7 @@ import {
   ButtonView,
 } from "../../components/Atom/button/button.jsx";
 
-import { Ptag16, Ptag18, Atag181, Atag182, Atag16, H4tag, H6tag  } from "../../components/Atom/text/text.jsx";
+import { Ptag16, Ptag18, Atag181, Atag182, Atag16, H4tag, H6tag, Span16  } from "../../components/Atom/text/text.jsx";
 
 import {
   TigaRoda,
@@ -25,6 +25,7 @@ import { IconsFA } from "../../components/Atom/icons/icons.jsx";
 import styles from "./home.module.css";
 import Navbar from "../../components/Organism/navbar/navbar.jsx";
 import Sidebar from "../../components/Organism/sidebar/sidebar.jsx";
+import Feed from "../../components/Organism/feed/feed.jsx";
 
 const Home = () => {
 
@@ -58,10 +59,12 @@ const Home = () => {
         <Atag16 link={'#'} text={'a tag 16'}/>
         <H4tag text={'h4 tag'}/>
         <H6tag text={'h6 tag'}/>
+        <Span16 text={'test'}/>
         <Actionpost title={'favorite'} text={'Like'} new_className={styles.actionpost}/>
         <Actionpost title={'comment'} text={'Comments'} new_className={styles.actionpost}/>
         <Actionpost title={'share'} text={'share'} new_className={styles.actionpost}/>
         <PostImage/>
+        <Feed/>
       </div>
     </div>
   );
