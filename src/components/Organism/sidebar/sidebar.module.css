@@ -2,18 +2,96 @@
 TOP SCT
 ==============================*/
 
+.sidebar {
+  flex: 1;
+  width: 100%;
+  max-width: 300px;
+  background-color: white;
+  padding: 16px 20px;
+  border-radius: 12px;
+}
+
 .top {
   display: flex ;
+  align-items: center;
 }
 
 .info {
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
   margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+.avatar_container {
+  display: flex;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  border-radius: 12px;
 }
 
 .ptag18 {
   margin: 0;
-  margin-top: 5px;  
+  margin-top: 5px;
+}
+
+.hr {
+  height: 1px;
+  border: 0;
+  border-radius: 1px;
+  background-color: var(--bs-gray-300);
+}
+
+/*=============================
+TOP SCT Ends
+==============================*/
+
+/*=============================
+BOTTOM SCT
+==============================*/
+.bottom {
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  margin: 6px 0;
+  cursor: pointer;
+}
+
+.icons_navigate {
+  margin-right: 20px;
+  color: var(--bs-gray-600);
+}
+
+.link_text {
+  color: var(--bs-gray-600);
+}
+
+.navigation:hover > .icons_navigate,
+.navigation:hover > .link_text {
+  color: var(--bs-primary);
+}
+
+/*=============================
+BOTTOM SCT Ends
+==============================*/
+
+@media (max-width:762px) {
+  .sidebar {
+    display: none;
+  }
 }

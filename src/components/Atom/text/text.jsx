@@ -1,30 +1,30 @@
 import styles from './text.module.css'
 
 const Ptag16 = ({text , new_className}) => {
-    return <p className={styles.tagP16}>{text}</p>
+    return <p className={`${styles.tagP16} ${new_className}`}>{text}</p>
 }
 const Ptag18 = ({text , new_className}) => {
     return <p className={`${styles.tagP18} ${new_className}`}>{text}</p>
 }
 
 const Atag181 = ({text, link, new_className}) => {
-    return <a href={link}  className={styles.tagA181}>{text}</a>
+    return <a href={link}  className={`${styles.tagA181} ${new_className}`}>{text}</a>
 }
 
 const Atag182 = ({text ,link , new_className}) => {
-    return <a href={link} className={styles.tagA181}>{text}</a>
+    return <a href={link} className={`${styles.tagA181} ${new_className}`}>{text}</a>
 }
 
-const Atag16 = ({text ,link}) => {
-    return <a href={link} className={styles.tagA16}>{text}</a>
+const Atag16 = ({text ,link, new_className}) => {
+    return <a href={link} className={`${styles.tagA16} ${new_className} `}>{text}</a>
 }
 
-const H4tag = ({text}) => {
-    return <h4 className={styles.h4tag}>{text}</h4>
+const H4tag = ({text, new_className}) => {
+    return <h4 className={`${styles.h4tag} ${new_className}`}>{text}</h4>
 }
 
-const H6tag = ({text}) => {
-    return <h6 className={styles.h6tag}>{text}</h6>
+const H6tag = ({text, new_className}) => {
+    return <h6 className={`${styles.h6tag} ${new_className}`}>{text}</h6>
 }
 
 export {

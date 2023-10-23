@@ -1,4 +1,4 @@
-const sideBar = {
+const sidebarData = {
   icons: [
     {
       name: "Home",
@@ -160,4 +160,4 @@ const infoProfilee = {
   ],
 };
 
-export { sideBar, siteNavbarData, aboutProfil, infoProfilee };
+export { sidebarData, siteNavbarData, aboutProfil, infoProfilee };
