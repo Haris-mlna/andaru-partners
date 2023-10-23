@@ -1,8 +1,8 @@
 import { IconsFA } from "../icons/icons";
 import styles from "./button.module.css";
 
-const ButtonPrimary = ({ text }) => {
-  return <button className={styles.buttonPrimary}>{text}</button>;
+const ButtonPrimary = ({ text, new_className }) => {
+  return <button className={`${styles.buttonPrimary} ${new_className}`}>{text}</button>;
 };
 
 const ButtonDanger = ({ text }) => {

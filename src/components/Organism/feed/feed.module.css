@@ -1,7 +1,8 @@
 .feed{
     background-color: var(--bs-white);
     flex: 2;
-    padding: 1rem;
+    padding: 2rem 1rem;
+    border-radius: 12px;
 }
 
 .headfeed{
@@ -18,4 +19,85 @@
 .actionpost{
     display: flex;
     justify-content: space-between;
+}
+
+.commentpost{
+    display: flex;
+    gap: 1rem;
+}
+
+.comment{
+    padding: 0 1rem;
+    background-color: var( --border-color) ;
+    border: none;
+    width: 100%;
+    border-radius: 12px;
+}
+
+.sendComment{
+    color: var(--icon-color) ;
+}
+.btnSendComment{
+    display: flex ;
+    align-items: center;
+}
+
+.resultComment{
+    margin-left: 7rem;
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.resultReplyComment{
+    margin-left: 11rem;
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.wrapResultComment, .wrapReplyComment{
+    display: flex;
+    gap: 1rem;
+}
+
+.firstComment{
+    width: 400px;
+    padding: 1rem;
+    background-color: var(--border-1st-color);
+    border-radius: 12px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    border-radius: 12px;
+}
+
+.replyComment{
+    width: 400px;
+    padding: 1rem;
+    background-color: var(--border-1st-color);
+    border-radius: 12pxs;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    border-radius: 12px;
+}
+
+.replyComment{
+    width: 300px;
+    padding: 1rem;
+    background-color: var(--border-1st-color);
+    border-radius: 12px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    border-radius: 12px;
+}
+
+.actionOfComments{
+    display: flex;
+    gap: 1rem;
+    margin-left: 5rem;
 }
