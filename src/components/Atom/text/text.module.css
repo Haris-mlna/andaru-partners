@@ -72,3 +72,10 @@
     font-family: inter;
     font-weight: 500;
 }
+
+.h5tag {
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: var(--font-inter);
+}
