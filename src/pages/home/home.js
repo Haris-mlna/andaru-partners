@@ -26,11 +26,11 @@ import styles from "./home.module.css";
 import Navbar from "../../components/Organism/navbar/navbar.jsx";
 import Sidebar from "../../components/Organism/sidebar/sidebar.jsx";
 import Feed from "../../components/Organism/feed/feed.jsx";
-import { GroupCard } from "../../components/Molekul/card/card.jsx";
+import { CardGroup, CardMarketplace } from "../../components/Molekul/card/card.jsx";
 
 const Home = () => {
 
-  const liked = <i class={`material-symbols-outlined ${styles.likes}`}> thumb_up </i>
+  const liked = <i className={`material-symbols-outlined ${styles.likes}`}> thumb_up </i>
 
   return (
     <div className={styles.pages}>
@@ -68,7 +68,8 @@ const Home = () => {
         <Actionpost title={'share'} text={'share'} new_className={styles.actionpost}/>
         <PostImage/>
         <Feed/>
-        <GroupCard/>
+        <CardGroup name={"Travel Moon"} member={"30k member"}/>
+        <CardMarketplace price={"$84"} text={`Men's Watch`}/>
       </div>
     </div>
   );

@@ -51,6 +51,10 @@ const Span12 = ({text, new_className}) => {
     return <span className={`${styles.span12} ${new_className}`}>{text}</span>
 }
 
+const H5tag = ({text, new_className}) => {
+  return <h5 className={`${styles.h5tag} ${new_className}`}>{text}</h5>
+}
+
 export {
   Ptag16,
   Ptag18,
@@ -61,5 +65,6 @@ export {
   H6tag,
   Span16,
   Span14,
-  Span12
+  Span12,
+  H5tag
 };
