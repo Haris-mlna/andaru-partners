@@ -1,0 +1,156 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: var(--bs-white);
+  box-shadow: var(--box-shadow-sm);
+}
+
+.nav {
+  width: 100%;
+  max-width: 1200px;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*========================
+Left SCT
+==========================*/
+
+.lt {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.lt img {
+  width: 50px;
+  height: auto;
+}
+
+.searchbar_container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-left: 20px;
+  background-color: var(--box-1st-color);
+  border-radius: 4px;
+}
+
+.searchbar_container input[type='search'] {
+  border: none;
+  background-color: transparent;
+  padding: 10px;
+  font-family: var(--font-inter);
+}
+
+.searchbar_container input:focus,
+.searchbar_container input:active
+{
+  outline: none;
+}
+
+@media (max-width:762px) {
+  .searchbar_container {
+    display: none;
+  }
+}
+
+/*========================
+Left SCT Ends
+==========================*/
+
+/*========================
+Middle SCT
+==========================*/
+
+.md {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.md ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.md li {
+  margin: 0 20px;
+}
+
+.icons_navigate {
+  color: var(--bs-gray-600);
+  cursor: pointer;
+
+  transition: 150ms ease-in-out;
+}
+
+.icons_navigate:hover {
+  color: var(--bs-primary);
+}
+
+@media (max-width:762px) {
+  .md {
+    justify-content: flex-end;
+  }
+}
+
+/*========================
+Middle SCT Ends
+==========================*/
+
+/*========================
+Right SCT
+==========================*/
+
+.rt {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.rt button {
+  margin: 0 10px;
+}
+
+.notifications {
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.icons_notifications {
+  margin-top: 3px;
+  color: var(--bs-gray-600);
+}
+
+.avatar_button {
+  display: flex;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 12px;
+
+  transition: 150ms ease-in-out;
+}
+
+.avatar_button:hover {
+  transform: scale(98%);
+}
+
+@media (max-width:762px) {
+  .rt {
+    display: none;
+  }
+}
+
+/*========================
+Right SCT Ends
+==========================*/

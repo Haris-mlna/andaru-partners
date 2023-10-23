@@ -18,45 +18,45 @@ const TigaRoda = () => {
   )
 }
 
-const ConfirmFriend = () => {
+const ConfirmFriend = (new_className) => {
   return (
-    <img className={styles.img_confirm} src={confirmFriendImage} alt={'confirm friend'} />
+    <img className={new_className} src={confirmFriendImage} alt={'confirm friend'} />
   )
 }
 
-const SuggestionFriend = () => {
+const SuggestionFriend = (new_className) => {
   return (
-    <img className={styles.img_suggest} src={suggestionFriendImage} alt={'suggest friend'}/>
+    <img className={new_className} src={suggestionFriendImage} alt={'suggest friend'}/>
   )
 }
 
-const AllFriend = () => {
+const AllFriend = (new_className) => {
   return (
-    <img className={styles.img_allfriend} src={allFriend} alt={'all friend'}/>
+    <img className={new_className} src={allFriend} alt={'all friend'}/>
   )
 }
 
-const AvatarNavbar = () => {
+const AvatarNavbar = (new_className) => {
   return (
-    <img className={styles.avatar_navbar} src={avatarNavbar} alt='avatar navbar'/>
+    <img className={new_className} src={avatarNavbar} alt='avatar navbar'/>
   )
 }
 
-const AvatarSidebar = () => {
+const AvatarSidebar = (new_className) => {
   return (
-    <img className={styles.avatar_sidebar} src={avatarNavbar} alt='avatar sidebar'/>
+    <img className={new_className} src={avatarNavbar} alt='avatar sidebar'/>
   )
 }
 
-const PagesCover = () => {
+const PagesCover = (new_className) => {
   return (
-    <img className={styles.pages_images} src={pagesImage} alt='pages'/>
+    <img className={new_className} src={pagesImage} alt='pages'/>
   )
 }
 
-const PagesAvatar = () => {
+const PagesAvatar = (new_className) => {
   return (
-    <img className={styles.pages_avatar} src={pagesAvatar} alt='pages avatar'/>
+    <img className={new_className} src={pagesAvatar} alt='pages avatar'/>
   )
 }
 

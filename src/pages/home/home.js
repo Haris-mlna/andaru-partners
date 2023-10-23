@@ -20,8 +20,8 @@ import {
 } from "../../components/Atom/image-placeholder/image-placeholder.jsx";
 
 import { IconsFA } from "../../components/Atom/icons/icons.jsx";
-import Navbar from "../../components/Molekul/navbar/navbar.jsx";
 import styles from "./home.module.css";
+import Navbar from "../../components/Organism/navbar/navbar.jsx";
 
 const Home = () => {
 
