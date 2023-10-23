@@ -7,7 +7,9 @@ import avatarNavbar from "../../../assets/images/avatar-1.png";
 import pagesImage from "../../../assets/images/page-img-1.png";
 import pagesAvatar from "../../../assets/images/page-avatar-1.png";
 import avatar from "../../../assets/images/avatar-1.png";
-import postimage1 from "../../../assets/images/post-img-1.png"
+import postimage1 from "../../../assets/images/post-img-1.png";
+import GroupImagePlaceholder from "../../../assets/images/group-img-1.png";
+import GroupAvatarImagePlaceHolder from "../../../assets/images/group-avatar-1.png";
 
 const TigaRoda = () => {
   return (
@@ -67,6 +69,16 @@ const PostImage = ({ new_className }) => {
   return <img className={new_className} src={postimage1} alt="pages avatar" />;
 };
 
+const GroupCover = ({ new_className }) => {
+  return (
+    <img className={new_className} src={GroupImagePlaceholder} alt="group" />
+  );
+};
+
+const GroupAvatar = ({ new_className }) => {
+  return <img className={new_className} src={GroupAvatarImagePlaceHolder} alt="avatar group" />;
+};
+
 export {
   TigaRoda,
   ConfirmFriend,
@@ -76,5 +88,7 @@ export {
   AvatarSidebar,
   PagesCover,
   PagesAvatar,
-  PostImage
+  PostImage,
+  GroupCover,
+  GroupAvatar,
 };

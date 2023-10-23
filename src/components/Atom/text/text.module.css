@@ -59,3 +59,16 @@
     font-weight: 500;
 }
 
+.span14 {
+    font-size: 14px;
+    color: var(--para-1st-color);
+    font-family: inter;
+    font-weight: 500;
+}
+
+.span12 {
+    font-size: 12px;
+    color: var(--para-1st-color);
+    font-family: inter;
+    font-weight: 500;
+}
