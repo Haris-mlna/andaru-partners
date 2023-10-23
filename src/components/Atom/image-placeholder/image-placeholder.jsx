@@ -76,4 +76,5 @@ export {
   AvatarSidebar,
   PagesCover,
   PagesAvatar,
+  PostImage
 };
