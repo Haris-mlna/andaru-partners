@@ -15,3 +15,7 @@
     gap: 0.5rem;
 }
 
+.actionpost{
+    display: flex;
+    justify-content: space-between;
+}

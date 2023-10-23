@@ -59,7 +59,7 @@ const Home = () => {
         <Atag16 link={'#'} text={'a tag 16'}/>
         <H4tag text={'h4 tag'}/>
         <H6tag text={'h6 tag'}/>
-        <Span16 text={'test'}/>
+        <Span16 text={'span 16'}/>
         <Actionpost title={'favorite'} text={'Like'} new_className={styles.actionpost}/>
         <Actionpost title={'comment'} text={'Comments'} new_className={styles.actionpost}/>
         <Actionpost title={'share'} text={'share'} new_className={styles.actionpost}/>

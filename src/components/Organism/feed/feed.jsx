@@ -1,6 +1,10 @@
 import styles from "./feed.module.css";
-import { AvatarSidebar, PostImage } from "../../Atom/image-placeholder/image-placeholder";
+import {
+  AvatarSidebar,
+  PostImage,
+} from "../../Atom/image-placeholder/image-placeholder";
 import { Atag181, Ptag18, Span16 } from "../../Atom/text/text";
+import { Actionpost } from "../../Atom/button/button";
 const Feed = () => {
   return (
     <div className={styles.feed}>
@@ -19,8 +23,20 @@ const Feed = () => {
         />
       </div>
       <div className={styles.imgpost}>
-        <PostImage/>
+        <PostImage />
       </div>
+      <hr />
+      <div className={styles.actionpost}>
+        <Actionpost fs={16} size={"large"} title={"favorite"} text={"Like"} />
+        <Actionpost
+          fs={16}
+          size={"large"}
+          title={"comment"}
+          text={"Comments"}
+        />
+        <Actionpost fs={16} size={"large"} title={"share"} text={"Shares"} />
+      </div>
+      <hr />
     </div>
   );
 };

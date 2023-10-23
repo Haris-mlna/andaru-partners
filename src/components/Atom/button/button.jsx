@@ -21,10 +21,10 @@ const ButtonInvite = ({text}) => {
   return <button className={styles.buttonInvite}>{text}</button>
 }
 
-const Actionpost = ({text, size, title , new_className}) => {
+const Actionpost = ({text, size, title , new_className, fs}) => {
 
   return(
-    <button className={`${styles.actionPost} ${new_className}`} ><IconsFA size={size} title={title} new_className={new_className}/> {text} </button>
+    <button style={{fontSize:fs}} className={`${styles.actionPost} ${new_className}`} ><IconsFA size={size} title={title} new_className={new_className}/> {text} </button>
   )
 }
 
