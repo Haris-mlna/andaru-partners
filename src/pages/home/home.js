@@ -22,6 +22,7 @@ import {
 import { IconsFA } from "../../components/Atom/icons/icons.jsx";
 import styles from "./home.module.css";
 import Navbar from "../../components/Organism/navbar/navbar.jsx";
+import Sidebar from "../../components/Organism/sidebar/sidebar.jsx";
 
 const Home = () => {
 
@@ -31,11 +32,12 @@ const Home = () => {
     <div className={styles.pages}>
       <Navbar />
       <div className={styles.content}>
+        <Sidebar/>
         <ButtonPrimary text={"Confirm"} />
         <ButtonDanger text={"Delete"} />
         <ButtonView text={"View Profile"} />
-        <IconsFA title={"home"} />
-        <IconsFA title={"feed"} />
+        <IconsFA title={"home"} new_className={''} size={'large'} />
+        <IconsFA title={"feed"} new_className={''} size={'large'} />
         <ButtonJoined text={"Joined"} />
         <ButtonInvite text={"Invite"} />
         <TigaRoda/>

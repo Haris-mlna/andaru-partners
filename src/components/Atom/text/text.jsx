@@ -1,17 +1,17 @@
 import styles from './text.module.css'
 
-const Ptag16 = ({text}) => {
+const Ptag16 = ({text , new_className}) => {
     return <p className={styles.tagP16}>{text}</p>
 }
-const Ptag18 = ({text}) => {
-    return <p className={styles.tagP18}>{text}</p>
+const Ptag18 = ({text , new_className}) => {
+    return <p className={`${styles.tagP18} ${new_className}`}>{text}</p>
 }
 
-const Atag181 = ({text, link}) => {
+const Atag181 = ({text, link, new_className}) => {
     return <a href={link}  className={styles.tagA181}>{text}</a>
 }
 
-const Atag182 = ({text ,link}) => {
+const Atag182 = ({text ,link , new_className}) => {
     return <a href={link} className={styles.tagA181}>{text}</a>
 }
 

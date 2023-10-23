@@ -4,6 +4,7 @@
   justify-content: center;
   background-color: var(--bs-white);
   box-shadow: var(--box-shadow-sm);
+  padding: 10px;
 }
 
 .nav {

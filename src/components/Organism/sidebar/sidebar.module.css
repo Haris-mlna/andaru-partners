@@ -1,0 +1,19 @@
+/*=============================
+TOP SCT
+==============================*/
+
+.top {
+  display: flex ;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.ptag18 {
+  margin: 0;
+  margin-top: 5px;  
+}
