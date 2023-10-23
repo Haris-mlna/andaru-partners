@@ -1,3 +1,4 @@
+import { IconsFA } from "../icons/icons";
 import styles from "./button.module.css";
 
 const ButtonPrimary = ({ text }) => {
@@ -20,5 +21,12 @@ const ButtonInvite = ({text}) => {
   return <button className={styles.buttonInvite}>{text}</button>
 }
 
+const Actionpost = ({text, size, title , new_className}) => {
 
-export { ButtonPrimary, ButtonDanger, ButtonView, ButtonJoined, ButtonInvite };
+  return(
+    <button className={`${styles.actionPost} ${new_className}`} ><IconsFA size={size} title={title} new_className={new_className}/> {text} </button>
+  )
+}
+
+
+export { ButtonPrimary, ButtonDanger, ButtonView, ButtonJoined, ButtonInvite, Actionpost };

@@ -7,6 +7,7 @@ import avatarNavbar from "../../../assets/images/avatar-1.png";
 import pagesImage from "../../../assets/images/page-img-1.png";
 import pagesAvatar from "../../../assets/images/page-avatar-1.png";
 import avatar from "../../../assets/images/avatar-1.png";
+import postimage1 from "../../../assets/images/post-img-1.png"
 
 const TigaRoda = () => {
   return (
@@ -60,6 +61,10 @@ const PagesCover = ({ new_className }) => {
 
 const PagesAvatar = ({ new_className }) => {
   return <img className={new_className} src={pagesAvatar} alt="pages avatar" />;
+};
+
+const PostImage = ({ new_className }) => {
+  return <img className={new_className} src={postimage1} alt="pages avatar" />;
 };
 
 export {

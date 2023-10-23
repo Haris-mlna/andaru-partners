@@ -1,4 +1,5 @@
 import {
+  Actionpost,
   ButtonDanger,
   ButtonInvite,
   ButtonJoined,
@@ -17,6 +18,7 @@ import {
   AvatarSidebar,
   PagesCover,
   PagesAvatar,
+  PostImage,
 } from "../../components/Atom/image-placeholder/image-placeholder.jsx";
 
 import { IconsFA } from "../../components/Atom/icons/icons.jsx";
@@ -56,6 +58,10 @@ const Home = () => {
         <Atag16 link={'#'} text={'a tag 16'}/>
         <H4tag text={'h4 tag'}/>
         <H6tag text={'h6 tag'}/>
+        <Actionpost title={'favorite'} text={'Like'} new_className={styles.actionpost}/>
+        <Actionpost title={'comment'} text={'Comments'} new_className={styles.actionpost}/>
+        <Actionpost title={'share'} text={'share'} new_className={styles.actionpost}/>
+        <PostImage/>
       </div>
     </div>
   );

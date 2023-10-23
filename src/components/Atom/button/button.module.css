@@ -86,3 +86,19 @@
 }
 
 /* Button Invite Ends */
+
+/*  actionpost */
+.actionPost{
+  font-size: 16px;
+  color: var(  --para-1st-color);
+  background-color: transparent;
+  width: 10rem;
+  padding: 0.5rem 0;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+/* actionpost end */
