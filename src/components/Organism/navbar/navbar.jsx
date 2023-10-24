@@ -1,7 +1,7 @@
 import styles from "./navbar.module.css";
 import { useState } from "react";
 import logo from "../../../assets/images/business-partner-logo1.png";
-
+import { useNavigate } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
 import { IconsFA } from "../../Atom/icons/icons";
 import { AvatarNavbar } from "../../Atom/image-placeholder/image-placeholder";
@@ -25,6 +25,15 @@ const SearchBar = () => {
 };
 
 const DropdownAvatar = ({ isActive }) => {
+
+  const navigate = useNavigate();
+
+  const NavigateTo = () => {
+    return (
+      navigate('/profile')
+    )
+  }
+
   return (
     <>
       <div
@@ -39,7 +48,7 @@ const DropdownAvatar = ({ isActive }) => {
             <Ptag16 text={"Web Developer"} new_className={styles.p16tag_dropdown} />
           </div>
         </div>
-        <ButtonView new_className={styles.button_view} text={"View Profile"} />
+        <ButtonView new_className={styles.button_view} text={"View Profile"} onPress={NavigateTo}/>
         <div className={styles.dropdown_link}>
           <IconsFA size={"small"} title={"settings"} new_className={styles.link_icons} />
           <Atag181 text={"Settings & Privacy"} new_className={styles.link_text} />
