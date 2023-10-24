@@ -47,6 +47,8 @@ import {
 } from "../../components/Molekul/card/card.jsx";
 
 import { DropdownAvatar } from "../../components/Organism/navbar/navbar.jsx";
+import { SidebarGallery } from "../../components/Molekul/right-sidebar/right-sidebar";
+import { SidebarContact } from "../../components/Molekul/contact/contact";
 
 const Template = () => {
 
@@ -101,6 +103,8 @@ const Template = () => {
         <CardMarketplace price={"$84"} text={`Men's Watch`} />
         <CollapsibleTable />
         <DropdownAvatar/>
+        <SidebarGallery/>
+        <SidebarContact/>
       </div>
     </div>
   );

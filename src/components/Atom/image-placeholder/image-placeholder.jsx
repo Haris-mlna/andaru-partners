@@ -15,6 +15,8 @@ import marketPlaceAvatar from "../../../assets/images/page-avatar-1.png";
 import requestAvatar from "../../../assets/images/avatar-4.png";
 import contactAvatar from "../../../assets/images/avatar-6.png";
 import profilebanner from "../../../assets/images/profile-cover-img.png";
+import photoSidebar from '../../../assets/images/post-img-6.png'
+
 
 const TigaRoda = ({ new_className }) => {
   return (
@@ -120,6 +122,12 @@ const ProfileBanner = ({ new_className }) => {
   );
 };
 
+const PhotoSidebar = ({new_className}) => {
+  return (
+    <img className={new_className} src={photoSidebar} alt="ph-sidebar" />
+  )
+}
+
 export {
   TigaRoda,
   ConfirmFriend,
@@ -137,4 +145,5 @@ export {
   RequestAvatar,
   ContactAvatar,
   ProfileBanner,
+  PhotoSidebar
 };
