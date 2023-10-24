@@ -9,6 +9,7 @@ TOP SCT
   background-color: white;
   padding: 16px 20px;
   border-radius: 12px;
+  height: 100%;
 }
 
 .top {
@@ -74,11 +75,12 @@ BOTTOM SCT
 
 .icons_navigate {
   margin-right: 20px;
-  color: var(--bs-gray-600);
+  color: var(--bs-gray-800);
 }
 
 .link_text {
-  color: var(--bs-gray-600);
+  color: var(--bs-gray-800);
+  font-size: 16px;
 }
 
 .navigation:hover > .icons_navigate,

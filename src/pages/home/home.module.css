@@ -15,6 +15,10 @@
   gap: 1rem;
 }
 
+.dev_only {
+  padding: 100px 0;
+}
+
 .dev_only p {
   font-family: var(--font-outfit);
   margin: 20px 0;

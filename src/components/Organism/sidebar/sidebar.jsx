@@ -13,7 +13,7 @@ const Sidebar = () => {
             <AvatarSidebar new_className={styles.avatar}/>
           </div>
           <div className={styles.info}>
-            <Atag181 text={"Ikhsanudin M"} />
+            <Atag181 text={"Ikhsanudin M"}/>
             <Ptag18 new_className={styles.ptag18} text={"@ikhsanudin"}/>
           </div>
         </div>
@@ -22,7 +22,7 @@ const Sidebar = () => {
           <ul>
             {sidebarData.icons.map((icon, index) => (
               <li key={index} className={styles.navigation}>
-                  <IconsFA title={icon.title} new_className={styles.icons_navigate}/>
+                  <IconsFA title={icon.title} size={'normal'} new_className={styles.icons_navigate}/>
                   <Atag181 text={icon.name} link={icon.url} new_className={styles.link_text}/>
               </li>
             ))}
