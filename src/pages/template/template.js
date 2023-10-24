@@ -49,6 +49,7 @@ import {
 import { DropdownAvatar } from "../../components/Organism/navbar/navbar.jsx";
 import { SidebarGallery } from "../../components/Molekul/right-sidebar/right-sidebar";
 import { SidebarContact } from "../../components/Molekul/contact/contact";
+import { GroupContainer } from "../../components/Organism/group/group";
 
 const Template = () => {
 
@@ -105,6 +106,7 @@ const Template = () => {
         <DropdownAvatar/>
         <SidebarGallery/>
         <SidebarContact/>
+        <GroupContainer/>
       </div>
     </div>
   );

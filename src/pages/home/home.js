@@ -12,7 +12,7 @@ import Feed from "../../components/Organism/feed/feed";
 
 const Home = () => {
   const navigate = useNavigate();
-
+  
   const openDev = () => {
     navigate("/template-dev");
   };
