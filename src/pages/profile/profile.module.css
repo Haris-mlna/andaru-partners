@@ -1,11 +1,70 @@
-.headerProfile{
-    max-width: 1200px;
-    background-color: var(--bs-white);
-    padding: 1rem;
-    margin: 0 auto;
-    margin-top: calc(1rem + 4px);
+.headerProfile {
+  max-width: 1200px;
+  background-color: var(--bs-white);
+  padding: 1rem;
+  margin: 0 auto;
+  margin-top: calc(1rem + 4px);
 }
 
-.profileBanner{
-    width: 100%;
+.profileBanner {
+  width: 100%;
+}
+
+.wrapDetailProfile {
+  margin-left: 1rem;
+}
+
+.detailProfile {
+  display: flex;
+  padding: 0.5rem 0;
+}
+
+.detailProfilee {
+  display: flex;
+  align-items: center;
+
+  flex: 1;
+}
+
+.detailProf {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.buttonEditProfile {
+  display: flex;
+  justify-content: end;
+  flex: 1;
+}
+
+.btnedt {
+  height: 40px;
+}
+
+.hiddenStyle {
+  background-color: transparent;
+  color: var(--bs-gray-500);
+}
+
+.hiddenStyle:hover {
+  color: var(--bs-primary);
+}
+
+.navProfile {
+  display: flex;
+  gap: 1rem;
+}
+
+.profileLeft {
+  flex: 1;
+}
+
+.profileMid {
+  flex: 2;
+}
+
+.profileRight {
+  flex: 1;
 }

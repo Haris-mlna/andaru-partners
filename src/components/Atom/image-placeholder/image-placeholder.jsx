@@ -117,6 +117,7 @@ const ContactAvatar = ({ new_className }) => {
 const ProfileBanner = ({ new_className }) => {
   return (
     <img className={new_className} src={profilebanner} alt="profile" />
+    <img className={new_className} src={profilebanner} alt="profileimg" />
   );
 };
 

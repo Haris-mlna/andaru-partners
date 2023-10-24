@@ -66,5 +66,5 @@ export {
   Span16,
   Span14,
   Span12,
-  H5tag
+  H5tag,
 };

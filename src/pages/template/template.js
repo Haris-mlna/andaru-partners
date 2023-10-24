@@ -1,4 +1,5 @@
 import styles from "./template.module.css";
+import CollapsibleTable from "../../components/Organism/table/table";
 
 import {
   Actionpost,
