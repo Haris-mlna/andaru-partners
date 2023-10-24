@@ -30,14 +30,14 @@ const Feed = () => {
       </div>
       <hr />
       <div className={styles.actionpost}>
-        <Actionpost fs={16} size={"large"} title={"favorite"} text={"Like"} />
+        <Actionpost fs={16} size={"small"} title={"favorite"} text={"Like"} />
         <Actionpost
           fs={16}
-          size={"large"}
+          size={"small"}
           title={"comment"}
           text={"Comments"}
         />
-        <Actionpost fs={16} size={"large"} title={"share"} text={"Shares"} />
+        <Actionpost fs={16} size={"small"} title={"share"} text={"Shares"} />
       </div>
       <hr />
       <br />

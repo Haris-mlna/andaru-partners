@@ -44,7 +44,7 @@
 /* ButtonView */
 
 .buttonViewProfile {
-  background-color: var(--bs-gray-300);
+  background-color: var(--bs-gray-200);
   font-family: var(--font-inter);
   padding: 8px 12px;
   border: none;

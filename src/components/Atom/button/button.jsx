@@ -9,33 +9,33 @@ const ButtonPrimary = ({ text, new_className, onPress }) => {
   );
 };
 
-const ButtonDanger = ({ text, new_className }) => {
+const ButtonDanger = ({ text, new_className, onPress }) => {
   return (
-    <button className={`${styles.buttonDanger} ${new_className}`}>
+    <button className={`${styles.buttonDanger} ${new_className}`} onClick={onPress}>
       {text}
     </button>
   );
 };
 
-const ButtonView = ({ text, new_className }) => {
+const ButtonView = ({ text, new_className, onPress }) => {
   return (
-    <button className={`${styles.buttonViewProfile} ${new_className}`}>
+    <button className={`${styles.buttonViewProfile} ${new_className}`} onClick={onPress}>
       {text}
     </button>
   );
 };
 
-const ButtonJoined = ({ text, new_className }) => {
+const ButtonJoined = ({ text, new_className, onPress }) => {
   return (
-    <button className={`${styles.buttonJoined} ${new_className}`}>
+    <button className={`${styles.buttonJoined} ${new_className}`} onClick={onPress}>
       {text}
     </button>
   );
 };
 
-const ButtonInvite = ({ text, new_className }) => {
+const ButtonInvite = ({ text, new_className, onPress }) => {
   return (
-    <button className={`${styles.buttonInvite} ${new_className}`}>
+    <button className={`${styles.buttonInvite} ${new_className}`} onClick={onPress}>
       {text}
     </button>
   );

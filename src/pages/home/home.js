@@ -1,10 +1,14 @@
 import styles from "./home.module.css";
-import Navbar from "../../components/Organism/navbar/navbar.jsx";
+
+
+// Components
 import { useNavigate } from "react-router-dom";
 import { ButtonPrimary } from "../../components/Atom/button/button";
+import { SidebarContact } from "../../components/Molekul/contact/contact";
+import Navbar from "../../components/Organism/navbar/navbar.jsx";
 import Sidebar from "../../components/Organism/sidebar/sidebar";
 import Feed from "../../components/Organism/feed/feed";
-import { SidebarContact } from "../../components/Molekul/contact/contact";
+
 
 const Home = () => {
   const navigate = useNavigate();

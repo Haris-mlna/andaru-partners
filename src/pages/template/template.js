@@ -45,6 +45,10 @@ import {
   CardMarketplace,
 } from "../../components/Molekul/card/card.jsx";
 
+import CollapsibleTable from "../../components/Organism/table/table";
+
+import { DropdownAvatar } from "../../components/Organism/navbar/navbar.jsx";
+
 const Template = () => {
 
   return (
@@ -97,6 +101,7 @@ const Template = () => {
         <CardGroup name={"Travel Moon"} member={"30k member"} />
         <CardMarketplace price={"$84"} text={`Men's Watch`} />
         <CollapsibleTable />
+        <DropdownAvatar/>
       </div>
     </div>
   );
