@@ -17,6 +17,6 @@
   gap: 1rem;
 }
 
-.dev_only p {
-  font-family: var(--font-outfit);
+.likes {
+  color: white;
 }

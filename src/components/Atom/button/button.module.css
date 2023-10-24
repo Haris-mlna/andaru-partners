@@ -83,6 +83,13 @@
   padding: 8px 12px;
   border-radius: 4px;
   border: none;
+  cursor: pointer;
+
+  transition: 150ms ease-in-out;
+}
+
+.buttonInvite:hover{
+  transform: scale(98%);
 }
 
 /* Button Invite Ends */

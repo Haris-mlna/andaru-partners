@@ -1,9 +1,9 @@
 import { IconsFA } from "../icons/icons";
 import styles from "./button.module.css";
 
-const ButtonPrimary = ({ text, new_className }) => {
+const ButtonPrimary = ({ text, new_className, onPress }) => {
   return (
-    <button className={`${styles.buttonPrimary} ${new_className}`}>
+    <button className={`${styles.buttonPrimary} ${new_className}`} onClick={onPress}>
       {text}
     </button>
   );
