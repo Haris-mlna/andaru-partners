@@ -1,0 +1,9 @@
+.about{
+    background-color: var(--bs-white);
+}
+
+.info_Profile_map{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}

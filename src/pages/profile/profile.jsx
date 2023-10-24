@@ -7,7 +7,7 @@ import styles from "./profile.module.css";
 import haris from "../../assets/images/harispp.png";
 import { H4tag, Span14 } from "../../components/Atom/text/text";
 import { ButtonPrimary } from "../../components/Atom/button/button";
-import { IconsFA } from "../../components/Atom/icons/icons";
+import About from "./about";
 
 const Profile = () => {
   return (
@@ -49,6 +49,7 @@ const Profile = () => {
         <div className={styles.profileLeft}></div>
         <div className={styles.profileMid}></div>
         <div className={styles.profileRight}></div>
+        <About/>
       </div>
     </div>
   );

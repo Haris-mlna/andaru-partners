@@ -50,7 +50,7 @@
     font-size: 18px;
     font-weight: 600;
     color: var( --heading-1st-color);
-    font-family: inter;
+    font-family: inter;margin: 0;
 }
 
 .spanTag{
