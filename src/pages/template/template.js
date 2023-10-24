@@ -44,9 +44,9 @@ import {
   CardGroup,
   CardMarketplace,
 } from "../../components/Molekul/card/card.jsx";
-import CollapsibleTable from "../../components/Organism/table/table";
 
 const Template = () => {
+
   return (
     <div className={styles.pages}>
       <Navbar />

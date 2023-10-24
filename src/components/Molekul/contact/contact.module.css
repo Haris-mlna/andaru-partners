@@ -3,13 +3,98 @@
   flex: 1;
 }
 
+/*-------------------------
+Request
+-------------------------*/
+
 .request_contact {
   margin-bottom: 10px;
   padding: 10px;
   background-color: var(--bs-white);
+  border-radius: 12px;
 }
 
 .title_request {
   margin: 0;
   font-size: 16px;
+  margin-top: 5px;
 }
+
+.req_card {
+  margin: 10px 0;
+  margin-top: 20px;
+}
+
+.req_container {
+  display: flex;
+}
+
+.avatar_container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.req_info {
+  margin-left: 5px;
+}
+
+.mutual {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.mutual_text {
+  margin-left: 5px;
+}
+
+.button_container_req {
+  display: flex;
+  margin: 15px 0;
+}
+
+.button_req_margin {
+  margin-right: 10px;
+}
+
+
+/*-------------------------
+Request Ends
+-------------------------*/
+
+
+/*-------------------------
+Contact
+-------------------------*/
+
+.contact_only {
+  background-color: var(--bs-white);
+  padding: 10px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title_contact {
+  margin: 6px 0;
+  font-size: 16px;
+}
+
+.contact {
+  width: 100%;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact_name {
+  width: 100%;
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+/*-------------------------
+Contact Ends
+-------------------------*/
