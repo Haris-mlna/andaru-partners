@@ -43,6 +43,7 @@
     font-weight: 600;
     color: var( --heading-1st-color);
     font-family: inter;
+    margin: 0;
 }
 
 .h6tag{
