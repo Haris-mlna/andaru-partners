@@ -8,14 +8,15 @@ import pagesImage from "../../../assets/images/page-img-1.png";
 import pagesAvatar from "../../../assets/images/page-avatar-1.png";
 import avatar from "../../../assets/images/avatar-1.png";
 import postimage1 from "../../../assets/images/post-img-1.png";
-import groupAvatar from '../../../assets/images/group-avatar-1.png'
-import groupCover from '../../../assets/images/group-img-1.png'
-import marketPlaceCover from '../../../assets/images/marketplace-img-1.png'
-import marketPlaceAvatar from '../../../assets/images/page-avatar-1.png'
-import requestAvatar from '../../../assets/images/avatar-4.png'
-import contactAvatar from '../../../assets/images/avatar-6.png'
+import groupAvatar from "../../../assets/images/group-avatar-1.png";
+import groupCover from "../../../assets/images/group-img-1.png";
+import marketPlaceCover from "../../../assets/images/marketplace-img-1.png";
+import marketPlaceAvatar from "../../../assets/images/page-avatar-1.png";
+import requestAvatar from "../../../assets/images/avatar-4.png";
+import contactAvatar from "../../../assets/images/avatar-6.png";
+import profilebanner from "../../../assets/images/profile-cover-img.png";
 
-const TigaRoda = ({new_className}) => {
+const TigaRoda = ({ new_className }) => {
   return (
     <div className={`${styles.tiga_roda} ${new_className}`}>
       <img src={avatar} alt="avatar tiga roda" />
@@ -73,29 +74,51 @@ const PostImage = ({ new_className }) => {
   return <img className={new_className} src={postimage1} alt="pages avatar" />;
 };
 
-const GroupAvatar = ({new_className}) => {
-  return <img className={new_className} src={groupAvatar} alt="group avatar" />
-}
+const GroupAvatar = ({ new_className }) => {
+  return <img className={new_className} src={groupAvatar} alt="group avatar" />;
+};
 
-const GroupCover = ({new_className}) => {
-  return <img className={new_className} src={groupCover} alt='cover group'/>
-}
+const GroupCover = ({ new_className }) => {
+  return <img className={new_className} src={groupCover} alt="cover group" />;
+};
 
-const MarketplaceCover = ({new_className}) => {
-  return <img src={marketPlaceCover} className={new_className} alt={'marketplace cover'}/>
-}
+const MarketplaceCover = ({ new_className }) => {
+  return (
+    <img
+      src={marketPlaceCover}
+      className={new_className}
+      alt={"marketplace cover"}
+    />
+  );
+};
 
-const MarketPlaceAvatar = ({new_className}) => {
-  return <img src={marketPlaceAvatar} className={new_className} alt={'marketplace avatar'}/>
-}
+const MarketPlaceAvatar = ({ new_className }) => {
+  return (
+    <img
+      src={marketPlaceAvatar}
+      className={new_className}
+      alt={"marketplace avatar"}
+    />
+  );
+};
 
-const RequestAvatar = ({new_className}) => {
-  return <img className={new_className} src={requestAvatar} alt="request avatar" />
-}
+const RequestAvatar = ({ new_className }) => {
+  return (
+    <img className={new_className} src={requestAvatar} alt="request avatar" />
+  );
+};
 
-const ContactAvatar = ({new_className}) => {
-  return <img className={new_className} src={contactAvatar} alt="contact avatar" />
-}
+const ContactAvatar = ({ new_className }) => {
+  return (
+    <img className={new_className} src={contactAvatar} alt="contact avatar" />
+  );
+};
+
+const ProfileBanner = ({ new_className }) => {
+  return (
+    <img className={new_className} src={profilebanner} alt="profile image" />
+  );
+};
 
 export {
   TigaRoda,
@@ -112,5 +135,6 @@ export {
   MarketPlaceAvatar,
   MarketplaceCover,
   RequestAvatar,
-  ContactAvatar
+  ContactAvatar,
+  ProfileBanner,
 };

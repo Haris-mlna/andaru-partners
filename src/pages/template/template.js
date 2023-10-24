@@ -47,10 +47,6 @@ import {
 import CollapsibleTable from "../../components/Organism/table/table";
 
 const Template = () => {
-  const liked = (
-    <i className={`material-symbols-outlined ${styles.likes}`}> thumb_up </i>
-  );
-
   return (
     <div className={styles.pages}>
       <Navbar />
@@ -71,7 +67,6 @@ const Template = () => {
         <AvatarSidebar />
         <PagesCover />
         <PagesAvatar />
-        <ButtonPrimary text={liked} />
         <Ptag16 text={"p tag 16"} />
         <Ptag18 text={"p tag 18"} />
         <Atag181 link={"#"} text={"a tag 181"} />
@@ -101,6 +96,7 @@ const Template = () => {
         <Feed />
         <CardGroup name={"Travel Moon"} member={"30k member"} />
         <CardMarketplace price={"$84"} text={`Men's Watch`} />
+        <CollapsibleTable />
       </div>
     </div>
   );

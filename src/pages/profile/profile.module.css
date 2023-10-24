@@ -1,0 +1,11 @@
+.headerProfile{
+    max-width: 1200px;
+    background-color: var(--bs-white);
+    padding: 1rem;
+    margin: 0 auto;
+    margin-top: calc(1rem + 4px);
+}
+
+.profileBanner{
+    width: 100%;
+}
