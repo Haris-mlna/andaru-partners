@@ -126,27 +126,22 @@ const rows = [
   createData('Gingerbread', 356, 16.0, 49, 3.9, 1.5),
 ];
 
-export default function CollapsibleTable(data) {
-
-    React.useEffect(() => {
-        if(data.total >= 7){
-            
-        }
-    },[])
-
+export default function CollapsibleTable() {
   return (
     <TableContainer component={Paper}>
       <Table aria-label="collapsible table">
         <TableHead>
           <TableRow>
             <TableCell />
-            {data.column.map((data , index) => {
-                <TableCell align='right' key={index}>{data.name}</TableCell>
-            })}
+            <TableCell>Dessert (100g serving)</TableCell>
+            <TableCell align="right">Calories</TableCell>
+            <TableCell align="right">Fat&nbsp;(g)</TableCell>
+            <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+            <TableCell align="right">Protein&nbsp;(g)</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {data.row.map((row) => (
+          {rows.map((row) => (
             <Row key={row.name} row={row} />
           ))}
         </TableBody>
