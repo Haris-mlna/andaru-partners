@@ -101,7 +101,6 @@ const Template = () => {
         <Feed />
         <CardGroup name={"Travel Moon"} member={"30k member"} />
         <CardMarketplace price={"$84"} text={`Men's Watch`} />
-        <CollapsibleTable/>
       </div>
     </div>
   );

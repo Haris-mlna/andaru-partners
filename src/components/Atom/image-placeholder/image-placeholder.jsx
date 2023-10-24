@@ -12,6 +12,8 @@ import groupAvatar from '../../../assets/images/group-avatar-1.png'
 import groupCover from '../../../assets/images/group-img-1.png'
 import marketPlaceCover from '../../../assets/images/marketplace-img-1.png'
 import marketPlaceAvatar from '../../../assets/images/page-avatar-1.png'
+import requestAvatar from '../../../assets/images/avatar-4.png'
+import contactAvatar from '../../../assets/images/avatar-6.png'
 
 const TigaRoda = ({new_className}) => {
   return (
@@ -87,6 +89,14 @@ const MarketPlaceAvatar = ({new_className}) => {
   return <img src={marketPlaceAvatar} className={new_className} alt={'marketplace avatar'}/>
 }
 
+const RequestAvatar = ({new_className}) => {
+  return <img className={new_className} src={requestAvatar} alt="request avatar" />
+}
+
+const ContactAvatar = ({new_className}) => {
+  return <img className={new_className} src={contactAvatar} alt="contact avatar" />
+}
+
 export {
   TigaRoda,
   ConfirmFriend,
@@ -100,5 +110,7 @@ export {
   GroupAvatar,
   GroupCover,
   MarketPlaceAvatar,
-  MarketplaceCover
+  MarketplaceCover,
+  RequestAvatar,
+  ContactAvatar
 };

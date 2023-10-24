@@ -8,9 +8,7 @@
 
 .content {
   display: flex;
-  flex-direction: column;
   width: 100%;
-  align-items: flex-start;
   max-width: 1200px;
   margin-top: 20px;
   padding: 10px;
@@ -19,4 +17,5 @@
 
 .dev_only p {
   font-family: var(--font-outfit);
+  margin: 20px 0;
 }

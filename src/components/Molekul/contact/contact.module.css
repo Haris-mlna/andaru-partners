@@ -1,0 +1,15 @@
+.sidebar_contact {
+  max-width: 300px;
+  flex: 1;
+}
+
+.request_contact {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: var(--bs-white);
+}
+
+.title_request {
+  margin: 0;
+  font-size: 16px;
+}
