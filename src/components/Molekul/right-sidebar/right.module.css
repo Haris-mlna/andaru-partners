@@ -1,0 +1,25 @@
+.container_gallery {
+  background-color: white;
+  padding: 15px 20px;
+  border-radius: 12px;
+  max-width: 250px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.title_gallery {
+  margin: 0;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.container_photo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.img_gallery {
+  width: 100px;
+}
