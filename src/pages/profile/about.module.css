@@ -1,5 +1,6 @@
 .about{
     background-color: var(--bs-white);
+    padding: 1rem 1rem;
 }
 
 .info_Profile_map{
@@ -7,3 +8,6 @@
     gap: 1rem;
     margin-bottom: 1rem;
 }
+
+
+

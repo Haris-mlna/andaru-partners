@@ -57,6 +57,13 @@
   gap: 1rem;
 }
 
+.main_section_profile{
+    display: flex;
+    gap: 1rem;
+    width: 1200px;
+    margin: 1rem auto;
+}
+
 .profileLeft {
   flex: 1;
 }
@@ -67,4 +74,20 @@
 
 .profileRight {
   flex: 1;
+}
+
+.aboutLeft{
+    flex: 3.1;
+}
+
+.aboutRight{
+    flex: 0.9;
+}
+
+.photoLeft{
+    flex: 1;
+}
+
+.photoRight{
+    flex: 0.9;
 }
