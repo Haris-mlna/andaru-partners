@@ -46,8 +46,6 @@ import {
   CardMarketplace,
 } from "../../components/Molekul/card/card.jsx";
 
-import CollapsibleTable from "../../components/Organism/table/table";
-
 import { DropdownAvatar } from "../../components/Organism/navbar/navbar.jsx";
 
 const Template = () => {
