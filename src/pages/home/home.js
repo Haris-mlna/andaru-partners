@@ -27,6 +27,7 @@ import Navbar from "../../components/Organism/navbar/navbar.jsx";
 import Sidebar from "../../components/Organism/sidebar/sidebar.jsx";
 import Feed from "../../components/Organism/feed/feed.jsx";
 import { CardGroup, CardMarketplace } from "../../components/Molekul/card/card.jsx";
+import CollapsibleTable from "../../components/Organism/table/table.jsx";
 
 const Home = () => {
 
@@ -70,6 +71,7 @@ const Home = () => {
         <Feed/>
         <CardGroup name={"Travel Moon"} member={"30k member"}/>
         <CardMarketplace price={"$84"} text={`Men's Watch`}/>
+        <CollapsibleTable/>
       </div>
     </div>
   );
