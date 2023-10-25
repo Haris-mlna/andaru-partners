@@ -21,25 +21,25 @@ const Profile = () => {
     setActive(page);
   };
 
-  console.log(handlePage);
-
   return (
     <div className={styles.profile}>
       <div className={styles.navbar}>
         <Navbar />
       </div>
 
+      <div className={styles.containerMobile}>
+
       <div className={styles.headerProfile}>
         <ProfileBanner new_className={styles.profileBanner} />
         <div className={styles.detailProfile}>
           <div className={styles.detailProfilee}>
-            <img src={haris} alt="" />
+            <img className={styles.resImg} src={haris} alt="" />
             <div className={styles.wrapDetailProfile}>
-              <H4tag text={"Haris Maulana"} />
+              <H4tag new_className={styles.resh4} text={"Haris Maulana"} />
               <div className={styles.detailProf}>
-                <TigaRoda />
-                <Span14 text={"10k Followers"} />
-                <Span14 text={"200 Followings"} />
+                <TigaRoda new_className={styles.restigaroda} />
+                <Span14 new_className={styles.resspan14} text={"10k Followers"} />
+                <Span14 new_className={styles.resspan14} text={"200 Followings"} />
               </div>
             </div>
           </div>
@@ -49,31 +49,18 @@ const Profile = () => {
         </div>
         <hr />
         <div className={styles.navProfile}>
-        <button className={styles.coverbtn} onClick={() => handlePage("post")} ><ButtonPrimary
-            onClick={() => handlePage("post")}
-            new_className={styles.hiddenStyle}
-            text={"Post"}
-          /></button>
+        <button className={styles.coverbtn} onClick={() => handlePage("post")} > Post
+          </button>
           
-          <button className={styles.coverbtn} onClick={() => handlePage("about")} > <ButtonPrimary onPress={()=>handlePage}
-            onClick={() => handlePage("about")}
-            new_className={styles.hiddenStyle}
-            text={"About"}
-          /></button>
+          <button className={styles.coverbtn} onClick={() => handlePage("about")} >About </button>
          
-         <button className={styles.coverbtn} onClick={() => handlePage("photo")} ><ButtonPrimary
-            onClick={() => handlePage("photo")} 
-            new_className={styles.hiddenStyle}
-            text={"Photo "}
-          /></button>
+         <button className={styles.coverbtn} onClick={() => handlePage("photo")} >Photos</button>
           
-          <button className={styles.coverbtn} onClick={() => handlePage("group")}> <ButtonPrimary
-            onClick={() => handlePage("group")}
-            new_className={styles.hiddenStyle}
-            text={"Groups"}
-          /></button>
+          <button className={styles.coverbtn} onClick={() => handlePage("group")}>Groups</button>
          
         </div>
+      </div>
+
       </div>
       {/* POST */}
       {active === "post" && (

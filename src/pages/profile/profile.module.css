@@ -44,25 +44,16 @@
   height: 40px;
 }
 
-.hiddenStyle {
-  background-color: transparent;
-  color: var(--bs-gray-500);
-}
-
-.hiddenStyle:hover {
-  color: var(--bs-primary);
-}
-
 .navProfile {
   display: flex;
   gap: 1rem;
 }
 
-.main_section_profile{
-    display: flex;
-    gap: 1rem;
-    width: 1200px;
-    margin: 1rem auto;
+.main_section_profile {
+  display: flex;
+  gap: 1rem;
+  width: 1200px;
+  margin: 1rem auto;
 }
 
 .profileLeft {
@@ -77,23 +68,76 @@
   flex: 1;
 }
 
-.aboutLeft{
-    flex: 3.1;
+.aboutLeft {
+  flex: 3.1;
 }
 
-.aboutRight{
-    flex: 0.9;
+.aboutRight {
+  flex: 0.9;
 }
 
-.photoLeft{
-    flex: 1;
+.photoLeft {
+  flex: 1;
 }
 
-.photoRight{
-    flex: 0.9;
+.photoRight {
+  flex: 0.9;
 }
 
-.coverbtn{
+.coverbtn {
   background-color: transparent;
   border: none;
+  color: var(--para-1st-color);
+  cursor: pointer;
+}
+
+.coverbtn:hover {
+  color: var(--bs-primary);
+}
+
+@media (max-width: 762px) {
+  .containerMobile {
+    padding: 0.5rem;
+  }
+
+  .headerProfile {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 12px;
+    margin-top: 0.5rem;
+  }
+
+  .resImg {
+    width: 60px;
+  }
+
+  .resh4 {
+    font-size: 18px;
+  }
+
+  .restigaroda img {
+    width: 20px;
+  }
+
+  .resspan14 {
+    font-size: 12px;
+  }
+
+  .detailProfile {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 0;
+  }
+
+  .buttonEditProfile {
+    justify-content: flex-start;
+    margin-top: 1rem;
+  }
+
+  .btnedt {
+    height: 30px;
+    font-size: 12px;
+  }
+  
+  
 }
