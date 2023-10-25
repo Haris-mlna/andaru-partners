@@ -5,17 +5,6 @@
     border-radius: 12px;
 }
 
-@media (width:762px) {
-}
-
-.containerfeed{
-    width: 100%;
-}
-
-.feed{
-   max-width: 395px;
-}
-
 .headfeed{
     display: flex;
     gap: 1rem;
@@ -113,14 +102,5 @@
     margin-left: 5rem;
 }
 
-.respostimg{
-    width: 100%;
-}
-
-.resatag18{
-    font-size: 14px;
-}
-
-.resspan16{
-    font-size: 12px;
+@media (width:762px) {
 }
