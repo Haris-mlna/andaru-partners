@@ -21,4 +21,4 @@ const GroupContainer = () => {
   )
 }
 
-export {GroupContainer}
+export {GroupContainer, GroupGrid}

@@ -12,6 +12,7 @@ import About from "./about";
 import ProfileFeed from "./profileFeed";
 import { SidebarGallery } from "../../components/Molekul/right-sidebar/right-sidebar";
 import { ContactOnly } from "../../components/Molekul/contact/contact";
+import { GroupGrid } from "../../components/Organism/group/group";
 
 const Profile = () => {
   const [active, setActive] = useState("post");
@@ -54,7 +55,7 @@ const Profile = () => {
             text={"Post"}
           /></button>
           
-          <button className={styles.coverbtn} onClick={() => handlePage("about")} > <ButtonPrimary
+          <button className={styles.coverbtn} onClick={() => handlePage("about")} > <ButtonPrimary onPress={()=>handlePage}
             onClick={() => handlePage("about")}
             new_className={styles.hiddenStyle}
             text={"About"}
@@ -111,6 +112,19 @@ const Profile = () => {
         <div className={styles.main_section_profile}>
           <div className={styles.aboutLeft}>
             <SidebarGallery />
+          </div>
+          <div className={styles.aboutRight}>
+            {" "}
+            <ContactOnly />
+          </div>
+        </div>
+      )}
+
+      {/* GROUP */}
+      {active === "group" && (
+        <div className={styles.main_section_profile}>
+          <div className={styles.aboutLeft}>
+            <GroupGrid/>
           </div>
           <div className={styles.aboutRight}>
             {" "}

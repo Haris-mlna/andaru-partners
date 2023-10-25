@@ -1,6 +1,7 @@
 .about{
     background-color: var(--bs-white);
     padding: 1rem 1rem;
+    border-radius: 12px;
 }
 
 .info_Profile_map{
