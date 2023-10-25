@@ -82,7 +82,7 @@ const Profile = () => {
 
       {/* ABOUT */}
       {active === "about" ? (
-        <div className={styles.main_section_profile}>
+        <div className={styles.main_section_profile_about}>
           <div className={styles.aboutLeft}>
             <About />
           </div>
@@ -96,7 +96,7 @@ const Profile = () => {
 
       {/* PHOTO */}
       {active === "photo" && (
-        <div className={styles.main_section_profile}>
+        <div className={styles.main_section_profile_photo}>
           <div className={styles.aboutLeft}>
             <SidebarGallery />
           </div>
@@ -109,7 +109,7 @@ const Profile = () => {
 
       {/* GROUP */}
       {active === "group" && (
-        <div className={styles.main_section_profile}>
+        <div className={styles.main_section_profile_group}>
           <div className={styles.aboutLeft}>
             <GroupGrid/>
           </div>

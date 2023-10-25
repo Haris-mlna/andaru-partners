@@ -5,6 +5,10 @@
     border-radius: 12px;
 }
 
+.containerfeed{
+    width: 100%;
+}
+
 .headfeed{
     display: flex;
     gap: 1rem;
@@ -78,7 +82,7 @@
     width: 400px;
     padding: 1rem;
     background-color: var(--border-1st-color);
-    border-radius: 12pxs;
+    border-radius: 12px;
     white-space: pre-wrap;
     word-wrap: break-word;
     overflow-wrap: break-word;
@@ -102,5 +106,41 @@
     margin-left: 5rem;
 }
 
-@media (width:762px) {
+@media (max-width:762px) {
+    .feed{
+       width: 100%;
+    }
+
+    .containerfeed{
+        width: 100%;
+    }
+
+    .respostimg{
+        width: 100%;
+    }
+
+    .resultComment{
+        margin-left: 0rem;
+        padding-left: 1em;
+    }
+    
+    .resultReplyComment{
+        margin-left: 0rem;
+    }
+
+    .resatag18{
+        font-size: 14px;
+    }
+
+    .resspan16{
+        font-size: 12px;
+    }
+
+    .ptag18{
+        font-size: 14px;
+    }
+
+    .firstComment{
+        width: 200px;
+    }
 }
