@@ -55,6 +55,10 @@ Left SCT
   .searchbar_container {
     display: none;
   }
+
+  .nav {
+    padding: 10px;
+  }
 }
 
 /*========================
@@ -95,6 +99,14 @@ Middle SCT
 @media (max-width: 762px) {
   .md {
     justify-content: flex-end;
+  }
+
+  .md li {
+    margin: 0 5px;
+  }
+
+  .md ul {
+    margin: 0;
   }
 }
 

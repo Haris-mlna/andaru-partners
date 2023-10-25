@@ -25,37 +25,57 @@ const SearchBar = () => {
 };
 
 const DropdownAvatar = ({ isActive }) => {
-
   const navigate = useNavigate();
 
   const NavigateTo = () => {
-    return (
-      navigate('/profile')
-    )
-  }
+    return navigate("/profile");
+  };
 
   return (
     <>
       <div
-        className={`${styles.dropdown_avatar} ${isActive ? styles.active : styles.passive}`}
+        className={`${styles.dropdown_avatar} ${
+          isActive ? styles.active : styles.passive
+        }`}
       >
         <div className={styles.dropdown_avatar_info_container}>
           <div className={styles.dropdown_avatar_image_container}>
             <AvatarNavbar new_className={styles.dropdown_image} />
           </div>
           <div className={styles.dropdown_avatar_info}>
-            <H6tag text={"Lori Ferguson"} new_className={styles.h6tag_dropdown} />
-            <Ptag16 text={"Web Developer"} new_className={styles.p16tag_dropdown} />
+            <H6tag
+              text={"Lori Ferguson"}
+              new_className={styles.h6tag_dropdown}
+            />
+            <Ptag16
+              text={"Web Developer"}
+              new_className={styles.p16tag_dropdown}
+            />
           </div>
         </div>
-        <ButtonView new_className={styles.button_view} text={"View Profile"} onPress={NavigateTo}/>
+        <ButtonView
+          new_className={styles.button_view}
+          text={"View Profile"}
+          onPress={NavigateTo}
+        />
         <div className={styles.dropdown_link}>
-          <IconsFA size={"small"} title={"settings"} new_className={styles.link_icons} />
-          <Atag181 text={"Settings & Privacy"} new_className={styles.link_text} />
+          <IconsFA
+            size={"small"}
+            title={"settings"}
+            new_className={styles.link_icons}
+          />
+          <Atag181
+            text={"Settings & Privacy"}
+            new_className={styles.link_text}
+          />
         </div>
         <hr className={styles.hr_dr_link} />
         <div className={styles.dropdown_link}>
-          <IconsFA size={"small"} title={"power_settings_new"} new_className={styles.link_icons} />
+          <IconsFA
+            size={"small"}
+            title={"power_settings_new"}
+            new_className={styles.link_icons}
+          />
           <Atag181 text={"Sign Out"} new_className={styles.link_text} />
         </div>
       </div>
@@ -72,19 +92,48 @@ const DropdownNotification = () => {
 };
 
 const NavbarMobile = () => {
+
+  const [isActive, setIsActive] = useState(false);
+
   return (
-    <>
-    
-    </>
-  )
-}
+    <div className={styles.navbar_mobile}>
+      <div>
+        <button className={styles.notifications}>
+          <IconsFA
+            title={"mail"}
+            new_className={styles.icons_notifications}
+            size={"small"}
+          />
+        </button>
+      </div>
+      <div>
+        <button className={styles.notifications}>
+          <IconsFA
+            title={"notifications"}
+            new_className={styles.icons_notifications}
+            size={"small"}
+          />
+        </button>
+      </div>
+      <div className={styles.container_user}>
+        <button
+          className={styles.avatar_button}
+          onClick={() => {
+            setIsActive(!isActive);
+          }}
+        >
+          <AvatarNavbar new_className={styles.avatar} />
+        </button>
+        <DropdownAvatar isActive={isActive} />
+      </div>
+    </div>
+  );
+};
 
 export { DropdownAvatar, DropdownMail, DropdownNotification };
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
-
-  
 
   return (
     <div className={styles.container}>
@@ -165,7 +214,7 @@ const Navbar = () => {
             >
               <AvatarNavbar new_className={styles.avatar} />
             </button>
-           <DropdownAvatar isActive={isActive} />
+            <DropdownAvatar isActive={isActive} />
           </div>
         </div>
       </nav>
