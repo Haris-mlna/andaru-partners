@@ -17,3 +17,9 @@
 .icons {
   margin: 0 5px;
 }
+
+@media (max-width:762px) {
+  .container {
+    display: flex;
+  }
+}

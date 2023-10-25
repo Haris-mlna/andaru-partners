@@ -9,7 +9,7 @@ const ResponsiveButton = () => {
 
   return (
     <div className={styles.container}>
-      <button>
+      <button onClick={handleOpen}>
         <IconsFA new_className={styles.icons} title={'tune'} size={'small'}/>
         My Profile
       </button>
