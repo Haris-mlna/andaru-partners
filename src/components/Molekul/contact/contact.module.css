@@ -1,11 +1,12 @@
 .sidebar_contact {
   flex: 1;
-
+  min-width: 250px;
   transition: 300ms ease-in-out;
 }
 
 @media (max-width: 762px) {
   .sidebar_contact {
+    max-width: none;
     position: fixed;
     width: 100%;
     background-color: white;
