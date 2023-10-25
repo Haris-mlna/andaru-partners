@@ -91,134 +91,97 @@ const DropdownNotification = () => {
   return <></>;
 };
 
-const NavbarMobile = () => {
-
-  const [isActive, setIsActive] = useState(false);
-
-  return (
-    <div className={styles.navbar_mobile}>
-      <div>
-        <button className={styles.notifications}>
-          <IconsFA
-            title={"mail"}
-            new_className={styles.icons_notifications}
-            size={"small"}
-          />
-        </button>
-      </div>
-      <div>
-        <button className={styles.notifications}>
-          <IconsFA
-            title={"notifications"}
-            new_className={styles.icons_notifications}
-            size={"small"}
-          />
-        </button>
-      </div>
-      <div className={styles.container_user}>
-        <button
-          className={styles.avatar_button}
-          onClick={() => {
-            setIsActive(!isActive);
-          }}
-        >
-          <AvatarNavbar new_className={styles.avatar} />
-        </button>
-        <DropdownAvatar isActive={isActive} />
-      </div>
-    </div>
-  );
-};
-
-export { DropdownAvatar, DropdownMail, DropdownNotification };
+export { DropdownAvatar, DropdownMail, DropdownNotification};
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
 
   return (
-    <div className={styles.container}>
-      <nav className={styles.nav}>
-        <div className={styles.lt}>
-          <img src={logo} alt="logo" />
-          <SearchBar />
-        </div>
-        <div className={styles.md}>
-          <ul>
-            <li>
-              <a href="/">
-                <IconsFA
-                  className={styles.icon_navigate}
-                  title={"home"}
-                  size={"large"}
-                  new_className={styles.icons_navigate}
-                />
-              </a>
-            </li>
-            <li>
-              <a href="/">
-                <IconsFA
-                  className={styles.icon_navigate}
-                  title={"feed"}
-                  size={"large"}
-                  new_className={styles.icons_navigate}
-                />
-              </a>
-            </li>
-            <li>
-              <a href="/">
-                <IconsFA
-                  className={styles.icon_navigate}
-                  title={"group"}
-                  size={"large"}
-                  new_className={styles.icons_navigate}
-                />
-              </a>
-            </li>
-            <li>
-              <a href="/">
-                <IconsFA
-                  className={styles.icon_navigate}
-                  title={"smart_display"}
-                  size={"large"}
-                  new_className={styles.icons_navigate}
-                />
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div className={styles.rt}>
-          <div>
-            <button className={styles.notifications}>
-              <IconsFA
-                title={"mail"}
-                new_className={styles.icons_notifications}
-                size={"small"}
-              />
-            </button>
+    <>
+      <div className={styles.container}>
+        <nav className={styles.nav}>
+          <div className={styles.lt}>
+            <img src={logo} alt="logo" />
+            <SearchBar />
           </div>
-          <div>
-            <button className={styles.notifications}>
-              <IconsFA
-                title={"notifications"}
-                new_className={styles.icons_notifications}
-                size={"small"}
-              />
-            </button>
+          <div className={styles.md}>
+            <ul>
+              <li>
+                <a href="/">
+                  <IconsFA
+                    className={styles.icon_navigate}
+                    title={"home"}
+                    size={"large"}
+                    new_className={styles.icons_navigate}
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="/">
+                  <IconsFA
+                    className={styles.icon_navigate}
+                    title={"feed"}
+                    size={"large"}
+                    new_className={styles.icons_navigate}
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="/">
+                  <IconsFA
+                    className={styles.icon_navigate}
+                    title={"group"}
+                    size={"large"}
+                    new_className={styles.icons_navigate}
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="/">
+                  <IconsFA
+                    className={styles.icon_navigate}
+                    title={"smart_display"}
+                    size={"large"}
+                    new_className={styles.icons_navigate}
+                  />
+                </a>
+              </li>
+            </ul>
           </div>
-          <div className={styles.container_user}>
-            <button
-              className={styles.avatar_button}
-              onClick={() => {
-                setIsActive(!isActive);
-              }}
-            >
-              <AvatarNavbar new_className={styles.avatar} />
-            </button>
-            <DropdownAvatar isActive={isActive} />
+          <div className={styles.rt}>
+            <div>
+              <button className={styles.notifications}>
+                <IconsFA
+                  title={"mail"}
+                  new_className={styles.icons_notifications}
+                  size={"small"}
+                />
+              </button>
+            </div>
+            <div>
+              <button className={styles.notifications}>
+                <IconsFA
+                  title={"notifications"}
+                  new_className={styles.icons_notifications}
+                  size={"small"}
+                />
+              </button>
+            </div>
+            <div className={styles.container_user}>
+              <button
+                className={styles.avatar_button}
+                onClick={() => {
+                  setIsActive(!isActive);
+                }}
+              >
+                <AvatarNavbar new_className={styles.avatar} />
+              </button>
+              <DropdownAvatar isActive={isActive} />
+            </div>
           </div>
-        </div>
-      </nav>
-    </div>
+        </nav>
+      </div>
+    </>
   );
 };
 

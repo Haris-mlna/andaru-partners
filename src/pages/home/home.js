@@ -8,6 +8,7 @@ import { SidebarContact } from "../../components/Molekul/contact/contact";
 import Navbar from "../../components/Organism/navbar/navbar.jsx";
 import Sidebar from "../../components/Organism/sidebar/sidebar";
 import Feed from "../../components/Organism/feed/feed";
+import NavbarMobile from "../../components/Organism/navbar-mobile/navbar-mobile";
 
 
 const Home = () => {
@@ -20,9 +21,10 @@ const Home = () => {
   return (
     <div className={styles.pages}>
       <Navbar />
+      <NavbarMobile/>
       <div className={styles.content}>
         <Sidebar />
-        <Feed />
+        <Feed/>
         <SidebarContact/>
       </div>
       <div className={styles.dev_only}>

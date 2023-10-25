@@ -279,3 +279,10 @@ Right SCT Ends
 }
 
 /* Dropdown Ends */
+
+/* Mobile Navbar */
+@media (max-width:762px) {
+  .navbar_mobile {
+    display: flex;
+  }
+}

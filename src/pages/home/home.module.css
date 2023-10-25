@@ -23,3 +23,9 @@
   font-family: var(--font-outfit);
   margin: 20px 0;
 }
+
+@media (max-width:762px) {
+  .content {
+    overflow-x: hidden ;
+  }
+}

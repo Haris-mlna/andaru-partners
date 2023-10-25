@@ -5,6 +5,11 @@
     border-radius: 12px;
 }
 
+@media (max-width:762px) {
+    .feed {
+    }
+}
+
 .headfeed{
     display: flex;
     gap: 1rem;
