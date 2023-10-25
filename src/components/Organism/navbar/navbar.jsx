@@ -71,6 +71,14 @@ const DropdownNotification = () => {
   return <></>;
 };
 
+const NavbarMobile = () => {
+  return (
+    <>
+    
+    </>
+  )
+}
+
 export { DropdownAvatar, DropdownMail, DropdownNotification };
 
 const Navbar = () => {
