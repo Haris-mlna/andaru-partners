@@ -91,3 +91,8 @@
 .photoRight{
     flex: 0.9;
 }
+
+.coverbtn{
+  background-color: transparent;
+  border: none;
+}

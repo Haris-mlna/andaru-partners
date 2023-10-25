@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import {
   ProfileBanner,
   TigaRoda,
@@ -13,6 +14,14 @@ import { SidebarGallery } from "../../components/Molekul/right-sidebar/right-sid
 import { ContactOnly } from "../../components/Molekul/contact/contact";
 
 const Profile = () => {
+  const [active, setActive] = useState("post");
+
+  const handlePage = (page) => {
+    setActive(page);
+  };
+
+  console.log(handlePage);
+
   return (
     <div className={styles.profile}>
       <div className={styles.navbar}>
@@ -34,67 +43,83 @@ const Profile = () => {
             </div>
           </div>
           <div className={styles.buttonEditProfile}>
-            <ButtonPrimary
-              new_className={styles.btnedt}
-              text={"Edit Profile"}
-            />
+            <ButtonPrimary new_className={styles.btnedt} text={"Edit Profile"} />
           </div>
         </div>
         <hr />
         <div className={styles.navProfile}>
-          <ButtonPrimary new_className={styles.hiddenStyle} text={"Post"} />
-          <ButtonPrimary new_className={styles.hiddenStyle} text={"About"} />
-          <ButtonPrimary new_className={styles.hiddenStyle} text={"Photo "} />
-          <ButtonPrimary new_className={styles.hiddenStyle} text={"Groups"} />
+        <button className={styles.coverbtn} onClick={() => handlePage("post")} ><ButtonPrimary
+            onClick={() => handlePage("post")}
+            new_className={styles.hiddenStyle}
+            text={"Post"}
+          /></button>
+          
+          <button className={styles.coverbtn} onClick={() => handlePage("about")} > <ButtonPrimary
+            onClick={() => handlePage("about")}
+            new_className={styles.hiddenStyle}
+            text={"About"}
+          /></button>
+         
+         <button className={styles.coverbtn} onClick={() => handlePage("photo")} ><ButtonPrimary
+            onClick={() => handlePage("photo")} 
+            new_className={styles.hiddenStyle}
+            text={"Photo "}
+          /></button>
+          
+          <button className={styles.coverbtn} onClick={() => handlePage("group")}> <ButtonPrimary
+            onClick={() => handlePage("group")}
+            new_className={styles.hiddenStyle}
+            text={"Groups"}
+          /></button>
+         
         </div>
       </div>
       {/* POST */}
-      <div className={styles.main_section_profile}>
-        <div className={styles.profileLeft}>
-          <About />
+      {active === "post" && (
+        <div className={styles.main_section_profile}>
+          <div className={styles.profileLeft}>
+            <About />
+          </div>
+          <div className={styles.profileMid}>
+            <ProfileFeed />
+          </div>
+          <div className={styles.profileRight}>
+            {" "}
+            <SidebarGallery />
+            <br />
+            <ContactOnly />
+          </div>
         </div>
-        <div className={styles.profileMid}>
-          <ProfileFeed />
-        </div>
-        <div className={styles.profileRight}>
-          {" "}
-          <SidebarGallery />
-          <br />
-          <ContactOnly />
-        </div>
-      </div>
+      )}
+
       {/* ABOUT */}
-      <div className={styles.main_section_profile}>
-        <div className={styles.aboutLeft}>
-          <About />
+      {active === "about" ? (
+        <div className={styles.main_section_profile}>
+          <div className={styles.aboutLeft}>
+            <About />
+          </div>
+          <div className={styles.aboutRight}>
+            {" "}
+            <ContactOnly />
+          </div>
         </div>
-        <div className={styles.aboutRight}>
-          {" "}
-          <ContactOnly />
+      ) : null
+      }
+
+      {/* PHOTO */}
+      {active === "photo" && (
+        <div className={styles.main_section_profile}>
+          <div className={styles.aboutLeft}>
+            <SidebarGallery />
+          </div>
+          <div className={styles.aboutRight}>
+            {" "}
+            <ContactOnly />
+          </div>
         </div>
-      </div>
-    {/* photo */}
-      <div className={styles.main_section_profile}>
-        <div className={styles.aboutLeft}>
-          <SidebarGallery />
-        </div>
-        <div className={styles.aboutRight}>
-          {" "}
-          <ContactOnly />
-        </div>
-      </div>
+      )}
     </div>
   );
 };
 
-const Post = () => {
-  return (
-    <div>
-      <About />
-      <ProfileFeed />
-      <SidebarGallery />
-      <ContactOnly />
-    </div>
-  );
-};
 export default Profile;
