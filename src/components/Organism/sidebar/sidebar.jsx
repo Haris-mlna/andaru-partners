@@ -7,7 +7,7 @@ import styles from "./sidebar.module.css";
 const Sidebar = () => {
   return (
     <>
-      <div className={styles.sidebar}>
+      <div className={styles.sidebar} id="sidebar-res">
         <div className={styles.top}>
           <div className={styles.avatar_container}>
             <AvatarSidebar new_className={styles.avatar}/>

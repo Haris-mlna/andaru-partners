@@ -9,6 +9,7 @@ import Navbar from "../../components/Organism/navbar/navbar.jsx";
 import Sidebar from "../../components/Organism/sidebar/sidebar";
 import Feed from "../../components/Organism/feed/feed";
 import NavbarMobile from "../../components/Organism/navbar-mobile/navbar-mobile";
+import ResponsiveButton from "../../components/Organism/responsive-button/responsive-button";
 
 
 const Home = () => {
@@ -22,6 +23,7 @@ const Home = () => {
     <div className={styles.pages}>
       <Navbar />
       <NavbarMobile/>
+      <ResponsiveButton/>
       <div className={styles.content}>
         <Sidebar />
         <Feed/>

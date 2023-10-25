@@ -1,0 +1,19 @@
+.container {
+  width: 100%;
+  display: flex;
+  padding: 10px 0;
+  justify-content: space-between;
+}
+
+.container button {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  font-family: var(--font-outfit);
+  cursor: pointer;
+}
+
+.icons {
+  margin: 0 5px;
+}
