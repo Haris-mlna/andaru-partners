@@ -52,3 +52,110 @@
     display: flex;
   }
 }
+
+/* Dropdown */
+
+/* New CSS for fade-in and fade-out */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  99% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+/* Apply the animations to the .dropdown_avatar element */
+.dropdown_avatar {
+  width: 220px;
+  background-color: var(--bs-white);
+  padding: 15px 20px;
+  border-radius: 12px;
+  border: 1px solid var(--bs-gray-200);
+  position: absolute;
+  top: -290px;
+  z-index: 100;
+  opacity: 0; /* Start with opacity 0 */
+  animation: fadeIn 0.3s ease-in-out forwards; /* Fade-in animation */
+}
+
+/* Apply fadeOut animation when .dropdown_avatar is inactive */
+.dropdown_avatar.passive {
+  animation: fadeOut 0.3s ease-in-out forwards; /* Fade-out animation */
+}
+
+.dropdown_avatar_info_container {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.dropdown_image {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.h6tag_dropdown {
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.p16tag_dropdown {
+  margin: 0;
+}
+
+.button_view {
+  width: 100%;
+  color: var(--bs-primary);
+  font-weight: 600;
+  font-family: var(--font-inter);
+  margin: 10px 0px !important;
+}
+
+.dropdown_link {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+.dropdown_link:hover > .link_text,
+.dropdown_link:hover > .link_icons {
+  color: var(--bs-primary);
+}
+
+.link_icons,
+.link_text {
+  transition: 150ms ease-in-out;
+}
+
+.link_text {
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 5px;
+}
+
+.hr_dr_link {
+  margin: 10px 0;
+  border: 0;
+  height: 1px;
+  background-color: var(--bs-gray-400);
+}
