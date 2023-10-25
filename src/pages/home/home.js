@@ -1,5 +1,5 @@
 import styles from "./home.module.css";
-
+import { useState } from "react";
 
 // Components
 import { useNavigate } from "react-router-dom";
@@ -13,6 +13,10 @@ import {ResponsiveButton} from "../../components/Organism/responsive-button/resp
 
 
 const Home = () => {
+
+  const [changeMain, setChangeMain] = useState(0);
+
+
   const navigate = useNavigate();
   
   const openDev = () => {
@@ -25,7 +29,7 @@ const Home = () => {
       <NavbarMobile/>
       <ResponsiveButton/>
       <div className={styles.content}>
-        <Sidebar />
+        <Sidebar changeMain={changeMain} setChangeMain={setChangeMain} />
         <Feed/>
         <SidebarContact/>
       </div>
