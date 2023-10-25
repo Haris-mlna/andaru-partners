@@ -41,22 +41,7 @@ const Feed = () => {
         </div>
         <hr />
         <br />
-        <div className={styles.commentpost}>
-          <AvatarSidebar />
-          <input
-            className={styles.comment}
-            type="text"
-            name="commentpost"
-            id="searchbar"
-            placeholder="Masukan Komentar"
-          />
-          <ButtonPrimary
-            new_className={styles.btnSendComment}
-            text={
-              <IconsFA new_className={styles.sendComment} title={"near_me"} />
-            }
-          />
-        </div>
+        
         <div className={styles.resultComment}>
           <div className={styles.wrapResultComment}>
             <div className={styles.profilrAv}>
@@ -82,6 +67,8 @@ const Feed = () => {
           </div>
         </div>
 
+        
+
         <div className={styles.resultReplyComment}>
           <div className={styles.wrapReplyComment}>
             <div className={styles.profilrAv}>
@@ -100,6 +87,24 @@ const Feed = () => {
             <Span12 text={"Suka"} />
             <Span12 text={"Bagikan"} />
           </div>
+        </div>
+        <br />
+        <hr />
+        <div className={styles.commentpost}>
+          <AvatarSidebar />
+          <input
+            className={styles.comment}
+            type="text"
+            name="commentpost"
+            id="searchbar"
+            placeholder="Masukan Komentar"
+          />
+          <ButtonPrimary
+            new_className={styles.btnSendComment}
+            text={
+              <IconsFA new_className={styles.sendComment} title={"near_me"} />
+            }
+          />
         </div>
       </div>
     </div>

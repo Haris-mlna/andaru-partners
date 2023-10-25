@@ -2,6 +2,7 @@
   flex: 1;
   min-width: 250px;
   transition: 300ms ease-in-out;
+  overflow-y: scroll;
 }
 
 @media (max-width: 762px) {

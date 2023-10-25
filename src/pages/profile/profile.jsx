@@ -13,6 +13,8 @@ import ProfileFeed from "./profileFeed";
 import { SidebarGallery } from "../../components/Molekul/right-sidebar/right-sidebar";
 import { ContactOnly } from "../../components/Molekul/contact/contact";
 import { GroupGrid } from "../../components/Organism/group/group";
+import { ResponsiveButtonProfile } from "../../components/Organism/responsive-button/responsive-button";
+
 
 const Profile = () => {
   const [active, setActive] = useState("post");
@@ -28,6 +30,7 @@ const Profile = () => {
       </div>
 
       <div className={styles.containerMobile}>
+      <ResponsiveButtonProfile/>
 
       <div className={styles.headerProfile}>
         <ProfileBanner new_className={styles.profileBanner} />
@@ -65,13 +68,13 @@ const Profile = () => {
       {/* POST */}
       {active === "post" && (
         <div className={styles.main_section_profile}>
-          <div className={styles.profileLeft}>
+          <div className={styles.profileLeft}id="aboutres" >
             <About />
           </div>
           <div className={styles.profileMid}>
             <ProfileFeed />
           </div>
-          <div className={styles.profileRight}>
+          <div className={styles.profileRight} id="contactres">
             {" "}
             <SidebarGallery />
             <br />

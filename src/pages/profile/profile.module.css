@@ -79,6 +79,8 @@
 
 .profileLeft {
   flex: 1;
+  transition: 300ms ease-in-out;
+  top: 130px;
 }
 
 .profileMid {
@@ -87,10 +89,13 @@
 
 .profileRight {
   flex: 1;
+  transition: 300ms ease-in-out;
+  top: 130px;
 }
 
 .aboutLeft {
   flex: 3.1;
+  
 }
 
 .aboutRight {
@@ -119,9 +124,6 @@
 @media (max-width: 762px) {
   .containerMobile {
     padding: 0.5rem;
-  }
-
-  .profile{
   }
 
   .headerProfile {
@@ -165,7 +167,12 @@
 
   .profileLeft {
     flex: 1;
-    display: none;
+    max-width: none;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    left: -100%;
+    height: 100vh;
   }
   
   .profileMid {
@@ -174,7 +181,12 @@
   
   .profileRight {
     flex: 1;
-    display: none;
+    max-width: none;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    right: -100%;
+    overflow-y: scroll;
   }
 
   .main_section_profile_about{
