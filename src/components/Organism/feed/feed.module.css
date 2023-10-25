@@ -5,9 +5,15 @@
     border-radius: 12px;
 }
 
-@media (max-width:762px) {
-    .feed {
-    }
+@media (width:762px) {
+}
+
+.containerfeed{
+    width: 100%;
+}
+
+.feed{
+   max-width: 395px;
 }
 
 .headfeed{
@@ -48,7 +54,7 @@
 }
 
 .resultComment{
-    margin-left: 7rem;
+    margin-left: 3rem;
     margin-top: 1rem;
     display: flex;
     gap: 1rem;
@@ -56,7 +62,7 @@
 }
 
 .resultReplyComment{
-    margin-left: 11rem;
+    margin-left: 8rem;
     margin-top: 1rem;
     display: flex;
     gap: 1rem;
@@ -105,4 +111,16 @@
     display: flex;
     gap: 1rem;
     margin-left: 5rem;
+}
+
+.respostimg{
+    width: 100%;
+}
+
+.resatag18{
+    font-size: 14px;
+}
+
+.resspan16{
+    font-size: 12px;
 }

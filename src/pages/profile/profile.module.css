@@ -100,6 +100,10 @@
     padding: 0.5rem;
   }
 
+  /* .profile{
+    overflow-x: hidden;
+  } */
+
   .headerProfile {
     width: 100%;
     padding: 1rem;
@@ -137,6 +141,20 @@
   .btnedt {
     height: 30px;
     font-size: 12px;
+  }
+
+  .profileLeft {
+    flex: 1;
+    display: none;
+  }
+  
+  .profileMid {
+    flex: 2;
+  }
+  
+  .profileRight {
+    flex: 1;
+    display: none;
   }
   
   

@@ -10,12 +10,13 @@ const Feed = () => {
 
   
   return (
+    <div className={styles.containerfeed}>
     <div className={styles.feed}>
       <div className={styles.headfeed}>
         <AvatarSidebar />
         <div className={styles.texthead}>
-          <Atag181 text={"Haris Maulana"} />
-          <Span16 text={"Active"} />
+          <Atag181 new_className={styles.resatag18} text={"Haris Maulana"} />
+          <Span16 new_className={styles.resspan16} text={"Baru Saja"} />
         </div>
       </div>
       <div className={styles.captionpost}>
@@ -26,7 +27,7 @@ const Feed = () => {
         />
       </div>
       <div className={styles.imgpost}>
-        <PostImage />
+        <PostImage new_className={styles.respostimg} />
       </div>
       <hr />
       <div className={styles.actionpost}>
@@ -79,6 +80,7 @@ const Feed = () => {
           <Span12 text={'Bagikan'}/>
         </div>
       </div>
+    </div>
     </div>
   );
 };

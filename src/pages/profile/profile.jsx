@@ -61,7 +61,7 @@ const Profile = () => {
         </div>
       </div>
 
-      </div>
+      
       {/* POST */}
       {active === "post" && (
         <div className={styles.main_section_profile}>
@@ -119,6 +119,7 @@ const Profile = () => {
           </div>
         </div>
       )}
+      </div>
     </div>
   );
 };
