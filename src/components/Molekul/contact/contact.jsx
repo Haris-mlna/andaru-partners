@@ -51,7 +51,7 @@ const ContactOnly = () => {
 
 const SidebarContact = () => {
   return(
-    <div className={styles.sidebar_contact}>
+    <div className={styles.sidebar_contact} id='contact-res'>
       <RequestContact/>
       <ContactOnly/>
     </div>
