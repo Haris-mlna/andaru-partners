@@ -25,6 +25,10 @@ Card Group
   position: relative;
 }
 
+.cover_img {
+  width: 100%;
+}
+
 .layer {
   position: absolute;
   width: 100%;

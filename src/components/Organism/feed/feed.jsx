@@ -4,9 +4,16 @@ import {
   PostImage,
 } from "../../Atom/image-placeholder/image-placeholder";
 import { Atag181, Ptag18, Span12, Span16 } from "../../Atom/text/text";
-import { Actionpost, ButtonPrimary } from "../../Atom/button/button";
-import { IconsFA } from "../../Atom/icons/icons";
+import { Actionpost } from "../../Atom/button/button";
+import Checkbox from "@mui/material/Checkbox";
+import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
+import Favorite from "@mui/icons-material/Favorite";
+import SendIcon from "@mui/icons-material/Send";
+import Button from "@mui/material/Button";
+
 const Feed = () => {
+  const label = { inputProps: { "aria-label": "Checkbox demo" } };
+
   return (
     <div className={styles.containerfeed}>
       <div className={styles.feed}>
@@ -30,7 +37,14 @@ const Feed = () => {
         </div>
         <hr />
         <div className={styles.actionpost}>
-          <Actionpost fs={16} size={"small"} title={"favorite"} text={"Like"} />
+          <div>
+            <Checkbox
+              {...label}
+              icon={<FavoriteBorder />}
+              checkedIcon={<Favorite className={styles.heartChecked} />}
+            />
+            <Span12 text={"Like"} new_className={styles.like_text} />
+          </div>
           <Actionpost
             fs={16}
             size={"small"}
@@ -41,7 +55,7 @@ const Feed = () => {
         </div>
         <hr />
         <br />
-        
+
         <div className={styles.resultComment}>
           <div className={styles.wrapResultComment}>
             <div className={styles.profilrAv}>
@@ -66,8 +80,6 @@ const Feed = () => {
             <Span12 text={"Bagikan"} />
           </div>
         </div>
-
-        
 
         <div className={styles.resultReplyComment}>
           <div className={styles.wrapReplyComment}>
@@ -99,12 +111,7 @@ const Feed = () => {
             id="searchbar"
             placeholder="Masukan Komentar"
           />
-          <ButtonPrimary
-            new_className={styles.btnSendComment}
-            text={
-              <IconsFA new_className={styles.sendComment} title={"near_me"} />
-            }
-          />
+          <Button className={styles.send_button} variant="contained" endIcon={<SendIcon />}></Button>
         </div>
       </div>
     </div>

@@ -30,6 +30,20 @@
     justify-content: space-between;
 }
 
+.heartChecked {
+    color: rgb(247, 71, 100) !important;
+}
+
+.send_button {
+    border-radius: 12px !important;
+    background-color: var(--bs-primary) !important;
+}
+
+.like_text {
+    font-size: 16px;
+    font-weight: 400;
+}
+
 .commentpost{
     display: flex;
     gap: 1rem;

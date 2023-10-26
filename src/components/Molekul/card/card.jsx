@@ -21,7 +21,7 @@ const CardGroup = ({name, member}) => {
       <div className={styles.card_group}>
         <div className={styles.cover_container}>
           <div className={styles.cover}>
-            <GroupCover />
+            <GroupCover new_className={styles.cover_img} />
             <div className={styles.layer}>
 
             </div>
