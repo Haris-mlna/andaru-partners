@@ -50,8 +50,10 @@ const Dashboard = () => {
             </div>
           </div>
           <div className={styles.confirmation}>
-            <p>Konfirmasi pemesanan</p>
-
+            <p>Menunggu konfirmasi pemesanan :</p>
+          </div>
+          <div>
+            
           </div>
         </div>
         <div className={styles.right}></div>
