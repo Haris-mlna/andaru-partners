@@ -10,6 +10,7 @@ import Sidebar from "../../components/Organism/sidebar/sidebar";
 import Feed from "../../components/Organism/feed/feed";
 import NavbarMobile from "../../components/Organism/navbar-mobile/navbar-mobile";
 import {ResponsiveButton} from "../../components/Organism/responsive-button/responsive-button";
+import Invoice from "../invoice/invoice";
 
 
 const Home = () => {
@@ -32,6 +33,10 @@ const Home = () => {
         <Sidebar changeMain={changeMain} setChangeMain={setChangeMain} />
         <Feed/>
         <SidebarContact/>
+      </div>
+      <div className={styles.content}>
+        <Sidebar changeMain={changeMain} setChangeMain={setChangeMain} />
+        <Invoice/>
       </div>
       <div className={styles.dev_only}>
         <p>Developer only</p>

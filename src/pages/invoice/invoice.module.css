@@ -1,0 +1,16 @@
+.invoice{
+    background-color: var(--bs-white);
+    border-radius: 12px;
+    padding: 1rem;
+    flex: 3;
+}
+
+.btnInvoice{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btnInvoiceRight{
+    display: flex;
+    gap: 1em;
+}
