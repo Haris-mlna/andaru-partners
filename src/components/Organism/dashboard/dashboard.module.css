@@ -15,7 +15,7 @@
   justify-content: flex-end;
 }
 
-@media (max-width:762px) {
+@media (max-width: 762px) {
   .btn_container {
     flex-direction: column;
   }
@@ -89,30 +89,32 @@
   border-radius: 12px;
   margin-right: 20px;
 
-  transition: 150ms ease-in-out;
+  transition: 300ms ease-in-out;
   cursor: pointer;
 }
 
 .myorder:hover,
-.delivery:hover {
+.delivery:hover,
+.confirmation:hover {
   background-color: var(--bs-primary);
   color: white;
   transform: translateY(-5%);
-  box-shadow: 0 0 4px 1px rgba(0, 0, 0, .25);
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.25);
 }
 
-.myorder:hover p ,
-.delivery:hover p{
+.myorder:hover p,
+.delivery:hover p,
+.confirmation:hover p {
   color: white;
 }
 
 .myorder p {
   padding: 10px;
   font-size: 12px;
-  color: gray;
+  color: var(--bs-gray-600);
   margin: 0;
 
-  transition: 150ms ease-in-out;
+  transition: 300ms ease-in-out;
 }
 
 .myorder h3 {
@@ -132,15 +134,15 @@
   margin-right: 20px;
   background-color: var(--bs-white);
   cursor: pointer;
-  transition: 150ms ease-in-out;
+  transition: 300ms ease-in-out;
 }
 
 .delivery p {
   padding: 10px;
   font-size: 12px;
-  color: gray;
+  color: var(--bs-gray-600);
   margin: 0;
-  transition: 150ms ease-in-out;
+  transition: 300ms ease-in-out;
 }
 
 .delivery h3 {
@@ -151,6 +153,25 @@
   font-weight: 200;
   margin: 0;
   padding: 0 20px;
+}
+
+.confirmation {
+  display: flex;
+  width: 420px;
+  height: 200px;
+  background-color: white;
+  margin: 10px 0;
+  border-radius: 12px;
+  cursor: pointer;
+
+  transition: 300ms ease-in-out;
+}
+
+.confirmation p {
+  margin: 0;
+  padding: 10px;
+  font-size: 12px;
+  color: var(--bs-gray-600);
 }
 
 .right {
