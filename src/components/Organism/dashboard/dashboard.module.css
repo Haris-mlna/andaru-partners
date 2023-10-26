@@ -1,6 +1,21 @@
-.dashboard {
-  flex: 3;
-  background-color: var(--bs-white);
-  border-radius: 12px;
+.dashboard_container h2 {
+  font-size: 32px;
+  font-weight: 400;
+  font-family: var(--font-outfit);
 }
 
+.dashboard {
+  flex: 3;
+  display: flex;
+  overflow-x: hidden;
+}
+
+.left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.right {
+  flex: 1;
+}

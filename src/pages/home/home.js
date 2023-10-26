@@ -32,10 +32,10 @@ const Home = () => {
       <ResponsiveButton/>
       <div className={styles.content}>
         <Sidebar changeMain={changeMain} setChangeMain={setChangeMain} />
-        {/* <Dashboard/> */}
+        <Dashboard/>
         {/* <MainComponents changeMain={changeMain}/> */}
-        <Feed/>
-        <SidebarContact/>
+        {/* <Feed/> */}
+        {/* <SidebarContact/> */}
 
       </div>
       <div className={styles.dev_only}>
