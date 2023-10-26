@@ -10,7 +10,8 @@ import Sidebar from "../../components/Organism/sidebar/sidebar";
 import Feed from "../../components/Organism/feed/feed";
 import NavbarMobile from "../../components/Organism/navbar-mobile/navbar-mobile";
 import {ResponsiveButton} from "../../components/Organism/responsive-button/responsive-button";
-import Invoice from "../invoice/invoice";
+import { GroupContainer } from "../../components/Organism/group/group";
+import Dashboard from "../../components/Organism/dashboard/dashboard";
 
 
 const Home = () => {
@@ -31,12 +32,11 @@ const Home = () => {
       <ResponsiveButton/>
       <div className={styles.content}>
         <Sidebar changeMain={changeMain} setChangeMain={setChangeMain} />
-        <Feed/>
-        <SidebarContact/>
-      </div>
-      <div className={styles.content}>
-        <Sidebar changeMain={changeMain} setChangeMain={setChangeMain} />
-        <Invoice/>
+        <Dashboard/>
+        {/* <MainComponents changeMain={changeMain}/> */}
+        {/* <Feed/> */}
+        {/* <SidebarContact/> */}
+
       </div>
       <div className={styles.dev_only}>
         <p>Developer only</p>
@@ -45,5 +45,14 @@ const Home = () => {
     </div>
   );
 };
+
+const MainComponents = ({changeMain}) => {
+  return (
+    <>
+    {changeMain === 0 &&  '' }
+    {changeMain === 5 && <GroupContainer/>}
+    </>
+  )
+}
 
 export default Home;
