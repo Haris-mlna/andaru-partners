@@ -1,9 +1,10 @@
 import { Button } from "@mui/material";
 import Input from "../../components/Atom/input/input";
-import styles from "./invoice.module.css";
-import InvoiceAdd from "../../components/Organism/table-invoice/table";
+import styles from "./invoiceReceipt.module.css";
+import CollapsibleTable from "../../components/Organism/table-invoice/table";
+import InvoiceReceipt from "../../components/Organism/table-invoiceReceipt/tableInvoiceReceipt";
 
-const Invoice = () => {
+const InvoiceReceiptPage = () => {
   return (
     <div className={styles.invoice}>
       <div className={styles.headInvoice}>
@@ -29,11 +30,11 @@ const Invoice = () => {
             </div>
         </div>
         <div className={styles.tableInvoice}>
-            <InvoiceAdd/>
+            <InvoiceReceipt/>
         </div>
         </div>
     </div>
   );
 };
 
-export default Invoice;
+export default InvoiceReceiptPage;

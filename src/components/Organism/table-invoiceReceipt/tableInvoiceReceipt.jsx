@@ -9,6 +9,7 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
+import TablePagination from '@mui/material/TablePagination'; // Import TablePagination
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
@@ -66,15 +67,16 @@ function Row(props) {
           <Collapse in={open} timeout="auto" unmountOnExit>
             <Box sx={{ margin: 1 }}>
               <Typography variant="h6" gutterBottom component="div">
-                History
+                Detail Pesanan
               </Typography>
               <Table size="small" aria-label="purchases">
                 <TableHead>
                   <TableRow>
-                    <TableCell>Date</TableCell>
-                    <TableCell>Customer</TableCell>
-                    <TableCell align="right">Amount</TableCell>
-                    <TableCell align="right">Total price ($)</TableCell>
+                    <TableCell>Produk</TableCell>
+                    <TableCell>Kuantitas 1</TableCell>
+                    <TableCell align="right">Kuantitas 2</TableCell>
+                    <TableCell align="right">Kuantitas 3</TableCell>
+                    <TableCell align="right">Total</TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
@@ -124,28 +126,62 @@ const rows = [
   createData('Eclair', 262, 16.0, 24, 6.0, 3.79),
   createData('Cupcake', 305, 3.7, 67, 4.3, 2.5),
   createData('Gingerbread', 356, 16.0, 49, 3.9, 1.5),
+  createData('a', 356, 16.0, 49, 3.9, 1.5),
+  createData('d', 356, 16.0, 49, 3.9, 1.5),
+  createData('u', 356, 16.0, 49, 3.9, 1.5),
+  createData('p', 356, 16.0, 49, 3.9, 1.5),
+  createData('o', 356, 16.0, 49, 3.9, 1.5),
+  createData('k', 356, 16.0, 49, 3.9, 1.5),
+  createData('m', 356, 16.0, 49, 3.9, 1.5),
+  createData('j', 356, 16.0, 49, 3.9, 1.5),
+  createData('h', 356, 16.0, 49, 3.9, 1.5),
+  createData('Gingerbread', 356, 16.0, 49, 3.9, 1.5),
 ];
 
-export default function CollapsibleTable() {
+export default function InvoiceReceipt() {
+  const [page, setPage] = React.useState(0);
+  const [rowsPerPage, setRowsPerPage] = React.useState(5);
+
+  const handleChangePage = (event, newPage) => {
+    setPage(newPage);
+  };
+
+  const handleChangeRowsPerPage = (event) => {
+    setRowsPerPage(parseInt(event.target.value, 10));
+    setPage(0);
+  };
+
+  const rowsToDisplay = rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage);
+
   return (
     <TableContainer component={Paper}>
       <Table aria-label="collapsible table">
         <TableHead>
           <TableRow>
             <TableCell />
-            <TableCell>Dessert (100g serving)</TableCell>
-            <TableCell align="right">Calories</TableCell>
-            <TableCell align="right">Fat&nbsp;(g)</TableCell>
-            <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-            <TableCell align="right">Protein&nbsp;(g)</TableCell>
+            <TableCell>No Receipt</TableCell>
+            <TableCell align="right">Pembeli</TableCell>
+            <TableCell align="right">Penerima</TableCell>
+            <TableCell align="right">Tanggal Invoice Receipt</TableCell>
+            <TableCell align="right">Alamat</TableCell>
+            <TableCell align="right">Status</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
+          {rowsToDisplay.map((row) => (
             <Row key={row.name} row={row} />
           ))}
         </TableBody>
       </Table>
+      <TablePagination
+        rowsPerPageOptions={[5, 10, 25]}
+        component="div"
+        count={rows.length}
+        rowsPerPage={rowsPerPage}
+        page={page}
+        onPageChange={handleChangePage}
+        onRowsPerPageChange={handleChangeRowsPerPage}
+      />
     </TableContainer>
   );
 }

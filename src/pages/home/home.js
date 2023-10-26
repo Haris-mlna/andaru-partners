@@ -13,6 +13,7 @@ import {ResponsiveButton} from "../../components/Organism/responsive-button/resp
 import { GroupContainer } from "../../components/Organism/group/group";
 import Dashboard from "../../components/Organism/dashboard/dashboard";
 import Invoice from "../invoice/invoice";
+import InvoiceReceiptPage from "../invoice-receipt/invoiceReceipt";
 
 
 const Home = () => {
@@ -42,6 +43,14 @@ const Home = () => {
       <div className={styles.content}>
         <Sidebar changeMain={changeMain} setChangeMain={setChangeMain} />
         <Invoice/>
+        {/* <MainComponents changeMain={changeMain}/> */}
+        {/* <Feed/> */}
+        {/* <SidebarContact/> */}
+
+      </div>
+      <div className={styles.content}>
+        <Sidebar changeMain={changeMain} setChangeMain={setChangeMain} />
+        <InvoiceReceiptPage/>
         {/* <MainComponents changeMain={changeMain}/> */}
         {/* <Feed/> */}
         {/* <SidebarContact/> */}
