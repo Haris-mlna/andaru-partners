@@ -1,7 +1,7 @@
 import * as React from "react";
 import TextField from "@mui/material/TextField";
 
-export default function BasicTextFields(id, new_className, size, name, label) {
+export default function Input ({id, new_className, size, name, label}) {
   return (
     <div>
       <TextField

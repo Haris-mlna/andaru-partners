@@ -1,5 +1,4 @@
 .invoice{
-    background-color: var(--bs-white);
     border-radius: 12px;
     padding: 1rem;
     flex: 3;
@@ -14,3 +13,43 @@
     display: flex;
     gap: 1em;
 }
+
+.filterInfoice{
+    display: flex;
+    gap: 1em;
+}
+
+.filterText{
+    display: flex;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+.btnBiruGelap{
+    background-color: #282e6b !important;
+    border-radius: 20px !important;
+}
+
+.btnBiruGelap:hover{
+    background-color: transparent;
+    background-color: #282e6b;
+}
+
+.grey{
+    background-color: transparent;
+    background-color: gray !important;
+    border-radius: 20px !important;
+}
+
+.headInvoice{
+    font-size: 32px;
+    font-weight: 400;
+    margin: 0.5em 0;
+}
+
+.hr{
+    height: 6px;
+    border-radius: 12px;
+    background-color: var(--bs-white);
+}
+

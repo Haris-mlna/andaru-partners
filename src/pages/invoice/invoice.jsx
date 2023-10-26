@@ -1,26 +1,36 @@
+import { Button } from "@mui/material";
 import {
   ButtonInvite,
   ButtonPrimary,
 } from "../../components/Atom/button/button";
-import { H4tag } from "../../components/Atom/text/text";
+import Input from "../../components/Atom/input/input";
 import styles from "./invoice.module.css";
 
 const Invoice = () => {
   return (
     <div className={styles.invoice}>
       <div className={styles.headInvoice}>
-        <H4tag text={"Faktur"} />
-        <hr />
+        <h2 className={styles.headInvoice}>Faktur</h2>
+        <div className={styles.hr}></div>
       </div>
       <div className={styles.btnInvoice}>
         <div className={styles.btnInvoiceLeft}>
-          <ButtonPrimary text={"Tandai Siap"} />
+          <Button className={styles.btnBiruGelap} variant="contained">Tandai Siap</Button>
         </div>
         <div className={styles.btnInvoiceRight}>
-          <ButtonPrimary text={"Print Faktur"} />
-          <ButtonInvite text={"Tambah Faktur"} />
+        <Button className={styles.btnBiruGelap} variant="contained">Print Faktur</Button>
+        <Button className={styles.grey} variant="contained">Tambah Faktur</Button>
         </div>
       </div>
+        <div className={styles.filterInfoice}>
+            <div className={styles.filterText}>
+            <Input id='noinvoice' name='noinvoice' label='Masukan No Invoice' size='small' new_clasname={styles.filter} />
+            <Input id='pembeliinvoice' name='pembeliinvoice' label='Masukan Nama Pembeli' size='small' new_clasname={styles.filter} />
+            </div>
+            <div className={styles.selectInvoice}>
+
+            </div>
+        </div>
     </div>
   );
 };

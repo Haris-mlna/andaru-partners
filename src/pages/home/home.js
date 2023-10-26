@@ -12,6 +12,7 @@ import NavbarMobile from "../../components/Organism/navbar-mobile/navbar-mobile"
 import {ResponsiveButton} from "../../components/Organism/responsive-button/responsive-button";
 import { GroupContainer } from "../../components/Organism/group/group";
 import Dashboard from "../../components/Organism/dashboard/dashboard";
+import Invoice from "../invoice/invoice";
 
 
 const Home = () => {
@@ -33,6 +34,14 @@ const Home = () => {
       <div className={styles.content}>
         <Sidebar changeMain={changeMain} setChangeMain={setChangeMain} />
         <Dashboard/>
+        {/* <MainComponents changeMain={changeMain}/> */}
+        {/* <Feed/> */}
+        {/* <SidebarContact/> */}
+
+      </div>
+      <div className={styles.content}>
+        <Sidebar changeMain={changeMain} setChangeMain={setChangeMain} />
+        <Invoice/>
         {/* <MainComponents changeMain={changeMain}/> */}
         {/* <Feed/> */}
         {/* <SidebarContact/> */}
