@@ -55,6 +55,27 @@ const Dashboard = () => {
           </div>
           <div className={styles.bill}>
             <p>Tagihan saya :</p>
+            <table className={styles.table}>
+              <thead>
+                  <tr>
+                    <th>No.</th>
+                    <th>No Kwitansi</th>
+                    <th>3</th>
+                  </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
         <div className={styles.right}>
