@@ -50,6 +50,7 @@ import { DropdownAvatar } from "../../components/Organism/navbar/navbar.jsx";
 import { SidebarGallery } from "../../components/Molekul/right-sidebar/right-sidebar";
 import { SidebarContact } from "../../components/Molekul/contact/contact";
 import { GroupContainer } from "../../components/Organism/group/group";
+import BasicTextFields from "../../components/Atom/input/input";
 
 const Template = () => {
 
@@ -107,6 +108,7 @@ const Template = () => {
         <SidebarGallery/>
         <SidebarContact/>
         <GroupContainer/>
+        <BasicTextFields/>
       </div>
     </div>
   );
