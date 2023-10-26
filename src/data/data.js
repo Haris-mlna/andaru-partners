@@ -296,4 +296,8 @@ const group = [
   },
 ];
 
+const data_tagihan = [{
+
+}]
+
 export { feedsHome, contactPeople, requestContact, product, group };

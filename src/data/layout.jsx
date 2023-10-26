@@ -1,53 +1,3 @@
-const sidebarData = {
-  icons: [
-    {
-      name: "Home",
-      title: "home",
-      className: "material-symbols-outlined mat-icon",
-    },
-    {
-      name: "Dashboard",
-      title: "person",
-      className: "material-symbols-outlined mat-icon",
-    },
-    {
-      name: "Faktur",
-      title: "workspace_premium",
-      className: "material-symbols-outlined mat-icon",
-    },
-    {
-      name: "Pengiriman",
-      title: "perm_media ",
-      className: "material-symbols-outlined mat-icon",
-    },
-    {
-      name: "Group",
-      title: "workspaces",
-      className: "material-symbols-outlined mat-icon",
-    },
-    {
-      name: "Katalog Produk",
-      title: "store",
-      className: "material-symbols-outlined mat-icon",
-    },
-    {
-      name: "Pembayaran",
-      title: "sync_saved_locally",
-      className: "material-symbols-outlined mat-icon",
-    },
-    {
-      name: "Teman",
-      title: "bookmark_add",
-      className: "material-symbols-outlined mat-icon",
-    },
-    {
-      name: "Pengaturan",
-      title: "settings",
-      className: "material-symbols-outlined mat-icon",
-    },
-  ],
-};
-
 const siteNavbarData = {
   icons: [
     {
@@ -151,4 +101,4 @@ const infoProfilee = {
   ],
 };
 
-export { sidebarData, siteNavbarData, aboutProfil, infoProfilee };
+export { siteNavbarData, aboutProfil, infoProfilee };

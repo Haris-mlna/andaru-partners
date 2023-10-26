@@ -81,13 +81,20 @@ BOTTOM SCT
 .navigation {
   display: flex;
   align-items: center;
-  margin: 6px 0;
   cursor: pointer;
+  padding: 10px 6px;
+  border-radius: 4px;
+
+  transition: 150ms ease-in-out;
 }
 
-.icons_navigate {
+.navigation:hover {
+  background-color: var(--bs-gray-100);
+}
+
+.icons {
   margin-right: 20px;
-  color: var(--bs-gray-800);
+  color: var(--bs-gray-600);
 }
 
 .link_text {
@@ -95,7 +102,7 @@ BOTTOM SCT
   font-size: 16px;
 }
 
-.navigation:hover > .icons_navigate,
+.navigation:hover > .icons,
 .navigation:hover > .link_text {
   color: var(--bs-primary);
 }
