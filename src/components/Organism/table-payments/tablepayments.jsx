@@ -73,7 +73,7 @@ function Row(props) {
                 <TableHead>
                   <TableRow>
                     <TableCell>No Invoice</TableCell>
-                    <TableCell>Notes</TableCell>
+                    <TableCell>Invoice Amount</TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
@@ -156,11 +156,10 @@ export default function Payments() {
         <TableHead>
           <TableRow>
             <TableCell />
-            <TableCell>No Receipt</TableCell>
+            <TableCell>No Reff</TableCell>
             <TableCell align="right">Pembeli</TableCell>
-            <TableCell align="right">Penerima</TableCell>
-            <TableCell align="right">Tanggal Invoice Receipt</TableCell>
-            <TableCell align="right">Alamat</TableCell>
+            <TableCell align="right">Tanggal Pemayaran</TableCell>
+            <TableCell align="right">Nominal Bayar</TableCell>
             <TableCell align="right">Status</TableCell>
           </TableRow>
         </TableHead>

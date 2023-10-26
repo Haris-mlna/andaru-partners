@@ -14,7 +14,8 @@ const TablePayments = () => {
         <div className={styles.btnInvoiceLeft}>
         </div>
         <div className={styles.btnInvoiceRight}>
-        <Button className={styles.grey} variant="contained">Tambah Invoice Receipt</Button>
+        <Button className={styles.btnBiruGelap} variant="contained">Import Payments</Button>
+        <Button className={styles.grey} variant="contained">Tambah Payments</Button>
         </div>
       </div>
       <div className={styles.wrapInvoiceContent}>
