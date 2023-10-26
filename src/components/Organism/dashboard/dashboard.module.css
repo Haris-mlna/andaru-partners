@@ -1,13 +1,52 @@
-.dashboard_container h2 {
+.dashboard_container {
+  flex: 3;
+  overflow-x: hidden;
+}
+
+.head {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.head h2 {
+  display: flex;
   font-size: 32px;
   font-weight: 400;
   font-family: var(--font-outfit);
+  margin: 10px 0;
+}
+
+.button_order {
+  --color-order : #282E6B;
+  margin: 0 10px;
+  border-radius: 50px;
+  width: 120px;
+  height: 30px;
+  border: 1px solid transparent;
+  font-family: var(--font-outfit);
+  cursor: pointer;
+
+  transition: 150ms ease-in-out;
+}
+
+.button_order:hover {
+  transform: scale(95%);
+}
+
+.active {
+  background-color: var(--color-order);
+  color: white;
+}
+
+.deactive {
+  border: 1px solid var(--color-order);
+  color: var(--color-order);
 }
 
 .dashboard {
-  flex: 3;
   display: flex;
-  overflow-x: hidden;
 }
 
 .left {
