@@ -1,0 +1,74 @@
+.invoice{
+    border-radius: 12px;
+    padding: 1rem;
+    flex: 3;
+}
+
+.btnInvoice{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btnInvoiceRight{
+    display: flex;
+    gap: 1em;
+}
+
+.filterInfoice{
+    display: flex;
+    gap: 1em;
+}
+
+.filterText{
+    display: flex;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+.btnBiruGelap{
+    background-color: #282e6b !important;
+    border-radius: 20px !important;
+    font-size: 12px !important;
+    text-transform: capitalize !important;
+}
+
+.btnBiruGelap:hover{
+    background-color: transparent;
+    background-color: #282e6b;
+}
+
+.grey{
+    background-color: transparent;
+    background-color: gray !important;
+    border-radius: 20px !important;
+    font-size: 12px !important;
+    text-transform: capitalize !important;
+}
+
+.headInvoice{
+    font-size: 32px;
+    font-weight: 400;
+    margin: 0.5em 0;
+}
+
+.hr{
+    height: 6px;
+    border-radius: 12px;
+    background-color: var(--bs-white);
+}
+
+.wrapInvoiceContent{
+    background-color: var(--bs-white);
+    padding: 1em;
+    margin-top: 1em;
+    border-radius: 12px;
+    box-shadow: 5px 5px 10px 0px #888888 !important;
+}
+
+.tabelInvoice{
+    padding: 1em;
+    border: 1px solid black !important;
+    
+}
+
+
