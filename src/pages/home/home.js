@@ -14,6 +14,7 @@ import { GroupContainer } from "../../components/Organism/group/group";
 import Dashboard from "../../components/Organism/dashboard/dashboard";
 import Invoice from "../invoice/invoice";
 import InvoiceReceiptPage from "../invoice-receipt/invoiceReceipt";
+import Payments from "../payments/payments";
 
 
 const Home = () => {
@@ -51,6 +52,14 @@ const Home = () => {
       <div className={styles.content}>
         <Sidebar changeMain={changeMain} setChangeMain={setChangeMain} />
         <InvoiceReceiptPage/>
+        {/* <MainComponents changeMain={changeMain}/> */}
+        {/* <Feed/> */}
+        {/* <SidebarContact/> */}
+
+      </div>
+      <div className={styles.content}>
+        <Sidebar changeMain={changeMain} setChangeMain={setChangeMain} />
+        <Payments/>
         {/* <MainComponents changeMain={changeMain}/> */}
         {/* <Feed/> */}
         {/* <SidebarContact/> */}

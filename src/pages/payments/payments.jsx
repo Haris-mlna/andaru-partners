@@ -1,14 +1,13 @@
 import { Button } from "@mui/material";
 import Input from "../../components/Atom/input/input";
-import styles from "./invoiceReceipt.module.css";
-import CollapsibleTable from "../../components/Organism/table-invoice/table";
-import InvoiceReceipt from "../../components/Organism/table-invoiceReceipt/tableInvoiceReceipt";
+import styles from "./payments.module.css";
+import Payments from "../../components/Organism/table-payments/tablepayments";
 
-const InvoiceReceiptPage = () => {
+const TablePayments = () => {
   return (
     <div className={styles.invoice}>
       <div className={styles.headInvoice}>
-        <h2 className={styles.headInvoice}>Invoice Receipt</h2>
+        <h2 className={styles.headInvoice}>Payments</h2>
         <div className={styles.hr}></div>
       </div>
       <div className={styles.btnInvoice}>
@@ -28,11 +27,11 @@ const InvoiceReceiptPage = () => {
             </div>
         </div>
         <div className={styles.tableInvoice}>
-            <InvoiceReceipt/>
+            <Payments/>
         </div>
         </div>
     </div>
   );
 };
 
-export default InvoiceReceiptPage;
+export default TablePayments;
