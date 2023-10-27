@@ -1,4 +1,3 @@
-import { getSelectUtilityClasses } from "@mui/material";
 import { ButtonInvite, ButtonJoined } from "../../Atom/button/button";
 import {
   GroupAvatar,
@@ -9,11 +8,6 @@ import {
 } from "../../Atom/image-placeholder/image-placeholder";
 import { Atag181, Span16 , Span14, H5tag, Ptag16} from "../../Atom/text/text";
 import styles from "./card.module.css";
-
-import StarIcon from '@mui/icons-material/Star';
-import StarHalfIcon from '@mui/icons-material/StarHalf';
-import StarOutlineIcon from '@mui/icons-material/StarOutline';
-import { Star } from "@mui/icons-material";
 
 const CardGroup = ({name, member}) => {
   return (
