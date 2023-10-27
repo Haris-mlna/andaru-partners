@@ -42,7 +42,7 @@ const CardGroup = ({name, member}) => {
   );
 };
 
-const CardMarketplace = ({price , text}) => {
+const CardMarketplace = ({price , text, seller, brand}) => {
   return (
     <div className={styles.card_marketplace}>
       <div className={styles.cover_marketplace}>
@@ -57,8 +57,8 @@ const CardMarketplace = ({price , text}) => {
           <MarketPlaceAvatar new_className={styles.market_avatar}/>
         </div>
         <div>
-          <Atag181 new_className={styles.ptag_marketplace} text={'Travel Moon'} link={'/'}/>
-          <Ptag16 new_className={styles.ptag_marketplace} text={"Zara"}/>
+          <Atag181 new_className={styles.ptag_marketplace} text={seller} link={'/'}/>
+          <Ptag16 new_className={styles.ptag_marketplace} text={brand}/>
         </div>
       </div>
       <div>

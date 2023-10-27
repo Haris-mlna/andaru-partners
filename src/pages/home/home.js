@@ -13,6 +13,7 @@ import Dashboard from "../../components/Organism/dashboard/dashboard";
 import Invoice from "../invoice/invoice";
 import InvoiceReceiptPage from "../invoice-receipt/invoiceReceipt";
 import Payments from "../payments/payments";
+import Katalog from "../../components/Organism/katalog-produk/katalog-produk";
 
 // Test
 
@@ -67,6 +68,14 @@ const Home = () => {
       <div className={styles.content}>
         <Sidebar changeMain={changeMain} setChangeMain={setChangeMain} />
         <GroupContainer/>
+        {/* <MainComponents changeMain={changeMain}/> */}
+        {/* <Feed/> */}
+        {/* <SidebarContact/> */}
+
+      </div>
+      <div className={styles.content}>
+        <Sidebar changeMain={changeMain} setChangeMain={setChangeMain} />
+        <Katalog/>
         {/* <MainComponents changeMain={changeMain}/> */}
         {/* <Feed/> */}
         {/* <SidebarContact/> */}

@@ -1,0 +1,8 @@
+.catalog_container {
+  flex: 3;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 470px);
+  gap: 20px;
+}
