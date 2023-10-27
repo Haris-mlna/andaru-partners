@@ -65,6 +65,14 @@ const Home = () => {
         {/* <SidebarContact/> */}
 
       </div>
+      <div className={styles.content}>
+        <Sidebar changeMain={changeMain} setChangeMain={setChangeMain} />
+        <GroupContainer/>
+        {/* <MainComponents changeMain={changeMain}/> */}
+        {/* <Feed/> */}
+        {/* <SidebarContact/> */}
+
+      </div>
       <div className={styles.dev_only}>
         <p>Developer only</p>
         <ButtonPrimary text={"Confirm"} onPress={openDev} />
