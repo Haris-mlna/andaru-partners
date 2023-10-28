@@ -16,6 +16,8 @@ import requestAvatar from "../../../assets/images/avatar-4.png";
 import contactAvatar from "../../../assets/images/avatar-6.png";
 import profilebanner from "../../../assets/images/profile-cover-img.png";
 import photoSidebar from '../../../assets/images/post-img-6.png'
+import profilePicture from '../../../assets/images/profile-picture.png'
+import profileCover from '../../../assets/images/profile-cover.png'
 
 
 const TigaRoda = ({ new_className }) => {
@@ -128,6 +130,18 @@ const PhotoSidebar = ({new_className}) => {
   )
 }
 
+const ProfilePicture = ({new_className}) => {
+  return (
+    <img className={new_className} src={profilePicture} alt="profile-picture" />
+  )
+}
+
+const ProfileCover = ({new_className}) => {
+  return (
+    <img className={new_className} src={profileCover} alt="profile-cover"/>
+  )
+}
+
 export {
   TigaRoda,
   ConfirmFriend,
@@ -145,5 +159,8 @@ export {
   RequestAvatar,
   ContactAvatar,
   ProfileBanner,
-  PhotoSidebar
+  PhotoSidebar,
+  ProfilePicture,
+  ProfileCover
+
 };

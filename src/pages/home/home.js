@@ -9,11 +9,12 @@ import Sidebar from "../../components/Organism/sidebar/sidebar";
 import NavbarMobile from "../../components/Organism/navbar-mobile/navbar-mobile";
 import {ResponsiveButton} from "../../components/Organism/responsive-button/responsive-button";
 import { GroupContainer } from "../../components/Organism/group/group";
-import Dashboard from "../../components/Organism/dashboard/dashboard";
+import Dashboard from "../dashboard/dashboard";
 import Invoice from "../invoice/invoice";
 import InvoiceReceiptPage from "../invoice-receipt/invoiceReceipt";
 import Payments from "../payments/payments";
-import Katalog from "../../components/Organism/katalog-produk/katalog-produk";
+import Katalog from "../katalog-produk/katalog-produk";
+import Settings from "../settings/settings";
 
 // Test
 
@@ -76,6 +77,14 @@ const Home = () => {
       <div className={styles.content}>
         <Sidebar changeMain={changeMain} setChangeMain={setChangeMain} />
         <Katalog/>
+        {/* <MainComponents changeMain={changeMain}/> */}
+        {/* <Feed/> */}
+        {/* <SidebarContact/> */}
+
+      </div>
+      <div className={styles.content}>
+        <Sidebar changeMain={changeMain} setChangeMain={setChangeMain} />
+        <Settings/>
         {/* <MainComponents changeMain={changeMain}/> */}
         {/* <Feed/> */}
         {/* <SidebarContact/> */}

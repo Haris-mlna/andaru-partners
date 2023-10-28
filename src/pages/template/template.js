@@ -51,7 +51,7 @@ import { SidebarGallery } from "../../components/Molekul/right-sidebar/right-sid
 import { SidebarContact } from "../../components/Molekul/contact/contact";
 import { GroupContainer } from "../../components/Organism/group/group";
 import BasicTextFields from "../../components/Atom/input/input";
-import Katalog from "../../components/Organism/katalog-produk/katalog-produk";
+import Katalog from "../katalog-produk/katalog-produk";
 
 const Template = () => {
 

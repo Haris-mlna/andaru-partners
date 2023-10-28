@@ -1,5 +1,5 @@
-import { product } from '../../../data/data';
-import { CardMarketplace } from '../../Molekul/card/card';
+import { product } from '../../data/data';
+import { CardMarketplace } from '../../components/Molekul/card/card';
 import styles from './katalog-produk.module.css'
 
 const Katalog = () => {

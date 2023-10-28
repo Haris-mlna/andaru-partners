@@ -57,7 +57,7 @@ const Dashboard = () => {
             <div className={`table-responsive ${styles.table}`}>
               <table className="table mb-0">
                 <thead>
-                  <tr>  
+                  <tr>
                     <th>#</th>
                     <th>First Name</th>
                     <th>Last Name</th>
@@ -90,11 +90,11 @@ const Dashboard = () => {
         </div>
         <div className={styles.right}>
           <div className={styles.list_payment}>
-          <p>List Pesanan Saya :</p>
+            <p>List Pesanan Saya :</p>
             <div className={`table-responsive ${styles.table}`}>
               <table className="table mb-0">
                 <thead>
-                  <tr>  
+                  <tr>
                     <th>#</th>
                     <th>First Name</th>
                     <th>Last Name</th>
@@ -125,11 +125,11 @@ const Dashboard = () => {
             </div>
           </div>
           <div className={styles.history}>
-          <p>Riwayat pembayaran :</p>
+            <p>Riwayat pembayaran :</p>
             <div className={`table-responsive ${styles.table}`}>
               <table className="table mb-0">
                 <thead>
-                  <tr>  
+                  <tr>
                     <th>#</th>
                     <th>First Name</th>
                     <th>Last Name</th>
