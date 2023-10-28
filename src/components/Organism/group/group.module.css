@@ -5,42 +5,42 @@
   gap: 30px;
 }
 
-.headInvoice{
+.headInvoice {
   font-size: 32px;
   font-weight: 400;
-  margin: 0.5em 0;
+  margin: 0.5rem 0;
 }
 
-.hr{
+.hr {
   height: 6px;
   border-radius: 12px;
   background-color: var(--bs-white);
 }
 
-.groupContainer{
-  padding: 1em;
+.groupContainer {
+  padding: 1rem;
 }
 
-.btnBiruGelap{
+.btnBiruGelap {
   background-color: #282e6b !important;
   border-radius: 20px !important;
   font-size: 12px !important;
   text-transform: capitalize !important;
 }
 
-.btnBiruGelap:hover{
+.btnBiruGelap:hover {
   background-color: transparent;
   background-color: #282e6b;
 }
 
-.btnHeadGroup{
+.btnHeadGroup {
   display: flex;
-  gap: 0.5em;
+  gap: 0.5rem;
   justify-content: flex-end;
-  padding-top: 0.5em;
+  padding-top: 0.5rem;
 }
 
-.grey{
+.grey {
   background-color: transparent;
   background-color: gray !important;
   border-radius: 20px !important;
@@ -48,69 +48,89 @@
   text-transform: capitalize !important;
 }
 
-.cardHeadGroup{
+.cardHeadGroup {
   display: flex;
   flex: 3;
-  gap: 1em;
-  padding-top: 0.5em;
+  gap: 1rem;
+  padding-top: 1rem;
 }
 
-.cardDataGroup{
+.cardDataGroup {
   flex: 1;
   background-color: var(--bs-white);
   border-radius: 12px;
-  height: 20vh;
-  padding: 1em;
+  padding: 0.5rem;
+  cursor: pointer;
 }
-.cardActiveDataGroup{
+
+.cardDataGroupActive {
   flex: 1;
   background-color: var(--bs-primary);
   border-radius: 12px;
-  height: 20vh;
-  padding: 1em;
+  padding: 0.5rem;
+  color: var(--bs-white);
+  cursor: pointer;
+}
+
+.cardDataGroup:hover {
+  flex: 1;
+  background-color: var(--bs-primary);
+  border-radius: 12px;
+  padding: 0.5rem;
   color: var(--bs-white);
 }
 
-.pCard{
+.cardDataGroupActive {
+  flex: 1;
+  background-color: var(--bs-primary);
+  border-radius: 12px;
+  padding: 0.5rem;
+  color: var(--bs-white);
+}
+
+.pCard {
   font-size: 12px;
   margin: 0;
   color: var(--bs-grey-600);
 }
 
-.nilaiCard{
+.nilaiCard {
   font-size: 64px;
   display: flex;
   justify-content: flex-end;
   font-weight: 200;
 }
 
-.listDetailGroup{
+.listDetailGroup {
   background-color: var(--bs-white);
   border-radius: 12px;
-  padding: 1em;
-  margin-top: 1em;
+  padding: 1rem;
+  margin-top: 1rem;
 }
 
-.listActive{
+.listActive {
   background-color: var(--bs-primary);
   height: 1vh;
   flex: 1;
   border-radius: 12px;
 }
-.listDeActive{
-  background-color: var(  --icon-2nd-color);
+.listDeActive {
+  background-color: var(--icon-2nd-color);
   height: 1vh;
   flex: 1;
   border-radius: 12px;
 }
 
-.wrapListActive{
+.wrapListActive {
   display: flex;
-  gap: 0.5em;
+  gap: 0.5rem;
 }
 
+.wrapHeadgroup {
+  padding-top: 1rem;
+}
 
-@media (max-width:900px) {
+@media (max-width: 900px) {
   .grid {
     grid-template-columns: repeat(2, minmax(200px, 1fr));
   }
