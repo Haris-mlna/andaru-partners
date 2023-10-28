@@ -4,7 +4,9 @@ const Delivery = () => {
   return (
     <>
       <div className={styles.pages}>
-        
+        <div className={styles.container}>
+
+        </div>
       </div>
     </>
   );
