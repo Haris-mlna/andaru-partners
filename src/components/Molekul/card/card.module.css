@@ -149,6 +149,17 @@ Card Marketplace
 .ptag_marketplace {
   margin: 5px 0;
 }
+
+@media (max-width:762px) {
+  .card_marketplace {
+    width: 300px;
+  }
+
+  .img_cover_marketplace {
+    width: 100%;
+  }
+}
+
 /*==========================
 Card Marketplace Ends
 ==========================*/

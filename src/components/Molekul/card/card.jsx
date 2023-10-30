@@ -46,7 +46,7 @@ const CardMarketplace = ({price , text, seller, brand}) => {
   return (
     <div className={styles.card_marketplace}>
       <div className={styles.cover_marketplace}>
-        <MarketplaceCover/>
+        <MarketplaceCover new_className={styles.img_cover_marketplace}/>
         <div className={styles.pricetag}>
           <H5tag text={price} new_className={styles.h5_price}/>
         </div>

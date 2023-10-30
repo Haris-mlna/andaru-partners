@@ -51,16 +51,6 @@ Left SCT
   outline: none;
 }
 
-@media (max-width: 762px) {
-  .searchbar_container {
-    display: none;
-  }
-
-  .nav {
-    padding: 10px;
-  }
-}
-
 /*========================
 Left SCT Ends
 ==========================*/
@@ -96,19 +86,7 @@ Middle SCT
   color: var(--bs-primary);
 }
 
-@media (max-width: 762px) {
-  .md {
-    justify-content: flex-end;
-  }
 
-  .md li {
-    margin: 0 5px;
-  }
-
-  .md ul {
-    margin: 0;
-  }
-}
 
 /*========================
 Middle SCT Ends
@@ -174,31 +152,6 @@ Right SCT Ends
 
 /* New CSS for fade-in and fade-out */
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(200px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  99% {
-    opacity: 0;
-    transform: translateY(200px);
-  }
-  100% {
-    opacity: 0;
-    display: none;
-  }
-}
 
 /* Apply the animations to the .dropdown_avatar element */
 .dropdown_avatar {
@@ -210,7 +163,7 @@ Right SCT Ends
   position: absolute;
   bottom: -290px;
   left: -150px;
-  z-index: 100;
+  z-index: 10000;
   opacity: 0;
 }
 
@@ -282,3 +235,53 @@ Right SCT Ends
 }
 
 /* Dropdown Ends */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  99% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@media (max-width: 762px) {
+  .md {
+    justify-content: flex-end;
+  }
+
+  .md li {
+    margin: 0 5px;
+  }
+
+  .md ul {
+    margin: 0;
+  }
+}
+
+@media (max-width: 762px) {
+  .searchbar_container {
+    display: none;
+  }
+
+  .nav {
+    padding: 10px;
+  }
+}

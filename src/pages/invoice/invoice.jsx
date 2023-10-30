@@ -22,8 +22,8 @@ const Invoice = () => {
       <div className={styles.wrapInvoiceContent}>
         <div className={styles.filterInfoice}>
             <div className={styles.filterText}>
-            <Input id='noinvoice' name='noinvoice' label='Masukan No Invoice' size='small' new_clasname={styles.filter} />
-            <Input id='pembeliinvoice' name='pembeliinvoice' label='Masukan Nama Pembeli' size='small' new_clasname={styles.filter} />
+            <Input id='noinvoice' name='noinvoice' label='Masukan No Invoice' size='small' new_classname={styles.filter} />
+            <Input id='pembeliinvoice' name='pembeliinvoice' label='Masukan Nama Pembeli' size='small' new_classname={styles.filter} />
             </div>
             <div className={styles.selectInvoice}>
             </div>
