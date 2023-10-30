@@ -2,6 +2,7 @@ import { Button } from "@mui/material";
 import Input from "../../components/Atom/input/input";
 import styles from "./invoice.module.css";
 import InvoiceAdd from "../../components/Organism/table-invoice/table";
+import Groupcard from "../../components/Organism/table-invoice/card";
 
 const Invoice = () => {
   return (
@@ -28,10 +29,12 @@ const Invoice = () => {
             <div className={styles.selectInvoice}>
             </div>
         </div>
-        <div className={styles.tableInvoice}>
+        {/* <div className={styles.tableInvoice}>
             <InvoiceAdd/>
+            
+        </div> */}
         </div>
-        </div>
+        <Groupcard/>
     </div>
   );
 };

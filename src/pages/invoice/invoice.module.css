@@ -24,18 +24,18 @@
 
 .btnInvoiceRight {
   display: flex;
-  gap: 1em;
+  gap: 1rem;
 }
 
 .filterInfoice {
   display: flex;
-  gap: 1em;
+  width: 100%;
 }
 
 .filterText {
+  width: 100%;
   display: flex;
   gap: 1em;
-  margin-bottom: 1em;
 }
 
 .btnBiruGelap {
@@ -71,8 +71,10 @@
 }
 
 .wrapInvoiceContent {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid black;
   background-color: var(--bs-white);
-  padding: 1em;
   margin-top: 1em;
   border-radius: 12px;
   box-shadow: 5px 5px 10px 0px #888888 !important;
@@ -82,3 +84,33 @@
   padding: 1em;
   border: 1px solid black !important;
 }
+
+.filter {
+  width: 100% !important;
+}
+
+@media (max-width: 762px) {
+
+  .btnInvoice {
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+  }
+
+  .filterText{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+  }
+
+  .filterInfoice {
+    border: 1px solid black;
+    display: flex;
+    gap: 1em;
+    width: 100%;
+  }
+  .filter{
+    width: 100%;
+  }
+}
+      
