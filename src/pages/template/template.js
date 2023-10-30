@@ -52,6 +52,7 @@ import { SidebarContact } from "../../components/Molekul/contact/contact";
 import { GroupContainer } from "../../components/Organism/group/group";
 import BasicTextFields from "../../components/Atom/input/input";
 import Katalog from "../katalog-produk/katalog-produk";
+import Loading from "../../components/loading/loading";
 
 const Template = () => {
 
@@ -111,6 +112,7 @@ const Template = () => {
         <GroupContainer/>
         <BasicTextFields/>
         <Katalog/>
+        <Loading/>
       </div>
     </div>
   );
