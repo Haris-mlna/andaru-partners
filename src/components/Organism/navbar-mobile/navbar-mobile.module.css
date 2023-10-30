@@ -8,6 +8,7 @@
   position: fixed;
   bottom: 0;
   box-shadow: var(--box-shadow-sm);
+  z-index: 100;
 }
 
 .navbar ul {

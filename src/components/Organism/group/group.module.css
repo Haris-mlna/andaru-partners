@@ -19,6 +19,19 @@
 
 .groupContainer {
   padding: 1rem;
+  animation: fade-up-pages 600ms ease-in-out;
+}
+
+@keyframes fade-up-pages {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .btnBiruGelap {

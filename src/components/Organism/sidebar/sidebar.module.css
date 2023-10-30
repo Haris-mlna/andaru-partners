@@ -99,6 +99,15 @@ BOTTOM SCT
   color: var(--bs-primary);
 }
 
+.active {
+  background-color: var(--bs-gray-100) !important;
+}
+
+.active > .icons,
+.active > .link_text {
+  color: var(--bs-primary) !important;
+}
+
 /*=============================
 BOTTOM SCT Ends
 ==============================*/

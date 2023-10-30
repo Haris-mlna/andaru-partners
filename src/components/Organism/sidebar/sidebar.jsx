@@ -1,4 +1,5 @@
 import styles from "./sidebar.module.css";
+import * as React from "react";
 import { AvatarSidebar } from "../../Atom/image-placeholder/image-placeholder";
 import { Atag181, Ptag18 } from "../../Atom/text/text";
 
@@ -75,9 +76,10 @@ const Sidebar = ({
   contactIsOpen,
   setContactIsOpen,
 }) => {
+  const [isActive, setIsActive] = React.useState("Home");
+
   const handleOpen = (component, direction, isOpen, setOpen) => {
     const componentElement = document.querySelector(component);
-
     // Check if the component is already open
     const isComponentOpen =
       isOpen && (direction === "left" ? sidebarIsOpen : contactIsOpen);
@@ -125,7 +127,9 @@ const Sidebar = ({
             {sidebarData.icons.map((icon, index) => (
               <li
                 key={index}
-                className={styles.navigation}
+                className={`${styles.navigation} ${
+                  isActive === icon.name ? styles.active : ""
+                }`}
                 onClick={() => {
                   setChangeMain(index);
                   handleOpen(
@@ -134,6 +138,7 @@ const Sidebar = ({
                     sidebarIsOpen,
                     setSidebarIsOpen
                   );
+                  setIsActive(icon.name);
                 }}
               >
                 {icon.icons}
