@@ -61,12 +61,6 @@ const sidebarData = {
       ),
     },
     {
-      name: "Teman",
-      icons: (
-        <GroupAddOutlinedIcon fontSize={iconSize} className={styles.icons} />
-      ),
-    },
-    {
       name: "Pengaturan",
       icons: (
         <SettingsOutlinedIcon fontSize={iconSize} className={styles.icons} />

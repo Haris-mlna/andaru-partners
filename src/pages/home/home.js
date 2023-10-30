@@ -49,7 +49,7 @@ const Home = () => {
         {changeMain === 4 && <GroupContainer />}
         {changeMain === 5 && <Katalog />}
         {changeMain === 6 && <Payments />}
-        {changeMain === 8 && <Settings />}
+        {changeMain === 7 && <Settings />}
       </div>
       <div className={styles.dev_only}>
         <p>Developer only</p>
