@@ -22,19 +22,33 @@ const sidebarData = {
     },
     {
       name: "Dashboard",
-      icons: <DashboardCustomizeOutlinedIcon fontSize={iconSize} className={styles.icons} />,
+      icons: (
+        <DashboardCustomizeOutlinedIcon
+          fontSize={iconSize}
+          className={styles.icons}
+        />
+      ),
     },
     {
       name: "Faktur",
-      icons: <DescriptionOutlinedIcon fontSize={iconSize} className={styles.icons} />,
+      icons: (
+        <DescriptionOutlinedIcon fontSize={iconSize} className={styles.icons} />
+      ),
     },
     {
       name: "Pengiriman",
-      icons: <LocalShippingOutlinedIcon fontSize={iconSize} className={styles.icons} />,
+      icons: (
+        <LocalShippingOutlinedIcon
+          fontSize={iconSize}
+          className={styles.icons}
+        />
+      ),
     },
     {
       name: "Group",
-      icons: <GroupsOutlinedIcon fontSize={iconSize} className={styles.icons} />,
+      icons: (
+        <GroupsOutlinedIcon fontSize={iconSize} className={styles.icons} />
+      ),
     },
     {
       name: "Katalog Produk",
@@ -42,20 +56,26 @@ const sidebarData = {
     },
     {
       name: "Pembayaran",
-      icons: <PaymentOutlinedIcon fontSize={iconSize} className={styles.icons} />,
+      icons: (
+        <PaymentOutlinedIcon fontSize={iconSize} className={styles.icons} />
+      ),
     },
     {
       name: "Teman",
-      icons: <GroupAddOutlinedIcon fontSize={iconSize} className={styles.icons} />,
+      icons: (
+        <GroupAddOutlinedIcon fontSize={iconSize} className={styles.icons} />
+      ),
     },
     {
       name: "Pengaturan",
-      icons: <SettingsOutlinedIcon fontSize={iconSize} className={styles.icons} />,
+      icons: (
+        <SettingsOutlinedIcon fontSize={iconSize} className={styles.icons} />
+      ),
     },
   ],
 };
 
-const Sidebar = () => {
+const Sidebar = ({ setChangeMain }) => {
   return (
     <>
       <div className={styles.sidebar} id="sidebar-res">
@@ -72,7 +92,11 @@ const Sidebar = () => {
         <div className={styles.bottom}>
           <ul>
             {sidebarData.icons.map((icon, index) => (
-              <li key={index} className={styles.navigation}>
+              <li
+                key={index}
+                className={styles.navigation}
+                onClick={() => setChangeMain(index)}
+              >
                 {icon.icons}
                 <Atag181
                   text={icon.name}

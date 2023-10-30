@@ -1,0 +1,18 @@
+.pages {
+  flex: 3;
+}
+
+.container_filter {
+  width: 100%;
+  height: 300px;
+  background-color: #282E6B;
+  border-radius: 12px;
+}
+
+.container_filter h3 {
+  color: var(--bs-white);
+  font-weight: 400;
+  padding: 10px;
+  font-size: 32px;
+  margin: 0;
+}
