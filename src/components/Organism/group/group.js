@@ -135,7 +135,7 @@ const TotalKonfirmasi = () => {
           <p className={styles.messageKonfirmasi}>Hallo, Mari berteman dengan saya</p>
         </div>
         </div>
-        <div className={styles.btnKonfirmasi}><NotificationImportantOutlinedIcon fontSize="16"/></div>
+        <div className={styles.btnKonfirmasi}><NotificationImportantOutlinedIcon /></div>
       </div>
     </div>
     {/*  */}
@@ -148,7 +148,7 @@ const TotalKonfirmasi = () => {
           <p className={styles.messageKonfirmasi}>Hallo, Mari berteman dengan saya</p>
         </div>
         </div>
-        <div className={styles.btnKonfirmasi}><NotificationImportantOutlinedIcon fontSize="16"/></div>
+        <div className={styles.btnKonfirmasi}><NotificationImportantOutlinedIcon /></div>
       </div>
     </div>
     </div>
@@ -167,7 +167,7 @@ const RequestPartners = () => {
           <p className={styles.messageKonfirmasi}>Hallo, Mari berteman dengan saya</p>
         </div>
         </div>
-        <div className={styles.btnKonfirmasi}><NotificationImportantOutlinedIcon fontSize="16"/></div>
+        <div className={styles.btnKonfirmasi}><NotificationImportantOutlinedIcon/></div>
       </div>
     </div>
     {/*  */}
@@ -180,7 +180,7 @@ const RequestPartners = () => {
           <p className={styles.messageKonfirmasi}>Hallo, Mari berteman dengan saya</p>
         </div>
         </div>
-        <div className={styles.btnKonfirmasi}><NotificationImportantOutlinedIcon fontSize="16"/></div>
+        <div className={styles.btnKonfirmasi}><NotificationImportantOutlinedIcon/></div>
       </div>
     </div>
     </div>
@@ -199,7 +199,7 @@ const InvitePartners = () => {
           <p className={styles.messageKonfirmasi}>Hallo, Mari berteman dengan saya</p>
         </div>
         </div>
-        <div className={styles.btnKonfirmasi}><NotificationImportantOutlinedIcon fontSize="16"/></div>
+        <div className={styles.btnKonfirmasi}><NotificationImportantOutlinedIcon/></div>
       </div>
     </div>
     {/*  */}
@@ -212,7 +212,7 @@ const InvitePartners = () => {
           <p className={styles.messageKonfirmasi}>Hallo, Mari berteman dengan saya</p>
         </div>
         </div>
-        <div className={styles.btnKonfirmasi}><NotificationImportantOutlinedIcon fontSize="16"/></div>
+        <div className={styles.btnKonfirmasi}><NotificationImportantOutlinedIcon/></div>
       </div>
     </div>
     </div>

@@ -8,6 +8,7 @@ import { IconsFA } from "../../components/Atom/icons/icons";
 
 const Settings = () => {
   return (
+    <div className={styles.wrapPage}>
     <div className={styles.page}>
       <div className={styles.img_settings}>
         <h5>Profile Image</h5>
@@ -16,7 +17,7 @@ const Settings = () => {
           Change Profiles
         </Button>
         <h5>Cover Image</h5>
-        <ProfileCover />
+        <ProfileCover new_className={styles.img_profile_cover} />
         <Button className={styles.primary} size="medium" variant="contained">
           Change Cover
         </Button>
@@ -67,6 +68,7 @@ const Settings = () => {
           </Button>
         </div>
       </div>
+    </div>
     </div>
   );
 };

@@ -146,56 +146,55 @@
   padding-top: 1rem;
 }
 
-.totalKonfirmasi{
+.totalKonfirmasi {
   margin-top: 1rem;
   background-color: var(--bs-white);
   padding: 0.5rem 1rem;
   border-radius: 12px;
 }
 
-.wrapTotalKonfirmasi{
+.wrapTotalKonfirmasi {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.wrapLeft{
+.wrapLeft {
   display: flex;
   gap: 1.5rem;
 }
 
-.ava{
+.ava {
   width: 80px;
   border-radius: 50%;
   margin: 0;
- 
-  
 }
 
-.nameKonfirmasi{
+.nameKonfirmasi {
   margin: 0;
   font-weight: 500;
   font-size: 24px;
 }
 
-.wrapText{
+.wrapText {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.messageKonfirmasi{
+.messageKonfirmasi {
   margin: 0;
   font-size: 16px;
   color: var(--bs-gray);
 }
 
-.btnKonfirmasi{
+.btnKonfirmasi {
   padding: 0.5rem;
   background-color: var(--icon-2nd-color);
   display: flex;
   align-items: center;
   border-radius: 12px;
+  font-size: 12px !important;
 }
 
 @media (max-width: 900px) {
@@ -212,17 +211,29 @@
   .pCard {
     font-size: 12px;
     margin: 0;
-    height: 50px;
+    height: 60px;
   }
 
-  .ava{
-    width: 80px;
+  .ava {
+    width: 50px;
     border-radius: 50%;
     margin: 0;
-   
-    
   }
-  
 
-  
+  .wrapLeft {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .nameKonfirmasi {
+    margin: 0;
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  .messageKonfirmasi {
+    margin: 0;
+    font-size: 12px;
+    color: var(--bs-gray);
+  }
 }
