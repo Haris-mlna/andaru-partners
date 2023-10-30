@@ -66,6 +66,12 @@
   justify-content: center;
 }
 
+@media (max-width:762px) {
+  .progress_container {
+    width: 80%;
+  }
+}
+
 .progress_bar {
   display: flex;
   position: relative;
@@ -84,24 +90,23 @@
     var(--bs-gray-400) 50%,
     var(--bs-gray-400) 50%
   );
+}
 
-  transition: background 0.3s ease-in-out;
+.progress_main {
+  position: absolute;
+  width: 0%;
+  height: 5px;
+  background-color: var(--bs-primary);
+
+  transition: 600ms ease-in-out;
 }
 
 .progress_half {
-  background: linear-gradient(
-    90deg,
-    var(--bs-primary) 50%,
-    var(--bs-gray-400) 50%
-  ) !important;
+  width: 50%;
 }
 
 .progress_full {
-  background: linear-gradient(
-    90deg,
-    var(--bs-primary) 50%,
-    var(--bs-primary) 50%
-  ) !important;
+  width: 100%;
 }
 
 .circle {

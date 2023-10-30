@@ -1,5 +1,6 @@
 import * as React from "react";
 import styles from "./delivery.module.css";
+import { ButtonPrimary } from "../../components/Atom/button/button";
 
 const Delivery = () => {
   const [detail, setDetail] = React.useState(false);
@@ -32,6 +33,10 @@ const Delivery = () => {
     console.log(progress);
   };
 
+  const handleTest = () => {
+    setDetail(!detail);
+  };
+
   return (
     <div className={styles.pages}>
       <div className={styles.container}>
@@ -40,13 +45,15 @@ const Delivery = () => {
           <p>Choose your delivery to shows details</p>
           <div className={styles.progress_container}>
             <div className={styles.progress_bar}>
+              <div className={styles.progress} id="progress"></div>
+
               <div
-                className={`${styles.progress} ${
+                className={`${styles.progress_main}  ${
                   (progress === "half" && styles.progress_half) ||
                   (progress === "full" && styles.progress_full)
                 }`}
-                id="progress"
               ></div>
+
               <div className={`${styles.circle} ${styles.active}`}>1</div>
               <div
                 className={`${styles.circle} ${
@@ -105,9 +112,14 @@ const Delivery = () => {
             </>
           )}
         </div>
+        <ButtonPrimary text={"TEST"} onPress={() => handleTest()} />
       </div>
 
-      <div className={styles.table}></div>
+      <div className={styles.table}>
+        <div>
+          
+        </div>
+      </div>
     </div>
   );
 };
