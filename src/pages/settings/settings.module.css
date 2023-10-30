@@ -1,12 +1,5 @@
 .page {
   flex: 3;
-<<<<<<< HEAD
-  width: 100%;
-}
-
-.wrapPage {
-  width: 100%;
-=======
   animation: fade-up-pages 600ms ease-in-out;
 }
 
@@ -21,7 +14,6 @@
     opacity: 1;
     transform: translateY(0);
   }
->>>>>>> 884047463aa017c2275556c2de907b119d17d0b5
 }
 
 .img_settings {
