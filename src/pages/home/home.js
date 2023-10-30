@@ -64,13 +64,4 @@ const Home = () => {
   );
 };
 
-const MainComponents = ({ changeMain }) => {
-  return (
-    <>
-      {changeMain === 0 && ""}
-      {changeMain === 5 && <GroupContainer />}
-    </>
-  );
-};
-
 export default Home;

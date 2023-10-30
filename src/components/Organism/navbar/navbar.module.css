@@ -211,12 +211,15 @@ Right SCT Ends
   bottom: -290px;
   left: -150px;
   z-index: 100;
-  opacity: 0; /* Start with opacity 0 */
+  opacity: 0;
+}
+
+.active {
   animation: fadeIn 0.3s ease-in-out forwards; /* Fade-in animation */
 }
 
 /* Apply fadeOut animation when .dropdown_avatar is inactive */
-.dropdown_avatar.passive {
+.passive {
   animation: fadeOut 0.3s ease-in-out forwards; /* Fade-out animation */
 }
 

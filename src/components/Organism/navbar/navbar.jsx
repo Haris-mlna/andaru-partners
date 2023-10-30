@@ -24,7 +24,7 @@ const SearchBar = () => {
   );
 };
 
-const DropdownAvatar = ({ isActive }) => {
+const DropdownAvatar = ({ isActive , isInitial}) => {
   const navigate = useNavigate();
 
   const NavigateTo = () => {
@@ -35,7 +35,7 @@ const DropdownAvatar = ({ isActive }) => {
     <>
       <div
         className={`${styles.dropdown_avatar} ${
-          isActive ? styles.active : styles.passive
+         isInitial ?  isActive ? styles.active : '':  isActive ? styles.active : styles.passive
         }`}
       >
         <div className={styles.dropdown_avatar_info_container}>
@@ -95,6 +95,7 @@ export { DropdownAvatar, DropdownMail, DropdownNotification};
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
+  const [isInitial, setIsInitial] = useState(true)
 
   return (
     <>
@@ -172,11 +173,12 @@ const Navbar = () => {
                 className={styles.avatar_button}
                 onClick={() => {
                   setIsActive(!isActive);
+                  setIsInitial(false)
                 }}
               >
                 <AvatarNavbar new_className={styles.avatar} />
               </button>
-              <DropdownAvatar isActive={isActive} />
+              <DropdownAvatar isActive={isActive} isInitial={isInitial} />
             </div>
           </div>
         </nav>
