@@ -27,6 +27,9 @@ const Delivery = React.lazy(() => import("../delivery/delivery"));
 const Home = () => {
   const [changeMain, setChangeMain] = React.useState(0);
 
+  const [sidebarIsOpen, setSidebarIsOpen] = React.useState(false);
+  const [contactIsOpen, setContactIsOpen] = React.useState(false);
+
   const navigate = useNavigate();
 
   const openDev = () => {
@@ -37,10 +40,22 @@ const Home = () => {
     <div className={styles.pages}>
       <Navbar />
       <NavbarMobile />
-      <ResponsiveButton />
+      <ResponsiveButton
+        sidebarIsOpen={sidebarIsOpen}
+        setSidebarIsOpen={setSidebarIsOpen}
+        contactIsOpen={contactIsOpen}
+        setContactIsOpen={setContactIsOpen}
+      />
       <div className={styles.content}>
-        <Sidebar changeMain={changeMain} setChangeMain={setChangeMain} />
-        <React.Suspense fallback={<Loading/>}>
+        <Sidebar
+          sidebarIsOpen={sidebarIsOpen}
+          setSidebarIsOpen={setSidebarIsOpen}
+          contactIsOpen={contactIsOpen}
+          setContactIsOpen={setContactIsOpen}
+          changeMain={changeMain}
+          setChangeMain={setChangeMain}
+        />
+        <React.Suspense fallback={<Loading />}>
           {changeMain === 0 && (
             <>
               <Feed />

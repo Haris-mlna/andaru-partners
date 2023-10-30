@@ -12,16 +12,8 @@ TOP SCT
   max-width: 230px;
   width: 100%;
   transition: 300ms ease-in-out;
-}
 
-@media (max-width: 762px) {
-  .sidebar {
-    max-width: none;
-    position: fixed;
-    width: 100%;
-    background-color: white;
-    left: -100%;
-  }
+  z-index: 10000;
 }
 
 .top {
@@ -110,3 +102,14 @@ BOTTOM SCT
 /*=============================
 BOTTOM SCT Ends
 ==============================*/
+
+
+@media (max-width: 762px) {
+  .sidebar {
+    max-width: none;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    left: -100%;
+  }
+}

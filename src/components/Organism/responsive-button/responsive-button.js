@@ -2,53 +2,65 @@ import { IconsFA } from "../../Atom/icons/icons";
 import styles from "./responsive-button.module.css";
 import { useState } from "react";
 
-const ResponsiveButton = () => {
-  const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
-  const [contactIsOpen, setContactIsOpen] = useState(false);
-
+const ResponsiveButton = ({
+  sidebarIsOpen,
+  setSidebarIsOpen,
+  contactIsOpen,
+  setContactIsOpen,
+}) => {
   const handleOpen = (component, direction, isOpen, setOpen) => {
     const componentElement = document.querySelector(component);
 
     // Check if the component is already open
-    const isComponentOpen = isOpen && (direction === 'left' ? sidebarIsOpen : contactIsOpen);
+    const isComponentOpen =
+      isOpen && (direction === "left" ? sidebarIsOpen : contactIsOpen);
 
     if (isComponentOpen) {
-      if (direction === 'left') {
-        componentElement.style.left = '-100%'; // Close the component
+      if (direction === "left") {
+        componentElement.style.left = "-100%"; // Close the component
         setSidebarIsOpen(false); // Close the sidebar
-      } else if (direction === 'right') {
-        componentElement.style.right = '-100%'; // Close the component
+        console.log(sidebarIsOpen);
+      } else if (direction === "right") {
+        componentElement.style.right = "-100%"; // Close the component
         setContactIsOpen(false); // Close the contact
+        console.log(contactIsOpen);
       }
     } else {
-      if (direction === 'left') {
-        componentElement.style.left = '0px'; // Open the component
+      if (direction === "left") {
+        componentElement.style.left = "0px"; // Open the component
         setSidebarIsOpen(true);
         setContactIsOpen(false); // Close the contact
-      } else if (direction === 'right') {
-        componentElement.style.right = '0px'; // Open the component
+        console.log(sidebarIsOpen);
+      } else if (direction === "right") {
+        componentElement.style.right = "0px"; // Open the component
         setContactIsOpen(true);
         setSidebarIsOpen(false); // Close the sidebar
+        console.log(contactIsOpen);
       }
     }
   };
 
   return (
     <div className={styles.container}>
-      <button onClick={() => handleOpen("#sidebar-res", 'left', sidebarIsOpen, setSidebarIsOpen)}>
+      <button
+        onClick={() =>
+          handleOpen("#sidebar-res", "left", sidebarIsOpen, setSidebarIsOpen)
+        }
+      >
         <IconsFA new_className={styles.icons} title={"tune"} size={"small"} />
         My Profile
       </button>
-      <button onClick={() => handleOpen("#contact-res", 'right', contactIsOpen, setContactIsOpen)}>
+      <button
+        onClick={() =>
+          handleOpen("#contact-res", "right", contactIsOpen, setContactIsOpen)
+        }
+      >
         My Contact
         <IconsFA new_className={styles.icons} title={"tune"} size={"small"} />
       </button>
     </div>
   );
 };
-
-
-
 
 const ResponsiveButtonProfile = () => {
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
@@ -58,23 +70,24 @@ const ResponsiveButtonProfile = () => {
     const componentElement = document.querySelector(component);
 
     // Check if the component is already open
-    const isComponentOpen = isOpen && (direction === 'left' ? sidebarIsOpen : contactIsOpen);
+    const isComponentOpen =
+      isOpen && (direction === "left" ? sidebarIsOpen : contactIsOpen);
 
     if (isComponentOpen) {
-      if (direction === 'left') {
-        componentElement.style.left = '-100%'; // Close the component
+      if (direction === "left") {
+        componentElement.style.left = "-100%"; // Close the component
         setSidebarIsOpen(false); // Close the sidebar
-      } else if (direction === 'right') {
-        componentElement.style.right = '-100%'; // Close the component
+      } else if (direction === "right") {
+        componentElement.style.right = "-100%"; // Close the component
         setContactIsOpen(false); // Close the contact
       }
     } else {
-      if (direction === 'left') {
-        componentElement.style.left = '0px'; // Open the component
+      if (direction === "left") {
+        componentElement.style.left = "0px"; // Open the component
         setSidebarIsOpen(true);
         setContactIsOpen(false); // Close the contact
-      } else if (direction === 'right') {
-        componentElement.style.right = '0px'; // Open the component
+      } else if (direction === "right") {
+        componentElement.style.right = "0px"; // Open the component
         setContactIsOpen(true);
         setSidebarIsOpen(false); // Close the sidebar
       }
@@ -83,11 +96,19 @@ const ResponsiveButtonProfile = () => {
 
   return (
     <div className={styles.container}>
-      <button onClick={() => handleOpen("#aboutres", 'left', sidebarIsOpen, setSidebarIsOpen)}>
+      <button
+        onClick={() =>
+          handleOpen("#aboutres", "left", sidebarIsOpen, setSidebarIsOpen)
+        }
+      >
         <IconsFA new_className={styles.icons} title={"tune"} size={"small"} />
         My Profile
       </button>
-      <button onClick={() => handleOpen("#contactres", 'right', contactIsOpen, setContactIsOpen)}>
+      <button
+        onClick={() =>
+          handleOpen("#contactres", "right", contactIsOpen, setContactIsOpen)
+        }
+      >
         My Contact
         <IconsFA new_className={styles.icons} title={"tune"} size={"small"} />
       </button>
@@ -95,4 +116,4 @@ const ResponsiveButtonProfile = () => {
   );
 };
 
-export   {ResponsiveButtonProfile, ResponsiveButton};
+export { ResponsiveButtonProfile, ResponsiveButton };
