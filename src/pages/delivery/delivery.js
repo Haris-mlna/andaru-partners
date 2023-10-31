@@ -153,7 +153,16 @@ const Delivery = () => {
         <ButtonPrimary text={"TEST"} onPress={() => handleTest()} />
       </div>
 
-      <div className={styles.filter}></div>
+      <div className={styles.filter}>
+        <div>
+          <label>Cari nomor DO</label>
+          <input/>
+        </div>
+        <div>
+          <label>Cari nama customer</label>
+          <input/>
+        </div>
+      </div>
 
       <div className={styles.table}>
         <Card setStatus={setStatus} />
