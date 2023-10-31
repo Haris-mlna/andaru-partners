@@ -8,8 +8,8 @@ import { H6tag, Ptag16, Atag181 } from "../../Atom/text/text";
 import { ButtonView } from "../../Atom/button/button";
 
 const NavbarMobile = () => {
-
-  const [isActive, setIsActive] = useState(false)
+  const [isActive, setIsActive] = useState(false);
+  const [isInitial, setIsInitial] = useState(true);
 
   return (
     <div className={styles.navbar}>
@@ -19,23 +19,26 @@ const NavbarMobile = () => {
             <IconsFA title={"mail"} size={"small"} />
           </button>
         </li>
-        <li >
+        <li>
           <button className={`${styles.notification}`}>
             <IconsFA title={"notifications"} size={"small"} />
           </button>
         </li>
-        <li onClick={() => {
-          setIsActive(!isActive)
-        }}>
+        <li
+          onClick={() => {
+            setIsActive(!isActive);
+            setIsInitial(false);
+          }}
+        >
           <AvatarNavbar new_className={styles.avatar} />
-          <DropdownAvatar isActive={isActive}/>
+          <DropdownAvatar isActive={isActive} isInitial={isInitial}/>
         </li>
       </ul>
     </div>
   );
 };
 
-const DropdownAvatar = ({ isActive }) => {
+const DropdownAvatar = ({ isActive, isInitial }) => {
   const navigate = useNavigate();
 
   const NavigateTo = () => {
@@ -46,7 +49,13 @@ const DropdownAvatar = ({ isActive }) => {
     <>
       <div
         className={`${styles.dropdown_avatar} ${
-          isActive ? styles.active : styles.passive
+          isInitial
+            ? isActive
+              ? styles.active
+              : ""
+            : isActive
+            ? styles.active
+            : styles.passive
         }`}
       >
         <div className={styles.dropdown_avatar_info_container}>

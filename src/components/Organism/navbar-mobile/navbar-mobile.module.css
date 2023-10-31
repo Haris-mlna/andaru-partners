@@ -53,37 +53,6 @@
     display: flex;
   }
 }
-
-/* Dropdown */
-
-/* New CSS for fade-in and fade-out */
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(200px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  99% {
-    opacity: 0;
-    transform: translateY(200px);
-  }
-  100% {
-    opacity: 0;
-    display: none;
-  }
-}
-
 /* Apply the animations to the .dropdown_avatar element */
 .dropdown_avatar {
   width: 220px;
@@ -92,14 +61,18 @@
   border-radius: 12px;
   border: 1px solid var(--bs-gray-200);
   position: absolute;
-  top: -290px;
-  z-index: 100;
-  opacity: 0; /* Start with opacity 0 */
+  bottom: -290px;
+  left: -150px;
+  z-index: 10000;
+  opacity: 0;
+}
+
+.active {
   animation: fadeIn 0.3s ease-in-out forwards; /* Fade-in animation */
 }
 
 /* Apply fadeOut animation when .dropdown_avatar is inactive */
-.dropdown_avatar.passive {
+.passive {
   animation: fadeOut 0.3s ease-in-out forwards; /* Fade-out animation */
 }
 
@@ -159,4 +132,32 @@
   border: 0;
   height: 1px;
   background-color: var(--bs-gray-400);
+}
+
+/* Dropdown Ends */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  99% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
 }
