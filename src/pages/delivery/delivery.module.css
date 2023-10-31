@@ -66,7 +66,7 @@
   justify-content: center;
 }
 
-@media (max-width:762px) {
+@media (max-width: 762px) {
   .progress_container {
     width: 80%;
   }
@@ -133,7 +133,7 @@
   color: white;
 }
 
-.status_delivery h1{
+.status_delivery h1 {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -170,10 +170,24 @@
 
 .card {
   display: flex;
+  flex-direction: column;
   width: 100%;
   margin-bottom: 20px;
   padding: 20px;
   border-bottom: 1px solid var(--bs-gray-200);
+  cursor: pointer;
+  border-radius: 4px;
+
+  transition: 150ms ease-in-out;
+}
+
+.card:hover {
+  background-color: var(--bs-primary);
+  transform: scale(98%);
+}
+
+.card:active {
+  transform: scale(97%);
 }
 
 .container_data {
@@ -197,6 +211,7 @@
 .left h6,
 .right h6 {
   margin: 0;
+  font-size: 14px;
 }
 
 .left p,
@@ -205,4 +220,30 @@
   font-weight: 400;
   font-size: 14px;
   color: var(--bs-gray-500);
+}
+
+.card:hover .left p,
+.card:hover .left h6,
+.card:hover .right h6,
+.card:hover .right p {
+  color: var(--bs-white) !important;
+}
+
+.status_delivery_card {
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  background-color: red;
+  padding: 6px 8px;
+  border-radius: 50px;
+}
+
+.green {
+  background-color: var(--bs-teal);
+  color: var(--bs-white);
+}
+
+.yellow {
+  color: var(--bs-white);
+  background-color: var(--bs-yellow);
 }

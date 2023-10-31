@@ -11,34 +11,53 @@ const Delivery = () => {
 
   const [progress, setProgress] = React.useState("off");
 
-  const toggleProgress = (params) => {
-    const off = "off";
-    const half = "half";
-    const full = "full";
+  // const toggleProgress = (params) => {
+  //   const off = "off";
+  //   const half = "half";
+  //   const full = "full";
 
-    if (params === "next") {
-      if (progress === off) {
-        setProgress(half);
-      } else if (progress === half) {
-        setProgress(full);
-      } else {
-        setProgress(full);
-      }
-    } else if (params === "prev") {
-      if (progress === full) {
-        setProgress(half);
-      } else if (progress === half) {
-        setProgress(off);
-      } else {
-        setProgress(off);
-      }
-    }
+  //   if (params === "next") {
 
-    console.log(progress);
-  };
+      
+
+  //     if (progress === off) {
+  //       setProgress(half);
+  //     } else if (progress === half) {
+  //       setProgress(full);
+  //     } else {
+  //       setProgress(full);
+  //     }
+  //   } else if (params === "prev") {
+  //     if (progress === full) {
+  //       setProgress(half);
+  //     } else if (progress === half) {
+  //       setProgress(off);
+  //     } else {
+  //       setProgress(off);
+  //     }
+  //   }
+
+  //   console.log(progress);
+  // };
 
   const handleTest = () => {
     setDetail(!detail);
+  };
+
+  const setStatus = (param) => {
+    const off = "off";
+    const half = "half";
+    const full = "full";
+    const ondelivery = "OnDelivery";
+    const delivered = "Delivered";
+
+    if (param === ondelivery) {
+      setProgress(half);
+    } else if (param === delivered) {
+      setProgress(full);
+    } else {
+      setProgress(off);
+    }
   };
 
   return (
@@ -84,22 +103,6 @@ const Delivery = () => {
                 {progress === "full" && "Pesanan sudah sampai tujuan"}
               </h1>
             </div>
-            <div className={styles.btn_container}>
-              <button
-                onClick={() => toggleProgress("prev")}
-                className="btn"
-                id="prev"
-              >
-                Prev
-              </button>
-              <button
-                onClick={() => toggleProgress("next")}
-                className="btn"
-                id="next"
-              >
-                Next
-              </button>
-            </div>
           </div>
         </div>
         <div
@@ -131,17 +134,23 @@ const Delivery = () => {
       <div className={styles.filter}></div>
 
       <div className={styles.table}>
-        <Card />
+        <Card setStatus={setStatus} />
       </div>
     </div>
   );
 };
 
-const Card = () => {
+const Card = ({ setStatus }) => {
   return (
     <>
       {dataDelivery.rows.map((data, index) => (
-        <div className={styles.card} key={index}>
+        <div
+          onClick={() => {
+            setStatus(data.status_pesanan);
+          }}
+          className={styles.card}
+          key={index}
+        >
           <div className={styles.container_data}>
             <div className={styles.left}>
               <h6>{data.pembeli}</h6>
@@ -153,7 +162,9 @@ const Card = () => {
               <p>{data.tanggal_pembuatan}</p>
             </div>
           </div>
-          <div></div>
+          <div className={`${styles.status_delivery_card} ${data.status_pesanan === "OnDelivery" && styles.yellow || data.status_pesanan === "Delivered" && styles.green}`}>
+            {data.status_pesanan}
+          </div>
         </div>
       ))}
     </>
