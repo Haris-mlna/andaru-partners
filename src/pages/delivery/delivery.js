@@ -18,8 +18,6 @@ const Delivery = () => {
 
   //   if (params === "next") {
 
-      
-
   //     if (progress === off) {
   //       setProgress(half);
   //     } else if (progress === half) {
@@ -162,7 +160,12 @@ const Card = ({ setStatus }) => {
               <p>{data.tanggal_pembuatan}</p>
             </div>
           </div>
-          <div className={`${styles.status_delivery_card} ${data.status_pesanan === "OnDelivery" && styles.yellow || data.status_pesanan === "Delivered" && styles.green}`}>
+          <div
+            className={`${styles.status_delivery_card} ${
+              (data.status_pesanan === "OnDelivery" && styles.yellow) ||
+              (data.status_pesanan === "Delivered" && styles.green)
+            }`}
+          >
             {data.status_pesanan}
           </div>
         </div>
