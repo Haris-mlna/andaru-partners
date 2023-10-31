@@ -11,6 +11,7 @@ import GroupsOutlinedIcon from "@mui/icons-material/GroupsOutlined";
 import StoreOutlinedIcon from "@mui/icons-material/StoreOutlined";
 import PaymentOutlinedIcon from "@mui/icons-material/PaymentOutlined";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
+import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
 
 const iconSize = "medium";
 
@@ -30,13 +31,19 @@ const sidebarData = {
       ),
     },
     {
-      name: "Faktur",
+      name: "Invoice",
       icons: (
         <DescriptionOutlinedIcon fontSize={iconSize} className={styles.icons} />
       ),
     },
     {
-      name: "Pengiriman",
+      name: "Invoice Reciept",
+      icons: (
+        <ReceiptOutlinedIcon fontSize={iconSize} className={styles.icons} />
+      ),
+    },
+    {
+      name: "Delivery",
       icons: (
         <LocalShippingOutlinedIcon
           fontSize={iconSize}
@@ -51,17 +58,17 @@ const sidebarData = {
       ),
     },
     {
-      name: "Katalog Produk",
+      name: "Product Catalog",
       icons: <StoreOutlinedIcon fontSize={iconSize} className={styles.icons} />,
     },
     {
-      name: "Pembayaran",
+      name: "Payments",
       icons: (
         <PaymentOutlinedIcon fontSize={iconSize} className={styles.icons} />
       ),
     },
     {
-      name: "Pengaturan",
+      name: "Setting",
       icons: (
         <SettingsOutlinedIcon fontSize={iconSize} className={styles.icons} />
       ),

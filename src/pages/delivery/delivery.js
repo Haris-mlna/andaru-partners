@@ -1,6 +1,7 @@
 import * as React from "react";
 import styles from "./delivery.module.css";
 import { ButtonPrimary } from "../../components/Atom/button/button";
+import { dataDelivery } from "../../data/data";
 
 const Delivery = () => {
   const [detail, setDetail] = React.useState(false);
@@ -115,12 +116,36 @@ const Delivery = () => {
         <ButtonPrimary text={"TEST"} onPress={() => handleTest()} />
       </div>
 
+      <div className={styles.filter}>
+            
+      </div>
+
       <div className={styles.table}>
-        <div>
-          
-        </div>
+        <Card />
       </div>
     </div>
+  );
+};
+
+const Card = () => {
+  return (
+    <>
+      {dataDelivery.rows.map((data, index) => (
+        <div className={styles.card} key={index}>
+          <div className={styles.container_data}>
+            <div className={styles.left}>
+              <h6>{data.pembeli}</h6>
+              <p>{data.no_Do}</p>
+            </div>
+            <div className={styles.right}>
+              <h6>{data.alamat_pengiriman}</h6>
+              <p>{data.metode_pengiriman}</p>
+            </div>
+          </div>
+          <div></div>
+        </div>
+      ))}
+    </>
   );
 };
 

@@ -129,3 +129,61 @@
 .btn_container {
   display: flex;
 }
+
+.filter {
+  width: 100%;
+  margin: 20px 0;
+  padding: 10px;
+  background-color: var(--bs-white);
+  border-radius: 12px;
+}
+
+.table {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  background-color: var(--bs-white);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* CARD */
+
+.card {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-bottom: 1px solid var(--bs-gray-200);
+}
+
+.container_data {
+  width: 100%;
+  display: flex;
+}
+
+.left {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+}
+
+.right {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.left h6,
+.right h6 {
+  margin: 0;
+}
+
+.left p,
+.right p {
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--bs-gray-500);
+}

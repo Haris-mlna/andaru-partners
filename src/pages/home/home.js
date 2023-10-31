@@ -64,11 +64,12 @@ const Home = () => {
           )}
           {changeMain === 1 && <Dashboard />}
           {changeMain === 2 && <Invoice />}
-          {changeMain === 3 && <Delivery />}
-          {changeMain === 4 && <GroupContainer />}
-          {changeMain === 5 && <Katalog />}
-          {changeMain === 6 && <Payments />}
-          {changeMain === 7 && <Settings />}
+          {changeMain === 3 && <InvoiceReceiptPage/>}
+          {changeMain === 4 && <Delivery />}
+          {changeMain === 5 && <GroupContainer />}
+          {changeMain === 6 && <Katalog />}
+          {changeMain === 7 && <Payments />}
+          {changeMain === 8 && <Settings />}
         </React.Suspense>
       </div>
       <div className={styles.dev_only}>
