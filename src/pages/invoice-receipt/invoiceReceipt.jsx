@@ -1,10 +1,30 @@
 import { Button } from "@mui/material";
 import Input from "../../components/Atom/input/input";
 import styles from "./invoiceReceipt.module.css";
-import CollapsibleTable from "../../components/Organism/table-invoice/table";
+
 import InvoiceReceipt from "../../components/Organism/table-invoiceReceipt/tableInvoiceReceipt";
+import { useState } from "react";
+import { useEffect } from "react";
+import Groupcard from "../../components/Organism/table-invoice/card";
 
 const InvoiceReceiptPage = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    function handleResize() {
+      setIsMobile(window.innerWidth <= 762);
+    }
+
+    // Tambahkan event listener untuk mendeteksi perubahan lebar layar
+    window.addEventListener("resize", handleResize);
+
+    // Panggil handleResize saat komponen pertama kali dimuat
+    handleResize();
+
+    // Hapus event listener saat komponen dibongkar
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <div className={styles.invoice}>
       <div className={styles.headInvoice}>
@@ -28,7 +48,19 @@ const InvoiceReceiptPage = () => {
             </div>
         </div>
         <div className={styles.tableInvoice}>
-            <InvoiceReceipt/>
+        <div>
+          {isMobile ? (
+            <div>
+              {/* Komponen B ditampilkan saat layar ponsel */}
+              <Groupcard/>
+            </div>
+          ) : (
+            <div>
+              {/* Komponen A ditampilkan saat lebar layar normal */}
+              <InvoiceReceipt/>
+            </div>
+          )}
+        </div>
         </div>
         </div>
     </div>
