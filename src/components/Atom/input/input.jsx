@@ -1,7 +1,7 @@
 import * as React from "react";
 import TextField from "@mui/material/TextField";
 
-export default function Input ({id, new_className, size, name, label}) {
+export default function Input ({id, size, name, label}) {
   return (
     <div>
       <TextField
@@ -9,7 +9,6 @@ export default function Input ({id, new_className, size, name, label}) {
         id={id}
         size={size}
         label={label}
-        new_className={new_className}
         variant="outlined"
       />
     </div>
