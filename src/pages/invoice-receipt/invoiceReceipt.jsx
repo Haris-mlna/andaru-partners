@@ -6,6 +6,7 @@ import InvoiceReceipt from "../../components/Organism/table-invoiceReceipt/table
 import { useState } from "react";
 import { useEffect } from "react";
 import Groupcard from "../../components/Organism/table-invoice/card";
+import InvoiceReceiptcard from "../../components/Organism/table-invoiceReceipt/card";
 
 const InvoiceReceiptPage = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -52,7 +53,7 @@ const InvoiceReceiptPage = () => {
           {isMobile ? (
             <div>
               {/* Komponen B ditampilkan saat layar ponsel */}
-              <Groupcard/>
+              <InvoiceReceiptcard/>
             </div>
           ) : (
             <div>

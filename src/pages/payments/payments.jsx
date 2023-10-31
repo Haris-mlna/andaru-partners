@@ -5,6 +5,7 @@ import Payments from "../../components/Organism/table-payments/tablepayments";
 import { useState } from "react";
 import { useEffect } from "react";
 import Groupcard from "../../components/Organism/table-invoice/card";
+import Paymentscard from "../../components/Organism/table-payments/card";
 
 const TablePayments = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -52,7 +53,7 @@ const TablePayments = () => {
           {isMobile ? (
             <div>
               {/* Komponen B ditampilkan saat layar ponsel */}
-              <Groupcard/>
+              <Paymentscard/>
             </div>
           ) : (
             <div>
