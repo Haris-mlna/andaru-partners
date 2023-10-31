@@ -9,8 +9,8 @@ import ava from '../../../assets/images/avatar-1.png'
 const GroupGrid = () => {
   return (
     <div className={styles.grid}>
-      {group.map((x) => (
-        <CardGroup name={x.name} member={x.member} />
+      {group.map((x, index) => (
+        <CardGroup key={index} name={x.name} member={x.member} />
       ))}
     </div>
   );

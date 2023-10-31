@@ -2,6 +2,9 @@ import * as React from "react";
 import styles from "./delivery.module.css";
 import { ButtonPrimary } from "../../components/Atom/button/button";
 import { dataDelivery } from "../../data/data";
+import WarehouseOutlinedIcon from "@mui/icons-material/WarehouseOutlined";
+import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined";
+import DoneAllOutlinedIcon from "@mui/icons-material/DoneAllOutlined";
 
 const Delivery = () => {
   const [detail, setDetail] = React.useState(false);
@@ -55,22 +58,31 @@ const Delivery = () => {
                 }`}
               ></div>
 
-              <div className={`${styles.circle} ${styles.active}`}>1</div>
+              <div className={`${styles.circle} ${styles.active}`}>
+                <WarehouseOutlinedIcon />
+              </div>
               <div
                 className={`${styles.circle} ${
                   (progress === "half" && styles.active) ||
                   (progress === "full" && styles.active)
                 }`}
               >
-                2
+                <LocalShippingOutlinedIcon />
               </div>
               <div
                 className={`${styles.circle} ${
-                  progress === "full" && styles.active
+                  progress === "full" && styles.circleActiveLast
                 }`}
               >
-                3
+                <DoneAllOutlinedIcon />
               </div>
+            </div>
+            <div className={styles.status_delivery}>
+              <h1>
+                {progress === "off" && "Pesanan sedang diproses"}
+                {progress === "half" && "Pesanan sedang diantar"}
+                {progress === "full" && "Pesanan sudah sampai tujuan"}
+              </h1>
             </div>
             <div className={styles.btn_container}>
               <button
@@ -116,9 +128,7 @@ const Delivery = () => {
         <ButtonPrimary text={"TEST"} onPress={() => handleTest()} />
       </div>
 
-      <div className={styles.filter}>
-            
-      </div>
+      <div className={styles.filter}></div>
 
       <div className={styles.table}>
         <Card />
@@ -140,6 +150,7 @@ const Card = () => {
             <div className={styles.right}>
               <h6>{data.alamat_pengiriman}</h6>
               <p>{data.metode_pengiriman}</p>
+              <p>{data.tanggal_pembuatan}</p>
             </div>
           </div>
           <div></div>

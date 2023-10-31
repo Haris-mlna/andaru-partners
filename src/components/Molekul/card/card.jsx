@@ -62,7 +62,6 @@ const CardMarketplace = ({price , text, seller, brand}) => {
         </div>
       </div>
       <div>
-      <i class="fa-solid fa-star"></i>
       </div>
     </div>
   )

@@ -118,13 +118,32 @@
   background-color: var(--bs-white);
   border-radius: 50%;
   border: 4px solid var(--bs-gray-400);
+  color: var(--bs-gray-600);
 
   z-index: 10;
 }
 
 .circle.active {
   border: 4px solid var(--bs-primary);
+  color: var(--bs-primary);
 }
+
+.circleActiveLast {
+  background-color: var(--bs-primary);
+  color: white;
+}
+
+.status_delivery h1{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-weight: 300;
+  color: var(--bs-primary);
+  margin: 0;
+  font-size: 20px;
+}
+
+/* FILTER */
 
 .btn_container {
   display: flex;
