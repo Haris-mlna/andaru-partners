@@ -1,8 +1,9 @@
 .wrap{
     background-color: var(--bs-white);
     padding: 1rem;
-    margin-top: 50px;
+    margin-top: 2rem;
     border-radius: 12px;
+    box-shadow: 5px 5px 10px 0px #888888 !important;
 }
 
 .fill{
@@ -13,8 +14,28 @@
 .row{
     width: 100%;
     margin: 0;
+    font-size: 14px;
+    font-weight: 500;
 }
 
 .col{
     margin: 0;
+    font-size: 14px;
+    font-size: 200;
+    color: #888888;
+}
+
+.history{
+    margin-top: 0.5rem;
+}
+
+.data, .history{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.historySect{
+    font-size: 14px;
+    font-weight: 700;
 }

@@ -31,12 +31,29 @@ const Groupcard = () => {
             </div>
             
           </div>
+          <hr/>
           <div className={styles.history}>
-            <h6>tes</h6>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
+            <div className={styles.historySect}>Detail Pesanan</div>
+             <div className={styles.fill}>
+                <h6 className={styles.row}>Produk</h6>
+                <p className={styles.col}>1111111111</p>
+            </div>
+             <div className={styles.fill}>
+                <h6 className={styles.row}>Kuantitas 1</h6>
+                <p className={styles.col}>1111111111</p>
+            </div>
+             <div className={styles.fill}>
+                <h6 className={styles.row}>Kuantitas 2</h6>
+                <p className={styles.col}>1111111111</p>
+            </div>
+             <div className={styles.fill}>
+                <h6 className={styles.row}>Kuantitas 3</h6>
+                <p className={styles.col}>1111111111</p>
+            </div>
+             <div className={styles.fill}>
+                <h6 className={styles.row}>Total</h6>
+                <p className={styles.col}>1111111111</p>
+            </div>
           </div>
         </div> 
       </div>

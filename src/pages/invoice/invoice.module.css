@@ -73,7 +73,6 @@
 .wrapInvoiceContent {
   width: 100%;
   padding: 0.5rem;
-  border: 1px solid black;
   background-color: var(--bs-white);
   margin-top: 1em;
   border-radius: 12px;
@@ -81,8 +80,7 @@
 }
 
 .tabelInvoice {
-  padding: 1em;
-  border: 1px solid black !important;
+  padding: 1rem;
 }
 
 .filter {
@@ -100,11 +98,9 @@
   .filterText{
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
   }
 
   .filterInfoice {
-    border: 1px solid black;
     display: flex;
     gap: 1em;
     width: 100%;
