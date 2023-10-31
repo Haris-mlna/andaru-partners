@@ -35,7 +35,8 @@
 .filterText {
   display: flex;
   gap: 1em;
-  margin-bottom: 1em;
+  margin-bottom: 0.5rem;
+  flex-direction: column;
 }
 
 .btnBiruGelap {

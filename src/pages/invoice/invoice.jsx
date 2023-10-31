@@ -53,14 +53,12 @@ const Invoice = () => {
               name="noinvoice"
               label="Masukan No Invoice"
               size="small"
-              new_classname={styles.filter}
             />
             <Input
               id="pembeliinvoice"
               name="pembeliinvoice"
               label="Masukan Nama Pembeli"
               size="small"
-              new_classname={styles.filter}
             />
           </div>
           <div className={styles.selectInvoice}></div>
@@ -75,6 +73,7 @@ const Invoice = () => {
             <div>
               {/* Komponen A ditampilkan saat lebar layar normal */}
               <InvoiceAdd />
+              
             </div>
           )}
         </div>

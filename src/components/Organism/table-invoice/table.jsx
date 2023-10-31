@@ -25,15 +25,10 @@ function createData(name, calories, fat, carbs, protein, price) {
     price,
     history: [
       {
-        date: '2020-01-05',
-        customerId: '11091700',
-        amount: 3,
-      },
-      {
-        date: '2020-01-02',
-        customerId: 'Anonymous',
-        amount: 1,
-      },
+        date: 'Tee SGP 3/4, RICON',
+        customerId: '0',
+        amount: '0'
+      }
     ],
   };
 }
@@ -121,21 +116,7 @@ Row.propTypes = {
 };
 
 const rows = [
-  createData('Frozen yoghurt', 159, 6.0, 24, 4.0, 3.99),
-  createData('Ice cream sandwich', 237, 9.0, 37, 4.3, 4.99),
-  createData('Eclair', 262, 16.0, 24, 6.0, 3.79),
-  createData('Cupcake', 305, 3.7, 67, 4.3, 2.5),
-  createData('Gingerbread', 356, 16.0, 49, 3.9, 1.5),
-  createData('a', 356, 16.0, 49, 3.9, 1.5),
-  createData('d', 356, 16.0, 49, 3.9, 1.5),
-  createData('u', 356, 16.0, 49, 3.9, 1.5),
-  createData('p', 356, 16.0, 49, 3.9, 1.5),
-  createData('o', 356, 16.0, 49, 3.9, 1.5),
-  createData('k', 356, 16.0, 49, 3.9, 1.5),
-  createData('m', 356, 16.0, 49, 3.9, 1.5),
-  createData('j', 356, 16.0, 49, 3.9, 1.5),
-  createData('h', 356, 16.0, 49, 3.9, 1.5),
-  createData('Gingerbread', 356, 16.0, 49, 3.9, 1.5),
+  createData('11111', 'Jaladara','20 October 2023', 'jalan nusa indah raya 2 blok k no 13','Submitted')
 ];
 
 export default function InvoiceAdd() {
