@@ -143,11 +143,58 @@
   font-size: 20px;
 }
 
-/* FILTER */
+/*=================================
+Detail
+==================================*/
 
-.btn_container {
+.detail_container {
+  width: 100%;
+  height: 100%;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bs-white);
+  border-radius: 12px;
 }
+
+.nama_pembeli {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  align-items: center;
+}
+
+.nama_pembeli p {
+  font-size: 14px;
+  color: var(--bs-gray-600);
+}
+
+.nama_pembeli h3 {
+  text-align: center;
+  font-size: 32px;
+  margin: 0;
+  font-weight: 300;
+}
+
+.detail_pembeli {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.detail_2 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/*=================================
+Detail Ends
+==================================*/
+
+
+/* FILTER */
 
 .filter {
   width: 100%;

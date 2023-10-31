@@ -10,6 +10,7 @@ const Delivery = () => {
   const [detail, setDetail] = React.useState(false);
 
   const [progress, setProgress] = React.useState("off");
+  const [dataDetail, setDataDetail] = React.useState();
 
   // const toggleProgress = (params) => {
   //   const off = "off";
@@ -42,12 +43,14 @@ const Delivery = () => {
     setDetail(!detail);
   };
 
-  const setStatus = (param) => {
+  const setStatus = (param, data) => {
     const off = "off";
     const half = "half";
     const full = "full";
     const ondelivery = "OnDelivery";
     const delivered = "Delivered";
+    setDataDetail(data);
+    setDetail(true);
 
     if (param === ondelivery) {
       setProgress(half);
@@ -56,6 +59,13 @@ const Delivery = () => {
     } else {
       setProgress(off);
     }
+
+    console.log(dataDetail);
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   return (
@@ -110,19 +120,33 @@ const Delivery = () => {
         >
           {detail === true && (
             <>
-              <p>Test</p>
-              <p>Test</p>
-              <p>Test</p>
-              <p>Test</p>
-              <p>Test</p>
-              <p>Test</p>
-              <p>Test</p>
-              <p>Test</p>
-              <p>Test</p>
-              <p>Test</p>
-              <p>Test</p>
-              <p>Test</p>
-              <p>Test</p>
+              <div className={styles.detail_container}>
+                <div className={styles.nama_pembeli}>
+                  <p>nama pembeli</p>
+                  <h3>
+                    {dataDetail !== undefined && dataDetail.pembeli}
+                    {dataDetail === undefined &&
+                      "Please pick first to show detail!"}
+                  </h3>
+                  <p>{dataDetail !== undefined && dataDetail.no_Do}</p>
+                </div>
+                <div className={styles.detail_pembeli}>
+                  <div className={styles.detail_1}>
+                    {dataDetail !== undefined && "Alamat Pengiriman :"}
+                    <br />
+                    {dataDetail !== undefined && "Metode Pengiriman :"}
+                    <br />
+                    {dataDetail !== undefined && "Tanggal Pembuatan :"}
+                  </div>
+                  <div className={styles.detail_2}>
+                    {dataDetail !== undefined && dataDetail.alamat_pengiriman}
+                    <br />
+                    {dataDetail !== undefined && dataDetail.metode_pengiriman}
+                    <br />
+                    {dataDetail !== undefined && dataDetail.tanggal_pembuatan}
+                  </div>
+                </div>
+              </div>
             </>
           )}
         </div>
@@ -144,7 +168,7 @@ const Card = ({ setStatus }) => {
       {dataDelivery.rows.map((data, index) => (
         <div
           onClick={() => {
-            setStatus(data.status_pesanan);
+            setStatus(data.status_pesanan, data);
           }}
           className={styles.card}
           key={index}
