@@ -113,6 +113,8 @@ const Delivery = () => {
             </div>
           </div>
         </div>
+        {/* <button onClick={() => toggleProgress('next')}>Next</button>
+        <button onClick={() => toggleProgress('prev')}>Prev</button> */}
         <div
           className={`${styles.detail} ${
             detail ? styles.detailExpanded : styles.detailShrink
@@ -150,10 +152,9 @@ const Delivery = () => {
             </>
           )}
         </div>
-        <ButtonPrimary text={"TEST"} onPress={() => handleTest()} />
       </div>
 
-      <div className={styles.filter}>
+      {/* <div className={styles.filter}>
         <div>
           <label>Cari nomor DO</label>
           <input/>
@@ -162,7 +163,7 @@ const Delivery = () => {
           <label>Cari nama customer</label>
           <input/>
         </div>
-      </div>
+      </div> */}
 
       <div className={styles.table}>
         <Card setStatus={setStatus} />

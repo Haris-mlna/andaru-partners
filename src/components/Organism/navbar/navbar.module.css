@@ -162,6 +162,11 @@ Right SCT Ends
   left: -150px;
   z-index: 10000;
   opacity: 0;
+  display: none;
+}
+
+.initial {
+  display: block;
 }
 
 .active {

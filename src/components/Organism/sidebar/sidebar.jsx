@@ -52,7 +52,7 @@ const sidebarData = {
       ),
     },
     {
-      name: "Group",
+      name: "Partner",
       icons: (
         <GroupsOutlinedIcon fontSize={iconSize} className={styles.icons} />
       ),
