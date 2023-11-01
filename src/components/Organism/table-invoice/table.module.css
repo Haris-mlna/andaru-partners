@@ -9,6 +9,7 @@
 .fill{
     display: flex;
     align-items: center;
+    border-bottom: 1px solid var(--bs-gray-200);
 }
 
 .row{
@@ -19,6 +20,9 @@
 }
 
 .col{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
     margin: 0;
     font-size: 14px;
     font-size: 200;
@@ -26,7 +30,7 @@
 }
 
 .history{
-    margin-top: 0.5rem;
+    margin-top: 1rem;
 }
 
 .data, .history{
