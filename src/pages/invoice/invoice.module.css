@@ -72,7 +72,7 @@
 
 .wrapInvoiceContent {
   width: 100%;
-  padding: 0.5rem;
+  padding: 1rem;
   background-color: var(--bs-white);
   margin-top: 1em;
   border-radius: 12px;

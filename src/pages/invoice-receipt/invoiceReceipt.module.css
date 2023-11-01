@@ -2,6 +2,7 @@
     border-radius: 12px;
     padding: 1rem;
     flex: 3;
+    animation: fade-up-pages 600ms ease-in-out;
 }
 
 .btnInvoice{
@@ -60,7 +61,7 @@
 
 .wrapInvoiceContent{
     background-color: var(--bs-white);
-    padding: 1em;
+    padding: 1rem;
     margin-top: 1em;
     border-radius: 12px;
     box-shadow: 5px 5px 10px 0px #888888 !important;
@@ -71,5 +72,17 @@
     border: 1px solid black !important;
     
 }
+
+@keyframes fade-up-pages {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
 
