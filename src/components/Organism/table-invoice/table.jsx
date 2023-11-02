@@ -40,7 +40,7 @@ const Card = ({ data }) => {
       </div>
       <div className={styles.btn}>
       <Button variant="contained" size="small" className={styles.btn_detail} onClick={toggleDetail}>
-        Lihat Detail
+      {showDetail ? 'Tutup Detail' : 'Lihat Detail'}
       </Button>
       </div>
       
