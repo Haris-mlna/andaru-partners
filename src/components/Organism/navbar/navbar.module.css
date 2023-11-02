@@ -68,18 +68,24 @@ Middle SCT
 
 .md ul {
   display: flex;
+  align-items: center;
   list-style-type: none;
 }
 
 .md li {
-  margin: 0 20px;
+  margin: 0 12px;
+  padding: 2px 4px;
 }
 
 .icons_navigate {
-  color: var(--bs-gray-600);
+  color: var(--bs-gray-500);
   cursor: pointer;
-
+  font-size: 28px !important;
   transition: 150ms ease-in-out;
+}
+
+.icons_home {
+  font-size: 32px !important;
 }
 
 .icons_navigate:hover {
@@ -101,17 +107,6 @@ Right SCT
   display: flex;
   justify-content: flex-end;
   align-items: center;
-}
-
-.rt button {
-  margin: 0 10px;
-}
-
-.notifications {
-  border: none;
-  padding: 4px 8px;
-  border-radius: 4px;
-  cursor: pointer;
 }
 
 .container_user {

@@ -3,6 +3,7 @@ import * as React from "react";
 import { AvatarSidebar } from "../../Atom/image-placeholder/image-placeholder";
 import { Atag181, Ptag18 } from "../../Atom/text/text";
 
+// Material UI
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import DashboardCustomizeOutlinedIcon from "@mui/icons-material/DashboardCustomizeOutlined";
 import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";
@@ -12,6 +13,7 @@ import StoreOutlinedIcon from "@mui/icons-material/StoreOutlined";
 import PaymentOutlinedIcon from "@mui/icons-material/PaymentOutlined";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
+
 
 const iconSize = "medium";
 
@@ -95,23 +97,19 @@ const Sidebar = ({
       if (direction === "left") {
         componentElement.style.left = "-100%"; // Close the component
         setSidebarIsOpen(false); // Close the sidebar
-        console.log(sidebarIsOpen);
       } else if (direction === "right") {
         componentElement.style.right = "-100%"; // Close the component
         setContactIsOpen(false); // Close the contact
-        console.log(contactIsOpen);
       }
     } else {
       if (direction === "left") {
         componentElement.style.left = "0px"; // Open the component
         setSidebarIsOpen(true);
         setContactIsOpen(false); // Close the contact
-        console.log(sidebarIsOpen);
       } else if (direction === "right") {
         componentElement.style.right = "0px"; // Open the component
         setContactIsOpen(true);
         setSidebarIsOpen(false); // Close the sidebar
-        console.log(contactIsOpen);
       }
     }
   };

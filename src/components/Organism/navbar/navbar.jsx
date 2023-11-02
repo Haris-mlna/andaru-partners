@@ -1,12 +1,20 @@
-import styles from "./navbar.module.css";
 import { useState } from "react";
-import logo from "../../../assets/images/business-partner-logo1.png";
+import styles from "./navbar.module.css";
 import { useNavigate } from "react-router-dom";
-import SearchIcon from "@mui/icons-material/Search";
+
+// Components
+import logo from "../../../assets/images/business-partner-logo1.png";
 import { IconsFA } from "../../Atom/icons/icons";
 import { AvatarNavbar } from "../../Atom/image-placeholder/image-placeholder";
 import { Atag181, H6tag, Ptag16 } from "../../Atom/text/text";
 import { ButtonView } from "../../Atom/button/button";
+
+// Material UI
+import SearchIcon from "@mui/icons-material/Search";
+import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
+import DashboardCustomizeRoundedIcon from "@mui/icons-material/DashboardCustomizeRounded";
+import LocalShippingRoundedIcon from "@mui/icons-material/LocalShippingRounded";
+import StorefrontRoundedIcon from "@mui/icons-material/StorefrontRounded";
 
 const SearchBar = () => {
   return (
@@ -89,19 +97,20 @@ const DropdownAvatar = ({ isActive, isInitial }) => {
   );
 };
 
-const DropdownMail = () => {
-  return <></>;
-};
+export { DropdownAvatar };
 
-const DropdownNotification = () => {
-  return <></>;
-};
-
-export { DropdownAvatar, DropdownMail, DropdownNotification };
-
-const Navbar = () => {
+const Navbar = ({ setChangeMain }) => {
+  const navigate = useNavigate();
   const [isActive, setIsActive] = useState(false);
   const [isInitial, setIsInitial] = useState(true);
+
+  const handleNavigation = (param) => {
+    if (window.location.pathname === "/") {
+      setChangeMain(param);
+    } else {
+      navigate("/");
+    }
+  };
 
   return (
     <>
@@ -114,66 +123,32 @@ const Navbar = () => {
           <div className={styles.md}>
             <ul>
               <li>
-                <a href="/">
-                  <IconsFA
-                    className={styles.icon_navigate}
-                    title={"home"}
-                    size={"large"}
-                    new_className={styles.icons_navigate}
-                  />
-                </a>
+                <HomeRoundedIcon
+                  className={`${styles.icons_navigate} ${styles.icons_home}`}
+                  onClick={() => handleNavigation(0)}
+                />
               </li>
               <li>
-                <a href="/">
-                  <IconsFA
-                    className={styles.icon_navigate}
-                    title={"feed"}
-                    size={"large"}
-                    new_className={styles.icons_navigate}
-                  />
-                </a>
+                <DashboardCustomizeRoundedIcon
+                  className={styles.icons_navigate}
+                  onClick={() => handleNavigation(1)}
+                />
               </li>
               <li>
-                <a href="/">
-                  <IconsFA
-                    className={styles.icon_navigate}
-                    title={"group"}
-                    size={"large"}
-                    new_className={styles.icons_navigate}
-                  />
-                </a>
+                <LocalShippingRoundedIcon
+                  className={styles.icons_navigate}
+                  onClick={() => handleNavigation(4)}
+                />
               </li>
               <li>
-                <a href="/">
-                  <IconsFA
-                    className={styles.icon_navigate}
-                    title={"smart_display"}
-                    size={"large"}
-                    new_className={styles.icons_navigate}
-                  />
-                </a>
+                <StorefrontRoundedIcon
+                  className={styles.icons_navigate}
+                  onClick={() => handleNavigation(6)}
+                />
               </li>
             </ul>
           </div>
           <div className={styles.rt}>
-            <div>
-              <button className={styles.notifications}>
-                <IconsFA
-                  title={"mail"}
-                  new_className={styles.icons_notifications}
-                  size={"small"}
-                />
-              </button>
-            </div>
-            <div>
-              <button className={styles.notifications}>
-                <IconsFA
-                  title={"notifications"}
-                  new_className={styles.icons_notifications}
-                  size={"small"}
-                />
-              </button>
-            </div>
             <div className={styles.container_user}>
               <button
                 className={styles.avatar_button}

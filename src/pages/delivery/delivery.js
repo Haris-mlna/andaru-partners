@@ -1,6 +1,5 @@
 import * as React from "react";
 import styles from "./delivery.module.css";
-import { ButtonPrimary } from "../../components/Atom/button/button";
 import { dataDelivery } from "../../data/data";
 import WarehouseOutlinedIcon from "@mui/icons-material/WarehouseOutlined";
 import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined";
@@ -39,9 +38,9 @@ const Delivery = () => {
   //   console.log(progress);
   // };
 
-  const handleTest = () => {
-    setDetail(!detail);
-  };
+  // const handleTest = () => {
+  //   setDetail(!detail);
+  // };
 
   const setStatus = (param, data) => {
     const off = "off";
@@ -60,7 +59,6 @@ const Delivery = () => {
       setProgress(off);
     }
 
-    console.log(dataDetail);
 
     window.scrollTo({
       top: 0,

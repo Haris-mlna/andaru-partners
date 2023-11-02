@@ -38,7 +38,7 @@ const Home = () => {
 
   return (
     <div className={styles.pages}>
-      <Navbar />
+      <Navbar setChangeMain={setChangeMain} />
       <NavbarMobile />
       <ResponsiveButton
         sidebarIsOpen={sidebarIsOpen}
@@ -64,7 +64,7 @@ const Home = () => {
           )}
           {changeMain === 1 && <Dashboard />}
           {changeMain === 2 && <Invoice />}
-          {changeMain === 3 && <InvoiceReceiptPage/>}
+          {changeMain === 3 && <InvoiceReceiptPage />}
           {changeMain === 4 && <Delivery />}
           {changeMain === 5 && <GroupContainer />}
           {changeMain === 6 && <Katalog />}

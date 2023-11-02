@@ -1,10 +1,10 @@
 import styles from './loading.module.css'
-import { useState } from "react";
 import { HashLoader } from "react-spinners";
 
 const Loading = () => {
-  let [loading, setLoading] = useState(true);
-  let [color, setColor] = useState("#173563");
+
+  const color = "#173563";
+  const loading = true;
 
   return (
     <div className={styles.pages}>
