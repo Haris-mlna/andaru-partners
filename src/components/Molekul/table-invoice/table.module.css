@@ -43,6 +43,9 @@
 .historySect{
     font-size: 14px;
     font-weight: 700;
+    position: static;
+    background-color: white;
+    position: sticky;
 }
 
 .btn{
@@ -54,6 +57,7 @@
 
 .btn_detail{
     text-transform: capitalize !important;
+    width: 100px;
 }
 
 .info{
@@ -63,3 +67,42 @@
     gap: 0.5rem;
     align-items: center;
 }
+.detail_content{ 
+    z-index: 1;
+    justify-content: center;
+    flex: 1;
+    max-height: 40vh;
+    overflow-y: scroll;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.wrap{
+    flex: 1;
+}
+
+.allWrap{
+    display: flex;
+}
+
+/* Mengatur warna scrollbar */
+.detail_content::-webkit-scrollbar {
+    width: 4px; /* Atur lebar scrollbar sesuai kebutuhan Anda */
+  }
+  
+  /* Mengatur warna thumb */
+  .detail_content::-webkit-scrollbar-thumb {
+    background-color: rgb(5, 0, 78); /* Atur warna thumb sesuai kebutuhan Anda */
+    border-radius: 8px; /* Atur radius sudut thumb sesuai kebutuhan Anda */
+  }
+  
+  /* Mengatur warna track scrollbar (bagian yang tidak dapat digeser) */
+  .detail_content::-webkit-scrollbar-track {
+    background-color: #e0e0e0; /* Atur warna track sesuai kebutuhan Anda */
+  }
+
+  @media (max-width:600px){
+    .allWrap{
+        flex-direction: column;
+    }
+  }
