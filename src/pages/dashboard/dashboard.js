@@ -40,17 +40,22 @@ const Dashboard = () => {
         <div className={styles.left}>
           <div className={styles.container_notification}>
             <div className={styles.myorder}>
-              <p>Pesanan saya :</p>
-              <h3>15</h3>
+              <p>Pesanan {partnerOrder ? "partner" : "saya"} :</p>
+              <h3>{partnerOrder ? 14 : 4}</h3>
             </div>
             <div className={styles.delivery}>
-              <p>Pesanan sedang dikirim :</p>
-              <h3>5</h3>
+              <p>
+                {" "}
+                {partnerOrder
+                  ? "Pesanan dalam pengiriman :"
+                  : "Pesanan sedang dikirim :"}
+              </p>
+              <h3>{partnerOrder ? 15 : 2}</h3>
             </div>
           </div>
           <div className={styles.confirmation}>
             <p>Menunggu konfirmasi pemesanan :</p>
-            <h3>2</h3>
+            <h3>{partnerOrder ? 8 : 12}</h3>
           </div>
           <div className={styles.bill}>
             <p>Tagihan saya :</p>

@@ -8,6 +8,7 @@ import { dataDelivery } from "../../data/data";
 import WarehouseOutlinedIcon from "@mui/icons-material/WarehouseOutlined";
 import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined";
 import DoneAllOutlinedIcon from "@mui/icons-material/DoneAllOutlined";
+import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
 
 const Delivery = () => {
   const [detail, setDetail] = React.useState(false);
@@ -32,13 +33,13 @@ const Delivery = () => {
       setProgress(off);
     }
 
-
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
   };
 
+  console.log(dataDetail);
   return (
     <div className={styles.pages}>
       <div className={styles.container}>
@@ -91,7 +92,7 @@ const Delivery = () => {
             detail ? styles.detailExpanded : styles.detailShrink
           }`}
         >
-          {detail === true && (
+          {dataDetail !== undefined && (
             <>
               <div className={styles.detail_container}>
                 <div className={styles.nama_pembeli}>
@@ -119,10 +120,43 @@ const Delivery = () => {
                     {dataDetail !== undefined && dataDetail.tanggal_pembuatan}
                   </div>
                 </div>
+                <div className={styles.table_detail_container}>
+                  <table className={styles.table_detail}>
+                    <thead>
+                      <tr>
+                        <th>No</th>
+                        <th>Kuantitas 1</th>
+                        <th>Kuantitas 2</th>
+                        <th>Kuantitas 3</th>
+                        <th>Total</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {dataDetail.detail_pesanan_produk.map((data, index) => (
+                        <>
+                          <tr>
+                            <td>{index + 1}</td>
+                            <td>{data.kuantitas_1}</td>
+                            <td>{data.kuantitas_2}</td>
+                            <td>{data.kuantitas_3}</td>
+                            <td>
+                              {data.kuantitas_1 +
+                                data.kuantitas_2 +
+                                data.kuantitas_3}
+                            </td>
+                          </tr>
+                        </>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </>
           )}
         </div>
+        <button className={`${styles.upNdown} ${detail ?  styles.up:  styles.down}`} onClick={() => setDetail(!detail) }>
+          <KeyboardDoubleArrowUpIcon />
+        </button>
       </div>
 
       {/* <div className={styles.filter}>
