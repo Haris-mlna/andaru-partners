@@ -1,5 +1,4 @@
 import styles from "./template.module.css";
-import CollapsibleTable from "../../components/Organism/table-invoice/table";
 
 import {
   Actionpost,
@@ -105,7 +104,6 @@ const Template = () => {
         <Feed />
         <CardGroup name={"Travel Moon"} member={"30k member"} />
         <CardMarketplace price={"$84"} text={`Men's Watch`} />
-        <CollapsibleTable />
         <DropdownAvatar/>
         <SidebarGallery/>
         <SidebarContact/>

@@ -2,8 +2,8 @@ import * as React from "react";
 import { Button } from "@mui/material";
 import Input from "../../components/Atom/input/input";
 import styles from "./payments.module.css";
-import Payments from "../../components/Organism/table-payments/tablepayments";
-import Paymentscard from "../../components/Organism/table-payments/card";
+import Payments from "../../components/Molekul/table-payments/tablepayments";
+import Paymentscard from "../../components/Molekul/table-payments/card";
 
 const TablePayments = () => {
   const [isMobile, setIsMobile] = React.useState(false);
