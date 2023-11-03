@@ -6,29 +6,29 @@ import Input from "../../components/Atom/input/input";
 
 // Molekul
 import InvoiceAdd from "../../components/Molekul/table-invoice/table";
-import Groupcard from "../../components/Molekul/table-invoice/card";
+// import Groupcard from "../../components/Molekul/table-invoice/card";
 
 // Material UI
 import { Button } from "@mui/material";
 
 const Invoice = () => {
-  const [isMobile, setIsMobile] = React.useState(false);
-  React.useEffect(() => {
-    function handleResize() {
-      setIsMobile(window.innerWidth <= 762);
-    }
+  // const [isMobile, setIsMobile] = React.useState(false);
+  // React.useEffect(() => {
+  //   function handleResize() {
+  //     setIsMobile(window.innerWidth <= 762);
+  //   }
 
-    // Tambahkan event listener untuk mendeteksi perubahan lebar layar
-    window.addEventListener("resize", handleResize);
+  //   // Tambahkan event listener untuk mendeteksi perubahan lebar layar
+  //   window.addEventListener("resize", handleResize);
 
-    // Panggil handleResize saat komponen pertama kali dimuat
-    handleResize();
+  //   // Panggil handleResize saat komponen pertama kali dimuat
+  //   handleResize();
 
-    // Hapus event listener saat komponen dibongkar
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  //   // Hapus event listener saat komponen dibongkar
+  //   return () => {
+  //     window.removeEventListener("resize", handleResize);
+  //   };
+  // }, []);
   return (
     <div className={styles.invoice}>
       <div className={styles.headInvoice}>
@@ -69,18 +69,7 @@ const Invoice = () => {
           <div className={styles.selectInvoice}></div>
         </div>
         <div>
-          {isMobile ? (
-            <div>
-              {/* Komponen B ditampilkan saat layar ponsel */}
-              <Groupcard />
-            </div>
-          ) : (
-            <div>
-              {/* Komponen A ditampilkan saat lebar layar normal */}
-              <InvoiceAdd />
-              
-            </div>
-          )}
+          <InvoiceAdd />
         </div>
       </div>
     </div>

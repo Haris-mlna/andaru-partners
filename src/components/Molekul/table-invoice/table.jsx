@@ -15,6 +15,7 @@ const Card = ({ data }) => {
   };
 
   return (
+    <div className={styles.allWrap}>
     <div className={styles.wrap}>
       <div className={styles.data}>
         <div className={styles.fill}>
@@ -47,6 +48,9 @@ const Card = ({ data }) => {
       {showDetail ? 'Tutup Detail' : 'Lihat Detail'}
       </Button>
       </div>
+      </div>
+
+      {/* <div className={styles.detailPage}></div> */}
       
       {showDetail && (
         <div className={styles.detail_content}>
@@ -79,6 +83,7 @@ const Card = ({ data }) => {
           ))}
         </div>
       )}
+    
     </div>
   );
 };
