@@ -1,5 +1,6 @@
 import styles from './loading.module.css'
 import { HashLoader } from "react-spinners";
+import { ClipLoader} from "react-spinners"
 
 const Loading = () => {
 
@@ -20,3 +21,24 @@ const Loading = () => {
 };
 
 export default Loading;
+
+const Loadingis = () => {
+
+  const color = "#173563";
+  const loading = true;
+
+  return (
+    <div className={styles.pages}>
+      <ClipLoader
+        color={color}
+        loading={loading}
+        size={14}
+        aria-label="Loading Spinner"
+        data-testid="loader"
+      />
+    </div>
+  );
+};
+
+export {
+   Loadingis};

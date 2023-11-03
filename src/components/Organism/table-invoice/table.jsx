@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { dataDelivery } from "../../../data/data";
 import styles from "./table.module.css";
 import { Button } from "@mui/material";
+import { useEffect, useRef } from "react";
+import { Loadingis } from "../../loading/loading";
+
 
 const Card = ({ data }) => {
   const [showDetail, setShowDetail] = useState(false);
@@ -80,12 +83,74 @@ const Card = ({ data }) => {
 };
 
 const InvoiceAdd = () => {
+  const [visibleCards, setVisibleCards] = useState(5);
+  const [isLoading, setIsLoading] = useState(false);
+  const [allDataLoaded, setAllDataLoaded] = useState(false);
+
+  const loadMoreCards = () => {
+    setIsLoading(true);
+
+    // Misalnya, Anda dapat mengambil lebih banyak data dari array dataDelivery.rows
+    setTimeout(() => {
+      const newVisibleCards = visibleCards + 5;
+      if (newVisibleCards >= dataDelivery.rows.length) {
+        setAllDataLoaded(true);
+      }
+      setVisibleCards(newVisibleCards);
+      setIsLoading(false);
+    }, 3000); // Misalnya, waktu tunggu 1 detik
+  };
+
+  // Gunakan useRef untuk mengamati elemen yang muncul di dalam viewport
+  const observerRef = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          loadMoreCards();
+        }
+      },
+      {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.1, // Pemicu ketika elemen mendekati viewport
+      }
+    );
+
+    if (observerRef.current) {
+      observer.observe(observerRef.current);
+    }
+
+    return () => {
+      if (observerRef.current) {
+        observer.unobserve(observerRef.current);
+      }
+    };
+  }, [allDataLoaded]);
+
+  const totalData = dataDelivery.rows.length;
+  // const startIndex = visibleCards - 4; // Misalnya, mulai dari 1 jika visibleCards adalah 5
+  // const endIndex = Math.min(visibleCards, totalData);
+  const startIndex = Math.min(1, visibleCards - 4);
+const endIndex = Math.min(visibleCards, totalData);
+
   return (
     <div className={styles.invoiceAdd}>
-      {dataDelivery.rows.map((data, index) => (
+     
+      {dataDelivery.rows.slice(0, visibleCards).map((data, index) => (
         <Card data={data} key={index} />
       ))}
+      
+      <div ref={observerRef}></div>
+      <div className={styles.info}>
+      {isLoading && <div className={styles.loading}><Loadingis/></div>
+      }
+        {`Data ${startIndex}-${endIndex} dari ${totalData} data`}
+      </div>
     </div>
+
+    
   );
 };
 
