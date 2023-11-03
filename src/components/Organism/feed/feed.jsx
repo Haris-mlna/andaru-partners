@@ -1,10 +1,14 @@
 import styles from "./feed.module.css";
+
+// Atom
 import {
   AvatarSidebar,
   PostImage,
 } from "../../Atom/image-placeholder/image-placeholder";
 import { Atag181, Ptag18, Span12, Span16 } from "../../Atom/text/text";
 import { Actionpost } from "../../Atom/button/button";
+
+// Material Ui
 import Checkbox from "@mui/material/Checkbox";
 import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
 import Favorite from "@mui/icons-material/Favorite";

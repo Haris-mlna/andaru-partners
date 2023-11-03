@@ -1,6 +1,10 @@
 import * as React from "react";
 import styles from "./delivery.module.css";
+
+// Import data
 import { dataDelivery } from "../../data/data";
+
+// Material UI
 import WarehouseOutlinedIcon from "@mui/icons-material/WarehouseOutlined";
 import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined";
 import DoneAllOutlinedIcon from "@mui/icons-material/DoneAllOutlined";
@@ -10,37 +14,6 @@ const Delivery = () => {
 
   const [progress, setProgress] = React.useState("off");
   const [dataDetail, setDataDetail] = React.useState();
-
-  // const toggleProgress = (params) => {
-  //   const off = "off";
-  //   const half = "half";
-  //   const full = "full";
-
-  //   if (params === "next") {
-
-  //     if (progress === off) {
-  //       setProgress(half);
-  //     } else if (progress === half) {
-  //       setProgress(full);
-  //     } else {
-  //       setProgress(full);
-  //     }
-  //   } else if (params === "prev") {
-  //     if (progress === full) {
-  //       setProgress(half);
-  //     } else if (progress === half) {
-  //       setProgress(off);
-  //     } else {
-  //       setProgress(off);
-  //     }
-  //   }
-
-  //   console.log(progress);
-  // };
-
-  // const handleTest = () => {
-  //   setDetail(!detail);
-  // };
 
   const setStatus = (param, data) => {
     const off = "off";

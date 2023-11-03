@@ -1,13 +1,14 @@
-import { useState } from "react";
-import { dataDelivery } from "../../../data/data";
+import * as React from "react";
 import styles from "./table.module.css";
-import { Button } from "@mui/material";
-import { useEffect, useRef } from "react";
+import { dataDelivery } from "../../../data/data";
 import { Loadingis } from "../../loading/loading";
+
+// Material UI
+import { Button } from "@mui/material";
 
 
 const Card = ({ data }) => {
-  const [showDetail, setShowDetail] = useState(false);
+  const [showDetail, setShowDetail] = React.useState(false);
 
   const toggleDetail = () => {
     setShowDetail(!showDetail);
@@ -88,9 +89,9 @@ const Card = ({ data }) => {
 };
 
 const InvoiceAdd = () => {
-  const [visibleCards, setVisibleCards] = useState(5);
-  const [isLoading, setIsLoading] = useState(false);
-  const [allDataLoaded, setAllDataLoaded] = useState(false);
+  const [visibleCards, setVisibleCards] = React.useState(5);
+  const [isLoading, setIsLoading] = React.useState(false);
+  const [allDataLoaded, setAllDataLoaded] = React.useState(false);
 
   const loadMoreCards = () => {
     setIsLoading(true);
@@ -107,9 +108,9 @@ const InvoiceAdd = () => {
   };
 
   // Gunakan useRef untuk mengamati elemen yang muncul di dalam viewport
-  const observerRef = useRef();
+  const observerRef = React.useRef();
 
-  useEffect(() => {
+  React.useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {

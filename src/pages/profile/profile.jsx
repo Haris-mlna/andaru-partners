@@ -1,46 +1,27 @@
 import React, { useState } from "react";
+import styles from "./profile.module.css";
+import haris from "../../assets/images/harispp.png";
+import { infoProfilee } from "../../../src/data/layout";
+
+// Atom
+import { H4tag, Span14 ,H6tag, Ptag16 } from "../../components/Atom/text/text";
+import { ButtonPrimary } from "../../components/Atom/button/button";
 import {
   ProfileBanner,
   TigaRoda,
 } from "../../components/Atom/image-placeholder/image-placeholder";
-import Navbar from "../../components/Organism/navbar/navbar";
-import styles from "./profile.module.css";
-import haris from "../../assets/images/harispp.png";
-import { H4tag, Span14 } from "../../components/Atom/text/text";
-import { H6tag, Ptag16 } from "../../components/Atom/text/text";
-import { ButtonPrimary } from "../../components/Atom/button/button";
-import Feed from "../../components/Organism/feed/feed";
-import { SidebarGallery } from "../../components/Molekul/right-sidebar/right-sidebar";
-import { ContactOnly } from "../../components/Molekul/contact/contact";
-import { GroupGrid } from "../../components/Organism/group/group";
+
+
+// Organism
 import { ResponsiveButtonProfile } from "../../components/Organism/responsive-button/responsive-button";
-import { infoProfilee } from "../../../src/data/layout";
-import about from "./about.module.css";
+import { GroupGrid } from "../../components/Organism/group/group";
+import { ContactOnly } from "../../components/Organism/contact/contact";
+import { SidebarGallery } from "../../components/Organism/right-sidebar/right-sidebar";
+import Navbar from "../../components/Organism/navbar/navbar";
+import Feed from "../../components/Organism/feed/feed";
 
 // REDUX JANGAN DIGANTI SAN !!!!!
 import { useSelector } from "react-redux";
-
-const About = () => {
-  return (
-    <div className={about.about}>
-      <H6tag text={"About"} />
-      <Ptag16
-        text={
-          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, corrupti. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, corrupti."
-        }
-      />
-      <hr />
-      <H6tag text={"Info"} />
-      <br />
-      {infoProfilee.icons.map((x, index) => (
-        <div className={about.info_Profile_map} key={index}>
-          <i className={x.className}>{x.title}</i>
-          <span className="nameofinfo">{x.name}</span>
-        </div>
-      ))}
-    </div>
-  );
-};
 
 const Profile = () => {
   const [active, setActive] = useState("post");
@@ -185,3 +166,25 @@ const Profile = () => {
 };
 
 export default Profile;
+
+const About = () => {
+  return (
+    <div className={styles.about}>
+      <H6tag text={"About"} />
+      <Ptag16
+        text={
+          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, corrupti. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, corrupti."
+        }
+      />
+      <hr />
+      <H6tag text={"Info"} />
+      <br />
+      {infoProfilee.icons.map((x, index) => (
+        <div className={styles.info_Profile_map} key={index}>
+          <i className={x.className}>{x.title}</i>
+          <span className="nameofinfo">{x.name}</span>
+        </div>
+      ))}
+    </div>
+  );
+};

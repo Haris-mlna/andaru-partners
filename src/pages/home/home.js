@@ -1,19 +1,26 @@
 import * as React from "react";
 import styles from "./home.module.css";
-
-// Components
 import { useNavigate } from "react-router-dom";
+
+// Redux
+import { useSelector } from "react-redux";
+
+// Atom --------------------------------------------------------------------
 import { ButtonPrimary } from "../../components/Atom/button/button";
+
+// Molekul -----------------------------------------------------------------
+
+// Organism ----------------------------------------------------------------
 import { ResponsiveButton } from "../../components/Organism/responsive-button/responsive-button";
 import { GroupContainer } from "../../components/Organism/group/group";
-import { SidebarContact } from "../../components/Molekul/contact/contact";
+import { SidebarContact } from "../../components/Organism/contact/contact";
 import Navbar from "../../components/Organism/navbar/navbar.jsx";
 import NavbarMobile from "../../components/Organism/navbar-mobile/navbar-mobile";
 import Sidebar from "../../components/Organism/sidebar/sidebar";
 import Feed from "../../components/Organism/feed/feed";
 import Loading from "../../components/loading/loading";
 
-// Pages
+// Pages -------------------------------------------------------------------
 const Dashboard = React.lazy(() => import("../dashboard/dashboard"));
 const Invoice = React.lazy(() => import("../invoice/invoice"));
 const InvoiceReceiptPage = React.lazy(() =>
@@ -35,6 +42,14 @@ const Home = () => {
   const openDev = () => {
     navigate("/template-dev");
   };
+
+  const user = useSelector((state) => state.user.value);
+
+  React.useEffect(() => {
+    if (user.name === "") {
+      navigate("/login");
+    }
+  }, [user.name, navigate]);
 
   return (
     <div className={styles.pages}>

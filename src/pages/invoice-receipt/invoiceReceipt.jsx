@@ -1,10 +1,15 @@
 import * as React from "react";
-import { Button } from "@mui/material";
-import Input from "../../components/Atom/input/input";
 import styles from "./invoiceReceipt.module.css";
+
+// Atom
+import Input from "../../components/Atom/input/input";
+
+// Molekul
 import InvoiceReceipt from "../../components/Molekul/table-invoiceReceipt/tableInvoiceReceipt";
 import InvoiceReceiptcard from "../../components/Molekul/table-invoiceReceipt/card";
 
+// Material UI
+import { Button } from "@mui/material";
 
 const InvoiceReceiptPage = () => {
   const [isMobile, setIsMobile] = React.useState(false);

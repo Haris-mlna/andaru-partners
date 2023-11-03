@@ -46,8 +46,8 @@ import {
 } from "../../components/Molekul/card/card.jsx";
 
 import { DropdownAvatar } from "../../components/Organism/navbar/navbar.jsx";
-import { SidebarGallery } from "../../components/Molekul/right-sidebar/right-sidebar";
-import { SidebarContact } from "../../components/Molekul/contact/contact";
+import { SidebarGallery } from "../../components/Organism/right-sidebar/right-sidebar";
+import { SidebarContact } from "../../components/Organism/contact/contact";
 import { GroupContainer } from "../../components/Organism/group/group";
 import BasicTextFields from "../../components/Atom/input/input";
 import Katalog from "../katalog-produk/katalog-produk";

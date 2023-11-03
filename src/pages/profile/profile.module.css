@@ -93,6 +93,22 @@
   top: 130px;
 }
 
+.about{
+  background-color: var(--bs-white);
+  padding: 1rem 1rem;
+  border-radius: 12px;
+}
+
+.info_Profile_map{
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+
+
+
 .aboutLeft {
   flex: 3.1;
   
