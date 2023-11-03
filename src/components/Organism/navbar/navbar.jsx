@@ -39,6 +39,12 @@ const DropdownAvatar = ({ isActive, isInitial }) => {
     return navigate("/profile");
   };
 
+  const signOut = () => {
+    window.sessionStorage.clear()
+    navigate('/login')
+
+  };
+
   return (
     <>
       <div
@@ -84,7 +90,12 @@ const DropdownAvatar = ({ isActive, isInitial }) => {
           />
         </div>
         <hr className={styles.hr_dr_link} />
-        <div className={styles.dropdown_link}>
+        <div
+          className={styles.dropdown_link}
+          onClick={() => {
+            signOut();
+          }}
+        >
           <IconsFA
             size={"small"}
             title={"power_settings_new"}

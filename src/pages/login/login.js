@@ -1,8 +1,9 @@
 import * as React from "react";
 import styles from "./login.module.css";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
 
+// Redux
+import { useDispatch } from "react-redux";
 import { login } from "../../redux/user";
 
 // Material UI
@@ -10,12 +11,19 @@ import TextField from "@mui/material/TextField";
 
 const Login = () => {
   const dispatch = useDispatch();
-
   const navigate = useNavigate();
   const [username, setUsername] = React.useState("");
 
   const handleSubmit = (param) => {
     if (param === "admin@pasti") {
+      dispatch(login({
+        name : "Admin Pasti Group",
+        age : 0,
+        email : "admin@pasti"
+      }));
+
+      window.sessionStorage.setItem("login_token", param); // Use setItem
+      navigate("/");
     } else if (param === "haris@pasti") {
       dispatch(
         login({
@@ -24,6 +32,8 @@ const Login = () => {
           email: "haris@pasti",
         })
       );
+
+      window.sessionStorage.setItem("login_token", param); // Use setItem
       navigate("/");
     } else {
       console.log(`you're out`);

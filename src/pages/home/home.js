@@ -46,10 +46,20 @@ const Home = () => {
   const user = useSelector((state) => state.user.value);
 
   React.useEffect(() => {
-    if (user.name === "") {
+    if (user.name === "admin@pasti" || user.name === "haris@pasti") {
+      console.log("succes");
+      
+    } else if (
+      window.sessionStorage.getItem("login_token") == "admin@pasti" ||
+      window.sessionStorage.getItem("login_token") == "haris@pasti"
+    ) {
+      console.log("succes");
+    } else {
       navigate("/login");
     }
   }, [user.name, navigate]);
+
+  console.log(user.name)
 
   return (
     <div className={styles.pages}>

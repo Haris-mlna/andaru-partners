@@ -31,7 +31,7 @@ const NavbarMobile = () => {
           }}
         >
           <AvatarNavbar new_className={styles.avatar} />
-          <DropdownAvatar isActive={isActive} isInitial={isInitial}/>
+          <DropdownAvatar isActive={isActive} isInitial={isInitial} />
         </li>
       </ul>
     </div>
@@ -43,6 +43,13 @@ const DropdownAvatar = ({ isActive, isInitial }) => {
 
   const NavigateTo = () => {
     return navigate("/profile");
+  };
+
+  const signOut = () => {
+    // window.sessionStorage.clear()
+    // navigate('/login')
+
+    console.log('test')
   };
 
   return (
@@ -90,7 +97,12 @@ const DropdownAvatar = ({ isActive, isInitial }) => {
           />
         </div>
         <hr className={styles.hr_dr_link} />
-        <div className={styles.dropdown_link}>
+        <div
+          className={styles.dropdown_link}
+          onClick={() => {
+            signOut();
+          }}
+        >
           <IconsFA
             size={"small"}
             title={"power_settings_new"}
