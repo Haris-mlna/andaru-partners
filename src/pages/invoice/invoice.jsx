@@ -1,4 +1,4 @@
-import * as React from 'react'
+import * as React from "react";
 import styles from "./invoice.module.css";
 
 // Atom
@@ -10,6 +10,7 @@ import InvoiceAdd from "../../components/Molekul/table-invoice/table";
 
 // Material UI
 import { Button } from "@mui/material";
+import { AddInvoice } from "../../components/Molekul/table-invoice/card";
 
 const Invoice = () => {
   // const [isMobile, setIsMobile] = React.useState(false);
@@ -29,6 +30,11 @@ const Invoice = () => {
   //     window.removeEventListener("resize", handleResize);
   //   };
   // }, []);
+  const [isInvoice, setIsInvoice] = React.useState(0);
+
+  const handleInvoice = (page) => {
+    setIsInvoice(page);
+  };
   return (
     <div className={styles.invoice}>
       <div className={styles.headInvoice}>
@@ -45,33 +51,46 @@ const Invoice = () => {
           <Button className={styles.btnBiruGelap} variant="contained">
             Import Faktur
           </Button>
-          <Button className={styles.grey} variant="contained">
-            Tambah Faktur
+          <Button
+            className={styles.grey}
+            variant="contained"
+            onClick={() => handleInvoice(1)}
+          >
+            Tambah Invoice
           </Button>
         </div>
       </div>
-      <div className={styles.wrapInvoiceContent}>
-        <div className={styles.filterInfoice}>
-          <div className={styles.filterText}>
-            <Input
-              id="noinvoice"
-              name="noinvoice"
-              label="Masukan No Invoice"
-              size="small"
-            />
-            <Input
-              id="pembeliinvoice"
-              name="pembeliinvoice"
-              label="Masukan Nama Pembeli"
-              size="small"
-            />
+      {isInvoice === 0 && (
+        <div className={styles.wrapInvoiceContent}>
+          <div className={styles.filterInfoice}>
+            <div className={styles.filterText}>
+              <Input
+                id="noinvoice"
+                name="noinvoice"
+                label="Masukan No Invoice"
+                size="small"
+              />
+              <Input
+                id="pembeliinvoice"
+                name="pembeliinvoice"
+                label="Masukan Nama Pembeli"
+                size="small"
+              />
+            </div>
+            <div className={styles.selectInvoice}></div>
           </div>
-          <div className={styles.selectInvoice}></div>
+
+          <div>
+            <InvoiceAdd />
+          </div>
         </div>
-        <div>
-          <InvoiceAdd />
+      )}
+      {isInvoice === 1 && (
+        <div className={styles.addInvoice}>
+          <AddInvoice />
+          <button onClick={()=>{handleInvoice(0)}}>tombol dev</button>
         </div>
-      </div>
+      )}
     </div>
   );
 };

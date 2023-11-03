@@ -20,7 +20,7 @@ import { SidebarGallery } from "../../components/Organism/right-sidebar/right-si
 import Navbar from "../../components/Organism/navbar/navbar";
 import Feed from "../../components/Organism/feed/feed";
 
-// REDUX JANGAN DIGANTI SAN !!!!!
+// REDUX JANGAN DIGANTI SAN {OKE RIS} !!!!!
 import { useSelector } from "react-redux";
 
 const Profile = () => {

@@ -87,6 +87,20 @@
   width: 100% !important;
 }
 
+/* TAGIHAN */
+
+.infoTagihan{
+  flex: 1;
+  border-radius: 12px;
+  padding: 1rem;
+  border: 1px solid black;
+}
+
+.headInfo{
+  margin: 0;
+  padding: 0;
+}
+
 @media (max-width: 762px) {
 
   .btnInvoice {
