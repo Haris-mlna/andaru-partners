@@ -1,10 +1,15 @@
-import { group } from "../../../data/data";
-import { CardGroup } from "../../Molekul/card/card";
+import * as React from "react";
 import styles from "./group.module.css";
-import { Button } from "@mui/material";
-import { useState } from "react";
-import NotificationImportantOutlinedIcon from '@mui/icons-material/NotificationImportantOutlined';
 import ava from '../../../assets/images/avatar-1.png'
+
+
+import { CardGroup } from "../../Molekul/card/card";
+// Mock-up data
+import { group } from "../../../data/data";
+
+// Material UI
+import NotificationImportantOutlinedIcon from '@mui/icons-material/NotificationImportantOutlined';
+import { Button } from "@mui/material";
 
 const GroupGrid = () => {
   return (
@@ -17,7 +22,7 @@ const GroupGrid = () => {
 };
 
 const GroupContainer = () => {
-  const [isActive, setIsActive] = useState({
+  const [isActive, setIsActive] = React.useState({
     button1: true,
     button2: false,
     button3: false,
@@ -34,7 +39,7 @@ const GroupContainer = () => {
     setIsActive(newActiveState);
   };
 
-  const [active, setActive] = useState("0");
+  const [active, setActive] = React.useState("0");
 
   const handlePage = (page) => {
     setActive(page);

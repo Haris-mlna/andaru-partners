@@ -1,3 +1,6 @@
+import styles from "./card.module.css";
+
+// Atom
 import { ButtonInvite, ButtonJoined } from "../../Atom/button/button";
 import {
   GroupAvatar,
@@ -7,7 +10,7 @@ import {
   TigaRoda,
 } from "../../Atom/image-placeholder/image-placeholder";
 import { Atag181, Span16 , Span14, H5tag, Ptag16} from "../../Atom/text/text";
-import styles from "./card.module.css";
+
 
 const CardGroup = ({name, member}) => {
   return (

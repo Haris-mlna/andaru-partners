@@ -1,16 +1,30 @@
 import * as React from "react";
 import styles from "./login.module.css";
-import TextField from "@mui/material/TextField";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+
+import { login } from "../../redux/user";
+
+// Material UI
+import TextField from "@mui/material/TextField";
 
 const Login = () => {
+  const dispatch = useDispatch();
+
   const navigate = useNavigate();
   const [username, setUsername] = React.useState("");
 
   const handleSubmit = (param) => {
     if (param === "admin@pasti") {
-      console.log(`you're in`);
-      navigate('/')
+    } else if (param === "haris@pasti") {
+      dispatch(
+        login({
+          name: "Haris Maulana",
+          age: 23,
+          email: "haris@pasti",
+        })
+      );
+      navigate("/");
     } else {
       console.log(`you're out`);
     }

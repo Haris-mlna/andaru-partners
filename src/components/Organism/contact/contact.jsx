@@ -1,9 +1,13 @@
-import { contactPeople, requestContact } from '../../../data/data'
+import styles from './contact.module.css'
+
+// Atom
 import { ButtonDanger, ButtonPrimary } from '../../Atom/button/button'
 import { IconsFA } from '../../Atom/icons/icons'
 import { ContactAvatar, RequestAvatar, TigaRoda } from '../../Atom/image-placeholder/image-placeholder'
 import { Atag16, H6tag, Span12 } from '../../Atom/text/text'
-import styles from './contact.module.css'
+
+// Mock-up Data
+import { contactPeople, requestContact } from '../../../data/data'
 
 const RequestContact = () => {
   return (
