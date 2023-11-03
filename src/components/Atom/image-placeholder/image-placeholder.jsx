@@ -120,7 +120,7 @@ const ContactAvatar = ({ new_className }) => {
 
 const ProfileBanner = ({ new_className }) => {
   return (
-    <img className={new_className} src={profilebanner} alt="profileimg" />
+    <img className={new_className} src={profilebanner} alt="profile" />
   );
 };
 
@@ -132,7 +132,7 @@ const PhotoSidebar = ({new_className}) => {
 
 const ProfilePicture = ({new_className}) => {
   return (
-    <img className={new_className} src={profilePicture} alt="profile-picture" />
+    <img className={new_className} src={profilePicture} alt="profile" />
   )
 }
 

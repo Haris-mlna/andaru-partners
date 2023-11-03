@@ -1,14 +1,14 @@
+import * as React from 'react'
+
 import { Button } from "@mui/material";
 import Input from "../../components/Atom/input/input";
 import styles from "./invoice.module.css";
-import InvoiceAdd from "../../components/Organism/table-invoice/table";
-import Groupcard from "../../components/Organism/table-invoice/card";
-import { useState } from "react";
-import { useEffect } from "react";
+import InvoiceAdd from "../../components/Molekul/table-invoice/table";
+import Groupcard from "../../components/Molekul/table-invoice/card";
 
 const Invoice = () => {
-  const [isMobile, setIsMobile] = useState(false);
-  useEffect(() => {
+  const [isMobile, setIsMobile] = React.useState(false);
+  React.useEffect(() => {
     function handleResize() {
       setIsMobile(window.innerWidth <= 762);
     }

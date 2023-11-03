@@ -1,8 +1,21 @@
-import { width } from "@mui/system";
+import * as React from "react";
 import styles from "./login.module.css";
 import TextField from "@mui/material/TextField";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate();
+  const [username, setUsername] = React.useState("");
+
+  const handleSubmit = (param) => {
+    if (param === "admin@pasti") {
+      console.log(`you're in`);
+      navigate('/')
+    } else {
+      console.log(`you're out`);
+    }
+  };
+
   return (
     <>
       <div className={styles.pages}>
@@ -15,15 +28,24 @@ const Login = () => {
               Partner
             </h1>
           </div>
-          <form className={styles.form}>
+          <form
+            className={styles.form}
+            onSubmit={(e) => {
+              e.preventDefault();
+              handleSubmit(username);
+            }}
+          >
             <TextField
               id="outlined-basic"
               label="Masukan Username"
               variant="outlined"
               size="small"
+              onChange={(e) => {
+                setUsername(e.target.value);
+              }}
               className={styles.input}
             />
-            <input type="submit" value={'Berikutnya'}/>
+            <input type="submit" value={"Berikutnya"} />
           </form>
         </div>
         <div className={styles.rt}>this is image component</div>

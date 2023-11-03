@@ -7,17 +7,48 @@ import Navbar from "../../components/Organism/navbar/navbar";
 import styles from "./profile.module.css";
 import haris from "../../assets/images/harispp.png";
 import { H4tag, Span14 } from "../../components/Atom/text/text";
+import { H6tag, Ptag16 } from "../../components/Atom/text/text";
 import { ButtonPrimary } from "../../components/Atom/button/button";
-import About from "./about";
-import ProfileFeed from "./profileFeed";
+import Feed from "../../components/Organism/feed/feed";
 import { SidebarGallery } from "../../components/Molekul/right-sidebar/right-sidebar";
 import { ContactOnly } from "../../components/Molekul/contact/contact";
 import { GroupGrid } from "../../components/Organism/group/group";
 import { ResponsiveButtonProfile } from "../../components/Organism/responsive-button/responsive-button";
+import { infoProfilee } from "../../../src/data/layout";
+import about from "./about.module.css";
 
+// REDUX JANGAN DIGANTI SAN !!!!!
+import { useSelector } from "react-redux";
+
+const About = () => {
+  return (
+    <div className={about.about}>
+      <H6tag text={"About"} />
+      <Ptag16
+        text={
+          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, corrupti. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, corrupti."
+        }
+      />
+      <hr />
+      <H6tag text={"Info"} />
+      <br />
+      {infoProfilee.icons.map((x, index) => (
+        <div className={about.info_Profile_map} key={index}>
+          <i className={x.className}>{x.title}</i>
+          <span className="nameofinfo">{x.name}</span>
+        </div>
+      ))}
+    </div>
+  );
+};
 
 const Profile = () => {
   const [active, setActive] = useState("post");
+
+  // KODE HARIS JANGAN DIGANTI
+  const user = useSelector((state) => state.user.value);
+
+  console.log(user);
 
   const handlePage = (page) => {
     setActive(page);
@@ -30,98 +61,124 @@ const Profile = () => {
       </div>
 
       <div className={styles.containerMobile}>
-      <ResponsiveButtonProfile/>
+        <ResponsiveButtonProfile />
 
-      <div className={styles.headerProfile}>
-        <ProfileBanner new_className={styles.profileBanner} />
-        <div className={styles.detailProfile}>
-          <div className={styles.detailProfilee}>
-            <img className={styles.resImg} src={haris} alt="" />
-            <div className={styles.wrapDetailProfile}>
-              <H4tag new_className={styles.resh4} text={"Haris Maulana"} />
-              <div className={styles.detailProf}>
-                <TigaRoda new_className={styles.restigaroda} />
-                <Span14 new_className={styles.resspan14} text={"10k Followers"} />
-                <Span14 new_className={styles.resspan14} text={"200 Followings"} />
+        <div className={styles.headerProfile}>
+          <ProfileBanner new_className={styles.profileBanner} />
+          <div className={styles.detailProfile}>
+            <div className={styles.detailProfilee}>
+              <img className={styles.resImg} src={haris} alt="" />
+              <div className={styles.wrapDetailProfile}>
+                <H4tag new_className={styles.resh4} text={user.name} />
+                <div className={styles.detailProf}>
+                  <TigaRoda new_className={styles.restigaroda} />
+                  <Span14
+                    new_className={styles.resspan14}
+                    text={"10k Followers"}
+                  />
+                  <Span14
+                    new_className={styles.resspan14}
+                    text={"200 Followings"}
+                  />
+                </div>
               </div>
             </div>
+            <div className={styles.buttonEditProfile}>
+              <ButtonPrimary
+                new_className={styles.btnedt}
+                text={"Edit Profile"}
+              />
+            </div>
           </div>
-          <div className={styles.buttonEditProfile}>
-            <ButtonPrimary new_className={styles.btnedt} text={"Edit Profile"} />
-          </div>
-        </div>
-        <hr />
-        <div className={styles.navProfile}>
-        <button className={styles.coverbtn} onClick={() => handlePage("post")} > Post
-          </button>
-          
-          <button className={styles.coverbtn} onClick={() => handlePage("about")} >About </button>
-         
-         <button className={styles.coverbtn} onClick={() => handlePage("photo")} >Photos</button>
-          
-          <button className={styles.coverbtn} onClick={() => handlePage("group")}>Groups</button>
-         
-        </div>
-      </div>
+          <hr />
+          <div className={styles.navProfile}>
+            <button
+              className={styles.coverbtn}
+              onClick={() => handlePage("post")}
+            >
+              {" "}
+              Post
+            </button>
 
-      
-      {/* POST */}
-      {active === "post" && (
-        <div className={styles.main_section_profile}>
-          <div className={styles.profileLeft}id="aboutres" >
-            <About />
-          </div>
-          <div className={styles.profileMid}>
-            <ProfileFeed />
-          </div>
-          <div className={styles.profileRight} id="contactres">
-            {" "}
-            <SidebarGallery />
-            <br />
-            <ContactOnly />
-          </div>
-        </div>
-      )}
+            <button
+              className={styles.coverbtn}
+              onClick={() => handlePage("about")}
+            >
+              About{" "}
+            </button>
 
-      {/* ABOUT */}
-      {active === "about" ? (
-        <div className={styles.main_section_profile_about}>
-          <div className={styles.aboutLeft}>
-            <About />
-          </div>
-          <div className={styles.aboutRight}>
-            {" "}
-            <ContactOnly />
-          </div>
-        </div>
-      ) : null
-      }
+            <button
+              className={styles.coverbtn}
+              onClick={() => handlePage("photo")}
+            >
+              Photos
+            </button>
 
-      {/* PHOTO */}
-      {active === "photo" && (
-        <div className={styles.main_section_profile_photo}>
-          <div className={styles.aboutLeft}>
-            <SidebarGallery />
-          </div>
-          <div className={styles.aboutRight}>
-            {" "}
-            <ContactOnly />
+            <button
+              className={styles.coverbtn}
+              onClick={() => handlePage("group")}
+            >
+              Groups
+            </button>
           </div>
         </div>
-      )}
 
-      {/* GROUP */}
-      {active === "group" && (
-        <div className={styles.main_section_profile_group}>
-          <div className={styles.aboutLeft}>
-            <GroupGrid/>
+        {/* POST */}
+        {active === "post" && (
+          <div className={styles.main_section_profile}>
+            <div className={styles.profileLeft} id="aboutres">
+              <About />
+            </div>
+            <div className={styles.profileMid}>
+              <Feed />
+            </div>
+            <div className={styles.profileRight} id="contactres">
+              {" "}
+              <SidebarGallery />
+              <br />
+              <ContactOnly />
+            </div>
           </div>
-          <div className={styles.aboutRight}>
-            {" "}
-            <ContactOnly />
+        )}
+
+        {/* ABOUT */}
+        {active === "about" ? (
+          <div className={styles.main_section_profile_about}>
+            <div className={styles.aboutLeft}>
+              <About />
+            </div>
+            <div className={styles.aboutRight}>
+              {" "}
+              <ContactOnly />
+            </div>
           </div>
-        </div>
-      )}
+        ) : null}
+
+        {/* PHOTO */}
+        {active === "photo" && (
+          <div className={styles.main_section_profile_photo}>
+            <div className={styles.aboutLeft}>
+              <SidebarGallery />
+            </div>
+            <div className={styles.aboutRight}>
+              {" "}
+              <ContactOnly />
+            </div>
+          </div>
+        )}
+
+        {/* GROUP */}
+        {active === "group" && (
+          <div className={styles.main_section_profile_group}>
+            <div className={styles.aboutLeft}>
+              <GroupGrid />
+            </div>
+            <div className={styles.aboutRight}>
+              {" "}
+              <ContactOnly />
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

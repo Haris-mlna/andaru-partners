@@ -1,16 +1,14 @@
+import * as React from "react";
 import { Button } from "@mui/material";
 import Input from "../../components/Atom/input/input";
 import styles from "./invoiceReceipt.module.css";
+import InvoiceReceipt from "../../components/Molekul/table-invoiceReceipt/tableInvoiceReceipt";
+import InvoiceReceiptcard from "../../components/Molekul/table-invoiceReceipt/card";
 
-import InvoiceReceipt from "../../components/Organism/table-invoiceReceipt/tableInvoiceReceipt";
-import { useState } from "react";
-import { useEffect } from "react";
-import Groupcard from "../../components/Organism/table-invoice/card";
-import InvoiceReceiptcard from "../../components/Organism/table-invoiceReceipt/card";
 
 const InvoiceReceiptPage = () => {
-  const [isMobile, setIsMobile] = useState(false);
-  useEffect(() => {
+  const [isMobile, setIsMobile] = React.useState(false);
+  React.useEffect(() => {
     function handleResize() {
       setIsMobile(window.innerWidth <= 762);
     }
@@ -33,37 +31,49 @@ const InvoiceReceiptPage = () => {
         <div className={styles.hr}></div>
       </div>
       <div className={styles.btnInvoice}>
-        <div className={styles.btnInvoiceLeft}>
-        </div>
+        <div className={styles.btnInvoiceLeft}></div>
         <div className={styles.btnInvoiceRight}>
-        <Button className={styles.grey} variant="contained">Tambah Invoice Receipt</Button>
+          <Button className={styles.grey} variant="contained">
+            Tambah Invoice Receipt
+          </Button>
         </div>
       </div>
       <div className={styles.wrapInvoiceContent}>
         <div className={styles.filterInfoice}>
-            <div className={styles.filterText}>
-            <Input id='noinvoice' name='noinvoice' label='Masukan No Invoice' size='small' new_clasname={styles.filter} />
-            <Input id='pembeliinvoice' name='pembeliinvoice' label='Masukan Nama Pembeli' size='small' new_clasname={styles.filter} />
-            </div>
-            <div className={styles.selectInvoice}>
-            </div>
+          <div className={styles.filterText}>
+            <Input
+              id="noinvoice"
+              name="noinvoice"
+              label="Masukan No Invoice"
+              size="small"
+              new_clasname={styles.filter}
+            />
+            <Input
+              id="pembeliinvoice"
+              name="pembeliinvoice"
+              label="Masukan Nama Pembeli"
+              size="small"
+              new_clasname={styles.filter}
+            />
+          </div>
+          <div className={styles.selectInvoice}></div>
         </div>
         <div className={styles.tableInvoice}>
-        <div>
-          {isMobile ? (
-            <div>
-              {/* Komponen B ditampilkan saat layar ponsel */}
-              <InvoiceReceiptcard/>
-            </div>
-          ) : (
-            <div>
-              {/* Komponen A ditampilkan saat lebar layar normal */}
-              <InvoiceReceipt/>
-            </div>
-          )}
+          <div>
+            {isMobile ? (
+              <div>
+                {/* Komponen B ditampilkan saat layar ponsel */}
+                <InvoiceReceiptcard />
+              </div>
+            ) : (
+              <div>
+                {/* Komponen A ditampilkan saat lebar layar normal */}
+                <InvoiceReceipt />
+              </div>
+            )}
+          </div>
         </div>
-        </div>
-        </div>
+      </div>
     </div>
   );
 };
