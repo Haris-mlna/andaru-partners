@@ -52,6 +52,7 @@ import { GroupContainer } from "../../components/Organism/group/group";
 import BasicTextFields from "../../components/Atom/input/input";
 import Katalog from "../katalog-produk/katalog-produk";
 import Loading from "../../components/loading/loading";
+import PieColor from "../../components/Molekul/chart/pie.js";
 
 const Template = () => {
 
@@ -111,6 +112,7 @@ const Template = () => {
         <BasicTextFields/>
         <Katalog/>
         <Loading/>
+        <PieColor/>
       </div>
     </div>
   );

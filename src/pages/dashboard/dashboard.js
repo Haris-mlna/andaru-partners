@@ -1,9 +1,13 @@
+import * as React from "react";
 import styles from "./dashboard.module.css";
-import { useState } from "react";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+
+// Material UI
+import { PieChart } from "@mui/x-charts";
 
 const Dashboard = () => {
-  const [myOrder, setMyOrder] = useState(true);
-  const [partnerOrder, setPartnerOrder] = useState(false);
+  const [myOrder, setMyOrder] = React.useState(true);
+  const [partnerOrder, setPartnerOrder] = React.useState(false);
 
   const toggleOrder = (active, nonactive) => {
     active(true);
@@ -40,10 +44,12 @@ const Dashboard = () => {
         <div className={styles.left}>
           <div className={styles.container_notification}>
             <div className={styles.myorder}>
+              <OpenInNewIcon className={styles.icons_open} />
               <p>Pesanan {partnerOrder ? "partner" : "saya"} :</p>
               <h3>{partnerOrder ? 14 : 4}</h3>
             </div>
             <div className={styles.delivery}>
+              <OpenInNewIcon className={styles.icons_open} />
               <p>
                 {" "}
                 {partnerOrder
@@ -54,43 +60,70 @@ const Dashboard = () => {
             </div>
           </div>
           <div className={styles.confirmation}>
+            <OpenInNewIcon className={styles.icons_open} />
             <p>Menunggu konfirmasi pemesanan :</p>
             <h3>{partnerOrder ? 8 : 12}</h3>
           </div>
           <div className={styles.bill}>
-            <p>Tagihan saya :</p>
-            <div className={`table-responsive ${styles.table}`}>
-              <table className="table mb-0">
-                <thead>
-                  <tr>
-                    <th>#</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Username</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+            <OpenInNewIcon className={styles.icons_open} />
+            <p> {partnerOrder ? "Invoice penjualan saya" : "Tagihan saya :"}</p>
+            {partnerOrder ? (
+              <div className={styles.chart_container}>
+                <PieChart
+                  series={[
+                    {
+                      data: [
+                        { value: 4 },
+                        { value: 6 },
+                        { value: 20 },
+                        { value: 20 },
+                      ],
+                      innerRadius: 30,
+                      outerRadius: 100,
+                      paddingAngle: 5,
+                      cornerRadius: 5,
+                      startAngle: -180,
+                      endAngle: 180,
+                      cx: 200,
+                      cy: 120,
+                    },
+                  ]}
+                />
+              </div>
+            ) : (
+              <div className={`table-responsive ${styles.table}`}>
+                <table className="table mb-0">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>First Name</th>
+                      <th>Last Name</th>
+                      <th>Username</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                      <td>@fat</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>Larry</td>
+                      <td>the Bird</td>
+                      <td>@twitter</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            )}
           </div>
         </div>
         <div className={styles.right}>

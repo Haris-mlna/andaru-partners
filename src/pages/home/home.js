@@ -50,8 +50,8 @@ const Home = () => {
       console.log("succes");
       
     } else if (
-      window.sessionStorage.getItem("login_token") == "admin@pasti" ||
-      window.sessionStorage.getItem("login_token") == "haris@pasti"
+      window.sessionStorage.getItem("login_token") === "admin@pasti" ||
+      window.sessionStorage.getItem("login_token") === "haris@pasti"
     ) {
       console.log("succes");
     } else {
