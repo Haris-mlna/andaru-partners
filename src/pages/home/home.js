@@ -49,7 +49,7 @@ const Home = () => {
     if (user.name === "") {
       navigate("/login");
     }
-  }, []);
+  }, [user.name, navigate]);
 
   return (
     <div className={styles.pages}>
