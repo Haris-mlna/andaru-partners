@@ -83,6 +83,7 @@
 
 .allWrap{
     display: flex;
+    transform: translate();
 }
 
 /* Mengatur warna scrollbar */
