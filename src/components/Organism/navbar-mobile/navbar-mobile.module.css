@@ -64,9 +64,11 @@
   top: -300px;
   z-index: 10000;
   opacity: 0;
+  display: none;
 }
 
 .active {
+  display: block;
   animation: fadeIn 0.3s ease-in-out forwards; /* Fade-in animation */
 }
 
