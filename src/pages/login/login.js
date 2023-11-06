@@ -8,7 +8,6 @@ import "aos/dist/aos.css";
 // images
 import feed from "../../assets/background/feed.png";
 import contact from "../../assets/background/contact.png";
-import request from "../../assets/background/request.png";
 import sidebar from "../../assets/background/sidebar.png";
 
 const Login = () => {
