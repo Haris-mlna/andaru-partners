@@ -2,8 +2,8 @@ import styles from './post-feed.module.css'
 
 const PostFeed = () => {
     return (
-        <div>
-        post - feed
+        <div className={styles.post_feed}>
+        post - feed 
         </div>
     )
 }
