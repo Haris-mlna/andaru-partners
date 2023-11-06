@@ -3,6 +3,9 @@ import * as React from "react";
 import { AvatarSidebar } from "../../Atom/image-placeholder/image-placeholder";
 import { Atag181, Ptag18 } from "../../Atom/text/text";
 
+// Redux
+import { useSelector } from "react-redux";
+
 // Material UI
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import DashboardCustomizeOutlinedIcon from "@mui/icons-material/DashboardCustomizeOutlined";
@@ -13,7 +16,6 @@ import StoreOutlinedIcon from "@mui/icons-material/StoreOutlined";
 import PaymentOutlinedIcon from "@mui/icons-material/PaymentOutlined";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
-
 
 const iconSize = "medium";
 
@@ -85,6 +87,8 @@ const Sidebar = ({
   contactIsOpen,
   setContactIsOpen,
 }) => {
+  const user = useSelector((state) => state.user.value);
+
   const [isActive, setIsActive] = React.useState("Home");
 
   const handleOpen = (component, direction, isOpen, setOpen) => {
@@ -122,8 +126,8 @@ const Sidebar = ({
             <AvatarSidebar new_className={styles.avatar} />
           </div>
           <div className={styles.info}>
-            <Atag181 text={"Ikhsanudin M"} />
-            <Ptag18 new_className={styles.ptag18} text={"@ikhsanudin"} />
+            <p className={styles.username}>{user.username} </p>
+            <p className={styles.email}>{user.email}</p>
           </div>
         </div>
         <hr className={styles.hr} />

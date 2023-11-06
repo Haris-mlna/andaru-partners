@@ -2,6 +2,13 @@ import * as React from "react";
 import styles from "./login.module.css";
 import styles_usernames from "./username.module.css";
 import styles_password from "./password.module.css";
+import { useNavigate } from "react-router-dom";
+
+// Redux
+import { useDispatch } from "react-redux";
+import { login } from "../../redux/user";
+
+// AOS
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -50,8 +57,14 @@ const Login = () => {
 export default Login;
 
 const LoginUsername = ({ username, setUsername, setIsAuthorized }) => {
+  const navigate = useNavigate();
+
+  const handleRecovery = () => {
+    navigate("/pass-recovery");
+  };
+
   return (
-    <form className={styles_usernames.content}>
+    <div className={styles_usernames.content}>
       <p data-aos="fade-right" data-aos-duration="2000" data-aos-delay="200">
         Welcome to
       </p>
@@ -79,16 +92,57 @@ const LoginUsername = ({ username, setUsername, setIsAuthorized }) => {
         onClick={() => {
           if (username === "admin@pasti") {
             setIsAuthorized(true);
+          } else if (username === "haris@pasti") {
+            setIsAuthorized(true);
           }
         }}
       >
         Berikutnya
       </button>
-    </form>
+      <br />
+      <div
+        onClick={() => {
+          handleRecovery();
+        }}
+        className={styles_usernames.a}
+      >
+        lupa password?
+      </div>
+    </div>
   );
 };
 
-const LoginPassword = ({ password, setPassword, username, setUsername }) => {
+const LoginPassword = ({ password, setPassword, username }) => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleRecovery = () => {
+    navigate("/pass-recovery");
+  };
+
+  const handleSubmit = (email, pass) => {
+    window.sessionStorage.setItem("login-email", email);
+    window.sessionStorage.setItem("login-pass", pass);
+
+    if (email === "admin@pasti") {
+      const body = {
+        email: email,
+        pass: pass,
+        username: "Admin Pasti Group",
+      };
+      dispatch(login(body));
+      navigate("/");
+    } else if (email === "haris@pasti") {
+      const body = {
+        email: email,
+        pass: pass,
+        username: "Haris Maulana",
+      };
+      dispatch(login(body));
+      navigate("/");
+    }
+  };
+
   return (
     <form className={styles_password.content}>
       <p data-aos="fade-right" data-aos-duration="2000" data-aos-delay="200">
@@ -115,7 +169,23 @@ const LoginPassword = ({ password, setPassword, username, setUsername }) => {
         placeholder="********"
       />
       <br />
-      <button>Masuk</button>
+      <button
+        onClick={(e) => {
+          e.preventDefault();
+          handleSubmit(username, password);
+        }}
+      >
+        Masuk
+      </button>
+      <br />
+      <div
+        onClick={() => {
+          handleRecovery()
+        }}
+        className={styles_password.a}
+      >
+        lupa password?
+      </div>
     </form>
   );
 };

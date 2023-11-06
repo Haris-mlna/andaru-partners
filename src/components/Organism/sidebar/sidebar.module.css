@@ -22,12 +22,32 @@ TOP SCT
 }
 
 .info {
+  width: 60%; 
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-left: 10px;
   margin-bottom: 20px;
+  
 }
+
+.info p {
+  width: 100%;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.username {
+
+}
+
+.email {
+  font-size: 14px;
+  color: var(--bs-gray-600);
+}
+
 
 .avatar_container {
   display: flex;
