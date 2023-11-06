@@ -9,6 +9,7 @@ import Login from "./pages/login/login";
 import { useDispatch } from "react-redux";
 import { login } from "./redux/user";
 import { AddInvoice } from "./components/Molekul/table-invoice/card";
+import PassRecovery from "./pages/password-recovery/passwor-recovery";
 
 function App() {
   const dispatch = useDispatch();
@@ -42,7 +43,8 @@ function App() {
       <Route path="/template-dev" element={<Template />} />
       <Route path="/profile" element={<Profile />} />
       <Route path="/login" element={<Login />} />
-      <Route path="/fff" element={<AddInvoice/>} />
+      <Route path="/dev-add-invoice" element={<AddInvoice />} />
+      <Route path="/pass-recovery" element={<PassRecovery />} />
     </Routes>
   );
 }
