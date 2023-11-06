@@ -22,6 +22,7 @@ import Feed from "../../components/Organism/feed/feed";
 
 // REDUX JANGAN DIGANTI SAN {OKE RIS} !!!!!
 import { useSelector } from "react-redux";
+import NavbarMobile from "../../components/Organism/navbar-mobile/navbar-mobile";
 
 const Profile = () => {
   const [active, setActive] = useState("post");
@@ -39,6 +40,7 @@ const Profile = () => {
     <div className={styles.profile}>
       <div className={styles.navbar}>
         <Navbar />
+        <NavbarMobile/>
       </div>
 
       <div className={styles.containerMobile}>
