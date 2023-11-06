@@ -16,6 +16,9 @@ import DashboardCustomizeRoundedIcon from "@mui/icons-material/DashboardCustomiz
 import LocalShippingRoundedIcon from "@mui/icons-material/LocalShippingRounded";
 import StorefrontRoundedIcon from "@mui/icons-material/StorefrontRounded";
 
+// Redux
+import { useSelector } from "react-redux";
+
 const SearchBar = () => {
   return (
     <>
@@ -33,16 +36,17 @@ const SearchBar = () => {
 };
 
 const DropdownAvatar = ({ isActive, isInitial }) => {
+  const user = useSelector((state) => state.user.value)
+
   const navigate = useNavigate();
 
   const NavigateTo = () => {
-    return navigate("/profile");
+    return navigate(`/profile/${user.email}`);
   };
 
   const signOut = () => {
     window.sessionStorage.clear()
     navigate('/login')
-
   };
 
   return (

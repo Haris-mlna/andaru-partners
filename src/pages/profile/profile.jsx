@@ -52,7 +52,7 @@ const Profile = () => {
             <div className={styles.detailProfilee}>
               <img className={styles.resImg} src={haris} alt="" />
               <div className={styles.wrapDetailProfile}>
-                <H4tag new_className={styles.resh4} text={user.name} />
+                <H4tag new_className={styles.resh4} text={user.username} />
                 <div className={styles.detailProf}>
                   <TigaRoda new_className={styles.restigaroda} />
                   <Span14

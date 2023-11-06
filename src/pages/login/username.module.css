@@ -48,3 +48,9 @@
 
   cursor: pointer;
 }
+
+.a {
+  margin : 10px 0;
+  color: var(--bs-gray-600);
+  cursor: pointer;
+}
