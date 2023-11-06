@@ -180,7 +180,7 @@ const LoginPassword = ({ password, setPassword, username }) => {
       <br />
       <div
         onClick={() => {
-          handleRecovery()
+          handleRecovery();
         }}
         className={styles_password.a}
       >
