@@ -1,9 +1,8 @@
-import styles from './loading.module.css'
+import styles from "./loading.module.css";
 import { HashLoader } from "react-spinners";
-import { ClipLoader} from "react-spinners"
+import { ClipLoader } from "react-spinners";
 
 const Loading = () => {
-
   const color = "#173563";
   const loading = true;
 
@@ -22,8 +21,7 @@ const Loading = () => {
 
 export default Loading;
 
-const Loadingis = () => {
-
+const LoadingComponents = () => {
   const color = "#173563";
   const loading = true;
 
@@ -40,5 +38,4 @@ const Loadingis = () => {
   );
 };
 
-export {
-   Loadingis};
+export { LoadingComponents };

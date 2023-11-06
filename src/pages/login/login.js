@@ -1,81 +1,121 @@
 import * as React from "react";
 import styles from "./login.module.css";
-import { useNavigate } from "react-router-dom";
+import styles_usernames from "./username.module.css";
+import styles_password from "./password.module.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-// Redux
-import { useDispatch } from "react-redux";
-import { login } from "../../redux/user";
-
-// Material UI
-import TextField from "@mui/material/TextField";
+// images
+import feed from "../../assets/background/feed.png";
+import contact from "../../assets/background/contact.png";
+import sidebar from "../../assets/background/sidebar.png";
 
 const Login = () => {
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
   const [username, setUsername] = React.useState("");
+  const [password, setPassword] = React.useState("");
+  const [isAuthorized, setIsAuthorized] = React.useState(false);
 
-  const handleSubmit = (param) => {
-    if (param === "admin@pasti") {
-      dispatch(login({
-        name : "Admin Pasti Group",
-        age : 0,
-        email : "admin@pasti"
-      }));
-
-      window.sessionStorage.setItem("login_token", param); // Use setItem
-      navigate("/");
-    } else if (param === "haris@pasti") {
-      dispatch(
-        login({
-          name: "Haris Maulana",
-          age: 23,
-          email: "haris@pasti",
-        })
-      );
-
-      window.sessionStorage.setItem("login_token", param); // Use setItem
-      navigate("/");
-    } else {
-      console.log(`you're out`);
-    }
-  };
+  React.useEffect(() => {
+    AOS.init();
+  }, []);
 
   return (
-    <>
-      <div className={styles.pages}>
-        <div className={styles.lt}>
-          <div className={styles.title_container}>
-            <span>Welcome to</span>
-            <h1 className={styles.title}>
-              Andaru
-              <br />
-              Partner
-            </h1>
-          </div>
-          <form
-            className={styles.form}
-            onSubmit={(e) => {
-              e.preventDefault();
-              handleSubmit(username);
-            }}
-          >
-            <TextField
-              id="outlined-basic"
-              label="Masukan Username"
-              variant="outlined"
-              size="small"
-              onChange={(e) => {
-                setUsername(e.target.value);
-              }}
-              className={styles.input}
-            />
-            <input type="submit" value={"Berikutnya"} />
-          </form>
-        </div>
-        <div className={styles.rt}>this is image component</div>
+    <div className={styles.pages}>
+      <div className={styles.lt}>
+        {isAuthorized ? (
+          <LoginPassword
+            username={username}
+            password={password}
+            setPassword={setPassword}
+          />
+        ) : (
+          <LoginUsername
+            username={username}
+            setUsername={setUsername}
+            setIsAuthorized={setIsAuthorized}
+          />
+        )}
       </div>
-    </>
+      <div className={styles.rt}>
+        <div className={styles.img_container}>
+          <img src={feed} alt="feed" className={styles.feed} />
+          <img src={sidebar} alt="sidebar" className={styles.sidebar} />
+          <img src={contact} alt="contact" className={styles.contact} />
+        </div>
+      </div>
+    </div>
   );
 };
 
 export default Login;
+
+const LoginUsername = ({ username, setUsername, setIsAuthorized }) => {
+  return (
+    <form className={styles_usernames.content}>
+      <p data-aos="fade-right" data-aos-duration="2000" data-aos-delay="200">
+        Welcome to
+      </p>
+      <h1 data-aos="fade-right" data-aos-duration="2000" data-aos-delay="200">
+        Andaru Partner
+      </h1>
+      <label
+        data-aos="fade-right"
+        data-aos-duration="2000"
+        data-aos-delay="400"
+      >
+        Login dengan email atau username :{" "}
+      </label>
+      <br />
+      <input
+        type="text"
+        name="username"
+        onChange={(e) => {
+          setUsername(e.target.value);
+        }}
+        placeholder="pasti@examples.com"
+      />
+      <br />
+      <button
+        onClick={() => {
+          if (username === "admin@pasti") {
+            setIsAuthorized(true);
+          }
+        }}
+      >
+        Berikutnya
+      </button>
+    </form>
+  );
+};
+
+const LoginPassword = ({ password, setPassword, username, setUsername }) => {
+  return (
+    <form className={styles_password.content}>
+      <p data-aos="fade-right" data-aos-duration="2000" data-aos-delay="200">
+        Welcome to
+      </p>
+      <h1 data-aos="fade-right" data-aos-duration="2000" data-aos-delay="200">
+        Andaru Partner
+      </h1>
+      <label
+        data-aos="fade-right"
+        data-aos-duration="2000"
+        data-aos-delay="400"
+        htmlFor="password"
+      >
+        Masukan Password :{" "}
+      </label>
+      <br />
+      <input
+        type="password"
+        name="password"
+        onChange={(e) => {
+          setPassword(e.target.value);
+        }}
+        placeholder="********"
+      />
+      <br />
+      <button>Masuk</button>
+    </form>
+  );
+};

@@ -6,68 +6,77 @@
 }
 
 .lt {
-  display: flex;
   width: 50%;
   height: 100%;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.title_container {
-  margin-bottom: 100px;
-}
-
-.title {
-  width: 500px;
-  font-size: 72px;
-  font-weight: 300;
-  margin: 0;
-}
-
-.lt span {
-  font-size: 48px !important;
-  font-weight: 200;
-  margin: 0;
-}
-
-.form {
-  width: 500px;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
-.input {
-  width: 100% !important;
-  max-width: 400px !important;
-}
-
-.form input[type="submit"] {
-    margin-top: 20px;
-    padding: 10px;
-    width: 100% !important;
-    max-width: 400px !important;
-    background-color: var(--primary-color);
-    color: var(--bs-white);
-    font-family: var(--font-outfit);
-    font-size: 14px;
-    cursor: pointer;
-    border: none;
-
-    transition: 150ms;
-}
-
-.form input[type="submit"]:hover {
-    transform: scale(98%);
-}
-
-/* RIGHT SCT */
 
 .rt {
-  display: flex;
   width: 50%;
   height: 100%;
-  flex-direction: column;
-  align-items: center;
+  display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.img_container {
+  position: relative;
+}
+
+.feed {
+  width: 100%;
+  max-width: 360px;
+  position: relative;
+  transform: perspective(500px) rotateY(-10deg) rotateX(4deg);
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.25);
+}
+
+.sidebar {
+  left: -50px;
+  top: 80px;
+  max-width: 80px;
+  position: absolute;
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.4);
+  z-index: 2;
+  opacity: 0;
+
+  animation: left 1200ms ease-in-out forwards;
+}
+
+.contact {
+  max-width: 80px;
+  position: absolute;
+  top: 200px;
+  right: -60px;
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+
+  animation: right 1200ms ease-in-out forwards;
+  animation-delay: 300ms;
+}
+
+@keyframes left {
+  0% {
+    opacity: 0;
+    transform: perspective(500px) rotateY(-16deg) rotateX(4deg)
+      translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(500px) rotateY(-20deg) rotateX(4deg) translateX(0);
+  }
+}
+
+@keyframes right {
+  0% {
+    opacity: 0;
+    transform: perspective(500px) rotateY(-16deg) rotateX(4deg)
+      translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(500px) rotateY(-12deg) rotateX(0deg) translateX(0);
+  }
 }

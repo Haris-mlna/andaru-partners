@@ -1,7 +1,7 @@
 import * as React from "react";
 import styles from "./table.module.css";
 import { dataDelivery } from "../../../data/data";
-import { Loadingis } from "../../loading/loading";
+import { LoadingComponents } from "../../loading/loading";
 
 // Material UI
 import { Button } from "@mui/material";
@@ -150,7 +150,7 @@ const endIndex = Math.min(visibleCards, totalData);
       
       <div ref={observerRef}></div>
       <div className={styles.info}>
-      {isLoading && <div className={styles.loading}><Loadingis/></div>
+      {isLoading && <div className={styles.loading}><LoadingComponents/></div>
       }
         {`Data ${startIndex}-${endIndex} dari ${totalData} data`}
       </div>

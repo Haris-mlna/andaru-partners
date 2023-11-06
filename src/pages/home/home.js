@@ -3,7 +3,6 @@ import styles from "./home.module.css";
 import { useNavigate } from "react-router-dom";
 
 // Redux
-import { useSelector } from "react-redux";
 
 // Atom --------------------------------------------------------------------
 import { ButtonPrimary } from "../../components/Atom/button/button";
@@ -42,24 +41,6 @@ const Home = () => {
   const openDev = () => {
     navigate("/template-dev");
   };
-
-  const user = useSelector((state) => state.user.value);
-
-  React.useEffect(() => {
-    if (user.name === "admin@pasti" || user.name === "haris@pasti") {
-      console.log("succes");
-      
-    } else if (
-      window.sessionStorage.getItem("login_token") === "admin@pasti" ||
-      window.sessionStorage.getItem("login_token") === "haris@pasti"
-    ) {
-      console.log("succes");
-    } else {
-      navigate("/login");
-    }
-  }, [user.name, navigate]);
-
-  console.log(user.name)
 
   return (
     <div className={styles.pages}>

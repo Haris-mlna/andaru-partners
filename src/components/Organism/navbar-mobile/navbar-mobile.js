@@ -15,12 +15,12 @@ const NavbarMobile = () => {
     <div className={styles.navbar}>
       <ul>
         <li>
-          <button className={`${styles.notification}`}>
+          <button className={`${styles.notification}`} >
             <IconsFA title={"mail"} size={"small"} />
           </button>
         </li>
         <li>
-          <button className={`${styles.notification}`}>
+          <button className={`${styles.notification}`} >
             <IconsFA title={"notifications"} size={"small"} />
           </button>
         </li>
@@ -28,6 +28,7 @@ const NavbarMobile = () => {
           onClick={() => {
             setIsActive(!isActive);
             setIsInitial(false);
+            console.log(isActive, isInitial);
           }}
         >
           <AvatarNavbar new_className={styles.avatar} />
@@ -49,7 +50,7 @@ const DropdownAvatar = ({ isActive, isInitial }) => {
     // window.sessionStorage.clear()
     // navigate('/login')
 
-    console.log('test')
+    console.log("test");
   };
 
   return (
