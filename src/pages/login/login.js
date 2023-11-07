@@ -104,9 +104,9 @@ const LoginUsername = ({ username, setUsername, setIsAuthorized }) => {
         onClick={() => {
           handleRecovery();
         }}
-        className={styles_usernames.a}
+        className={styles_usernames.forgot_password}
       >
-        lupa password?
+        lupa kata sandi?
       </div>
     </div>
   );
@@ -182,9 +182,9 @@ const LoginPassword = ({ password, setPassword, username }) => {
         onClick={() => {
           handleRecovery();
         }}
-        className={styles_password.a}
+        className={styles_password.forgot_password}
       >
-        lupa password?
+        lupa kata sandi?
       </div>
     </form>
   );

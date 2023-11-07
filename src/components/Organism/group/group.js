@@ -53,10 +53,10 @@ const GroupContainer = () => {
         <div className={styles.wrapHeadgroup}>
           <div className={styles.btnHeadGroup}>
             <Button className={styles.btnBiruGelap} variant="contained">
-              Import Payments
+              Tambah Partner
             </Button>
             <Button className={styles.grey} variant="contained">
-              Tambah Payments
+              Undang Partner ke app
             </Button>
           </div>
         </div>
