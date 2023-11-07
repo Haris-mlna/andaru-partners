@@ -13,6 +13,7 @@ const PassRecovery = () => {
   const handleRecovery = (page) => {
     setGanti(page);
   };
+
   return (
     <div className={styles.PassRecovery}>
       {ganti === 0 && (
@@ -52,25 +53,37 @@ const PassRecovery = () => {
                 <p className={styles.descs}>00:59</p>
                 <div className={styles.input_btn}>
                   <div className={styles.kode_otp}>
-                    <TextField
+                    <input
                       id="outlined-basic"
                       size="small"
+                      type="text"
+                      maxLength={'1'}
                       className={styles.input_otp}
+                      
                     />
-                    <TextField
+                    <input
                       id="outlined-basic"
                       size="small"
+                      type="text"
+                      maxLength={'1'}
                       className={styles.input_otp}
+                      
                     />
-                    <TextField
+                    <input
                       id="outlined-basic"
                       size="small"
+                      type="text"
+                      maxLength={'1'}
                       className={styles.input_otp}
+                      
                     />
-                    <TextField
+                    <input
                       id="outlined-basic"
                       size="small"
+                      type="text"
+                      maxLength={'1'}
                       className={styles.input_otp}
+                      
                     />
                   </div>
                   <Button

@@ -37,8 +37,8 @@ const CardGroup = ({name, member}) => {
         </div>
         <hr className={styles.hr}/>
         <div className={styles.button_container}>
-          <ButtonJoined text={'Joined'} new_className={styles.button_group}/>
-          <ButtonInvite text={'Invite'} new_className={styles.button_group}/>
+          <ButtonJoined text={'Tambah Teman'} new_className={styles.button_group}/>
+          <ButtonInvite text={'Undang Group'} new_className={styles.button_group}/>
         </div>
       </div>
     </>
