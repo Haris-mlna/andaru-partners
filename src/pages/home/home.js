@@ -16,8 +16,6 @@ import Feed from "../../components/Organism/feed/feed";
 import Loading from "../../components/loading/loading";
 
 // Redux
-import { useSelector } from "react-redux/es/hooks/useSelector.js";
-import { login } from "../../redux/user.js";
 
 // Pages -------------------------------------------------------------------
 const Dashboard = React.lazy(() => import("../dashboard/dashboard"));
@@ -32,7 +30,6 @@ const Delivery = React.lazy(() => import("../delivery/delivery"));
 
 const Home = () => {
   const [changeMain, setChangeMain] = React.useState(0);
-  const user = useSelector((state) => state.user.value);
 
   const [sidebarIsOpen, setSidebarIsOpen] = React.useState(false);
   const [contactIsOpen, setContactIsOpen] = React.useState(false);
@@ -44,17 +41,18 @@ const Home = () => {
   };
 
   React.useEffect(() => {
-    const adminEmail = window.sessionStorage.getItem('login-email')
-    const adminPass = window.sessionStorage.getItem('login-pass')
- 
-    if(adminEmail === 'admin@pasti' && adminPass === '1234' || adminEmail === 'haris@pasti' && adminPass === '1234')
-    {
-      console.log('remove this when you are on deployment')
-    } else {
-      navigate('/login')
-    }
+    const adminEmail = window.sessionStorage.getItem("login-email");
+    const adminPass = window.sessionStorage.getItem("login-pass");
 
-  },[])
+    if (
+      (adminEmail === "admin@pasti" && adminPass === "1234") ||
+      (adminEmail === "haris@pasti" && adminPass === "1234")
+    ) {
+      console.log("remove this when you are on deployment");
+    } else {
+      navigate("/login");
+    }
+  }, []);
 
   return (
     <div className={styles.pages}>

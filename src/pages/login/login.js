@@ -64,7 +64,7 @@ const LoginUsername = ({ username, setUsername, setIsAuthorized }) => {
   };
 
   return (
-    <div className={styles_usernames.content}>
+    <form className={styles_usernames.content}>
       <p data-aos="fade-right" data-aos-duration="2000" data-aos-delay="200">
         Welcome to
       </p>
@@ -108,7 +108,12 @@ const LoginUsername = ({ username, setUsername, setIsAuthorized }) => {
       >
         lupa kata sandi?
       </div>
-    </div>
+      <div onClick={() => {
+        navigate('/register')
+      }} className={styles_usernames.forgot_password}>
+        belum punya akun?
+      </div>
+    </form>
   );
 };
 
@@ -185,6 +190,11 @@ const LoginPassword = ({ password, setPassword, username }) => {
         className={styles_password.forgot_password}
       >
         lupa kata sandi?
+      </div>
+      <div onClick={() => {
+        navigate('/register')
+      }} className={styles_usernames.forgot_password}>
+        belum punya akun?
       </div>
     </form>
   );

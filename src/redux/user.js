@@ -8,6 +8,7 @@ const userInitial = {
   address : '',
   avatar_user : '',
   cover_user : '',
+  role : '',
 }
 
 const userSlice = createSlice({

@@ -4,7 +4,7 @@ TOP SCT
 
 .sidebar {
   flex: 1;
-  background-color: white;
+  background-color: var(--bs-white);
   padding: 16px 20px;
   border-radius: 12px;
   height: 100%;
