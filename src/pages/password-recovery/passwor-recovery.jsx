@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./password-recover.module.css";
 import { Button, TextField } from "@mui/material";
 import lupaSandi1 from "../../assets/images/lupa-sandi-1.png";
@@ -13,10 +13,13 @@ const PassRecovery = () => {
   const [ganti, setGanti] = useState(0);
   const [password1, setPassword1] = useState("");
   const [password2, setPassword2] = useState("");
+ 
 
   const handleRecovery = (page) => {
     setGanti(page);
   };
+
+  
 
   const handlePasswordChange = (e) => {
     const { name, value } = e.target;

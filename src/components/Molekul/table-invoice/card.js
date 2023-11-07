@@ -1,12 +1,8 @@
 import styles from "./table.module.css";
 import * as React from "react";
-import Box from "@mui/material/Box";
-import TextField from "@mui/material/TextField";
+import { useState } from "react";
+import Select from 'react-select'
 
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
 
 const Groupcard = () => {
   return (
@@ -67,103 +63,42 @@ const Groupcard = () => {
   );
 };
 
-const AddInvoice = () => {
-  const [age, setAge] = React.useState("");
+const options = [
+  { value: 'haris', label: 'Haris'},
+  { value: 'ikhsan', label: 'Ikhsan' },
+  { value: 'topa', label: 'Topa' }
+]
 
-  const handleChange = (event) => {
-    setAge(event.target.value);
+const AddInvoice = () => {
+  const [selectedOption, setSelectedOption] = useState(null);
+
+  const handleChange = (selectedOption) => {
+    setSelectedOption(selectedOption);
   };
   return (
     <div className={styles.addInvoice}>
       <h2 className={styles.headInfo}>Informasi Tagihan</h2>
       <div className={styles.wrap_form}>
-        <p className={styles.labelForm}>Tentukan Nama Pelanggan</p>
-
-        <FormControl fullWidth>
-          <InputLabel id="demo-simple-select-label">Age</InputLabel>
-          <Select
-            labelId="demo-simple-select-label"
-            id="demo-simple-select"
-            value={age}
-            label="Age"
-            onChange={handleChange}
-          >
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
-          </Select>
-        </FormControl>
-
-        <TextField
-          className={styles.inputForm}
-          id="outlined-basic"
-          label="Nama Pelanggan"
-          variant="outlined"
-          size="small"
-        />
-
-
-        <p className={styles.labelForm}>Tentukan Nama Pelanggan</p>
-        <TextField
-          className={styles.inputForm}
-          id="outlined-basic"
-          label="Nama Pelanggan"
-          variant="outlined"
-          size="small"
-        />
-
-        
-        <p className={styles.labelForm}>Tentukan Nama Pelanggan</p>
-        <TextField
-          className={styles.inputForm}
-          id="outlined-basic"
-          label="Nama Pelanggan"
-          variant="outlined"
-          size="small"
-        />
-        <p className={styles.labelForm}>Tentukan Nama Pelanggan</p>
-        <TextField
-          className={styles.inputForm}
-          id="outlined-basic"
-          label="Nama Pelanggan"
-          variant="outlined"
-          size="small"
-        />
-        <p className={styles.labelForm}>Tentukan Nama Pelanggan</p>
-        <TextField
-          className={styles.inputForm}
-          id="outlined-basic"
-          label="Nama Pelanggan"
-          variant="outlined"
-          size="small"
-        />
-        <p className={styles.labelForm}>Tentukan Nama Pelanggan</p>
-        <TextField
-          className={styles.inputForm}
-          id="outlined-basic"
-          label="Nama Pelanggan"
-          variant="outlined"
-          size="small"
-        />
-        <p className={styles.labelForm}>Tentukan Nama Pelanggan</p>
-        <TextField
-          className={styles.inputForm}
-          id="outlined-basic"
-          label="Nama Pelanggan"
-          variant="outlined"
-          size="small"
-        />
-        <p className={styles.labelForm}>Tentukan Nama Pelanggan</p>
-        <TextField
-          className={styles.inputForm}
-          id="outlined-basic"
-          label="Nama Pelanggan"
-          variant="outlined"
-          size="small"
-        />
+      <label>Nama Pelanggan</label>
+      <Select
+        id="select"
+        options={options}
+        value={selectedOption}
+        onChange={handleChange}
+      />
+      <p>Selected Value: {selectedOption ? selectedOption.value : "No selection"}</p>
       </div>
     </div>
   );
 };
 
 export { AddInvoice, Groupcard };
+
+
+
+
+
+
+
+
+

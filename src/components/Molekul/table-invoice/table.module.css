@@ -125,6 +125,15 @@
     margin-bottom: 1rem;
 }
 
+
+.data_list{
+  width: 100%;
+}
+
+.nama_pelanggan{
+  background-color: var();
+}
+
 @media (max-width: 600px) {
   .allWrap {
     flex-direction: column;
