@@ -31,10 +31,6 @@ const TablePayments = () => {
   }, []);
   return (
     <div className={styles.invoice}>
-      <div className={styles.headInvoice}>
-        <h2 className={styles.headInvoice}>Payments</h2>
-        <div className={styles.hr}></div>
-      </div>
       <div className={styles.btnInvoice}>
         <div className={styles.btnInvoiceLeft}></div>
         <div className={styles.btnInvoiceRight}>
