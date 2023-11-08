@@ -116,6 +116,7 @@
   --bs-highlight-bg: #fff3cd;
 
   --max-width: 1360px;
+  --background-color : #DEDEDE;
 }
 
 @font-face {
@@ -134,7 +135,7 @@
 body {
   margin: 0;
   font-family: var(--font-outfit);
-  background-color: var(--box-1st-color);
+  background-color: var(--background-color);
 }
 
 .material-symbols-outlined {

@@ -12,7 +12,6 @@ import InvoiceReceiptcard, {
 
 // Material UI
 import { Button } from "@mui/material";
-import { useState } from "react";
 
 const InvoiceReceiptPage = () => {
   const [isMobile, setIsMobile] = React.useState(false);
@@ -40,10 +39,6 @@ const InvoiceReceiptPage = () => {
   };
   return (
     <div className={styles.invoice}>
-      <div className={styles.headInvoice}>
-        <h2 className={styles.headInvoice}>Invoice Receipt</h2>
-        <div className={styles.hr}></div>
-      </div>
       <div className={styles.btnInvoice}>
         <div className={styles.btnInvoiceLeft}></div>
         <div className={styles.btnInvoiceRight}>

@@ -48,8 +48,6 @@ const GroupContainer = () => {
   return (
     <div className={styles.groupContainer}>
       <div className={styles.headInvoice}>
-        <h2 className={styles.headInvoice}>Group</h2>
-        <div className={styles.hr}></div>
         <div className={styles.wrapHeadgroup}>
           <div className={styles.btnHeadGroup}>
             <Button className={styles.btnBiruGelap} variant="contained">

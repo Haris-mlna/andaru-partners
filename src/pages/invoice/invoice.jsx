@@ -38,8 +38,6 @@ const Invoice = () => {
   return (
     <div className={styles.invoice}>
       <div className={styles.headInvoice}>
-        <h2 className={styles.headInvoice}>Faktur</h2>
-        <div className={styles.hr}></div>
       </div>
       <div className={styles.btnInvoice}>
         <div className={styles.btnInvoiceLeft}>

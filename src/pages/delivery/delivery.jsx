@@ -43,7 +43,6 @@ const Delivery = () => {
   return (
     <div className={styles.pages}>
       <div className={styles.container}>
-        <h1>Delivery</h1>
         <div className={styles.main}>
           <p>Choose your delivery to shows details</p>
           <div className={styles.progress_container}>
