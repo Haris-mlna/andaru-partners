@@ -9,6 +9,7 @@ const userInitial = {
   avatar_user : '',
   cover_user : '',
   role : '',
+  image : '',
 }
 
 const userSlice = createSlice({

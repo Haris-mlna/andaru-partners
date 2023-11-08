@@ -27,7 +27,7 @@ function App() {
           username: "Admin Pasti Group",
         })
       );
-    } else if ((tokeEmail === "haris@pasti" ** tokenPass) === "1234") {
+    } else if (tokeEmail === "haris@pasti" && tokenPass === "1234") {
       dispatch(
         login({
           email: tokeEmail,
