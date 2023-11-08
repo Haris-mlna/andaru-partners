@@ -10,7 +10,7 @@ import InvoiceAdd from "../../components/Molekul/table-invoice/table";
 
 // Material UI
 import { Button } from "@mui/material";
-import { AddInvoice } from "../../components/Molekul/table-invoice/card";
+import { AddInvoice, DaftarProdukPesanan } from "../../components/Molekul/table-invoice/card";
 
 const Invoice = () => {
   // const [isMobile, setIsMobile] = React.useState(false);
@@ -41,26 +41,28 @@ const Invoice = () => {
         <h2 className={styles.headInvoice}>Faktur</h2>
         <div className={styles.hr}></div>
       </div>
-      <div className={styles.btnInvoice}>
-        <div className={styles.btnInvoiceLeft}>
-          <Button className={styles.btnBiruGelap} variant="contained">
-            Tandai Siap
-          </Button>
-        </div>
-        <div className={styles.btnInvoiceRight}>
-          <Button className={styles.btnBiruGelap} variant="contained">
-            Import Faktur
-          </Button>
-          <Button
-            className={styles.grey}
-            variant="contained"
-            onClick={() => handleInvoice(1)}
-          >
-            Tambah Invoice
-          </Button>
-        </div>
-      </div>
+     
       {isInvoice === 0 && (
+        <div>
+         <div className={styles.btnInvoice}>
+         <div className={styles.btnInvoiceLeft}>
+           <Button className={styles.btnBiruGelap} variant="contained">
+             Tandai Siap
+           </Button>
+         </div>
+         <div className={styles.btnInvoiceRight}>
+           <Button className={styles.btnBiruGelap} variant="contained">
+             Import Faktur
+           </Button>
+           <Button
+             className={styles.grey}
+             variant="contained"
+             onClick={() => handleInvoice(1)}
+           >
+             Tambah Invoice
+           </Button>
+         </div>
+       </div>
         <div className={styles.wrapInvoiceContent}>
           <div className={styles.filterInfoice}>
             <div className={styles.filterText}>
@@ -77,18 +79,22 @@ const Invoice = () => {
                 size="small"
               />
             </div>
-            <div className={styles.selectInvoice}></div>
           </div>
 
           <div>
             <InvoiceAdd />
           </div>
         </div>
+        </div>
       )}
       {isInvoice === 1 && (
         <div className={styles.addInvoice}>
-          <AddInvoice />
-          <button onClick={()=>{handleInvoice(0)}}>tombol dev</button>
+          <AddInvoice handleInvoice={handleInvoice} />
+        </div>
+      )}
+      {isInvoice === 2 && (
+        <div className={styles.addInvoice}>
+          <DaftarProdukPesanan handleInvoice={handleInvoice} />
         </div>
       )}
     </div>
