@@ -5,6 +5,8 @@ import { useState } from "react";
 import Select from "react-select";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
+import gambar from "../../../assets/images/avatar-4.png";
+import DeleteIcon from "@mui/icons-material/Delete";
 
 const Groupcard = () => {
   return (
@@ -220,7 +222,7 @@ const AddInvoice = ({ handleInvoice }) => {
 const DaftarProdukPesanan = ({ handleInvoice }) => {
   return (
     <div className={styles.invoice_pesanan}>
-      <h2 className={styles.headInfo}>Daftar Produk Pesanan</h2>
+      {/* <h2 className={styles.headInfo}>Daftar Produk Pesanan</h2> */}
       <div className={styles.prev}>
         <Button
           onClick={() => {
@@ -232,7 +234,140 @@ const DaftarProdukPesanan = ({ handleInvoice }) => {
           <ArrowBackIcon />
         </Button>
       </div>
-      <div className={styles.wrap_invoice_pesanan}>test</div>
+      <div className={styles.wrap_invoice_pesanan}>
+        <div className={styles.pesanan_left}>
+          <img className={styles.gambar} src={gambar} alt="" />
+          {/* PESANAN */}
+          <div className={styles.pesanan}>
+            <div className={styles.total_harga}>
+              <strong>Total Bayar</strong>
+              <strong>Rp. 20.000</strong>
+            </div>
+            <div className={styles.pcs}>
+              <strong>Quantity</strong>
+              <strong>2Pcs</strong>
+            </div>
+            <div className={styles.catatan}>
+              <p>Catatan</p>
+              <p>Ini space untuk catatan</p>
+            </div>
+          </div>
+          {/* HARGA */}
+          <div className={styles.pesanan}>
+            <p>Detail Pesanan</p>
+            <hr />
+            <div className={styles.harga}>
+              <p>Harga Satuan</p>
+              <p>Rp. 10.000</p>
+            </div>
+            <div className={styles.total_harga}>
+              <strong>Total Harga</strong>
+              <strong>Rp. 20.000</strong>
+            </div>
+            <br />
+            <p>Informasi Discount & VAT</p>
+            <hr />
+            <div className={styles.discount}>
+              <p>Discount</p>
+              <div className={styles.action_discount}>
+                <input
+                  className={styles.vat}
+                  pattern=".*%.*"
+                  type="text"
+                  name=""
+                  id=""
+                />
+                <input
+                  className={styles.input_discount}
+                  type="text"
+                  name=""
+                  id=""
+                />
+              </div>
+            </div>
+            <div className={styles.discount}>
+              <p>VAT</p>
+              <div className={styles.action_discount}>
+                <Select className={styles.select_vat} options={options} />
+                <input
+                  className={styles.input_discount}
+                  type="text"
+                  name=""
+                  id=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className={styles.pesanan_right}>
+          <div className={styles.ringkasan_produk}>
+            <div className={styles.ringkasan_left}>
+              <h3>Ringkasan Produk</h3>
+              <div className={styles.wrap_left}>
+                <p>Jumlah Produk Pesanan:</p>
+                <p>2</p>
+              </div>
+            </div>
+            <Button
+              className={styles.grey}
+              style={{ height: 30 }}
+              variant="contained"
+              size="small"
+            >
+              Tambah Produk
+            </Button>
+          </div>
+          <div className={styles.wrap_list_produk}>
+            <div className={styles.list_produk}>
+              <div className={styles.wrap_list}>
+                <h3>Tee SGP 3/4, RICON</h3>
+                <p>Rp. 10.000</p>
+              </div>
+              <Button
+                className={styles.btn_hapus}
+                variant="contained"
+                size="small"
+              >
+                -
+              </Button>
+            </div>
+            <div className={styles.list_produk}>
+              <div className={styles.wrap_list}>
+                <h3>Tee SGP 3/4, RICON</h3>
+                <p>Rp. 10.000</p>
+              </div>
+              <Button
+                className={styles.btn_hapus}
+                variant="contained"
+                size="small"
+              >
+                <DeleteIcon />
+              </Button>
+            </div>
+            <div className={styles.list_produk}>
+              <div className={styles.wrap_list}>
+                <h3>Tee SGP 3/4, RICON</h3>
+                <p>Rp. 10.000</p>
+              </div>
+              <Button
+                className={styles.btn_hapus}
+                variant="contained"
+                size="small"
+              >
+                -
+              </Button>
+            </div>
+          </div>
+          <div className={styles.action_data}>
+            <Button variant="contained" className={styles.grey}>
+              Batal
+            </Button>
+            <Button className={styles.grey} variant="contained">
+              Buat Invoice
+            </Button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

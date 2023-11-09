@@ -151,6 +151,7 @@ textarea{
 
 .btn_next{
   background-color: var(--primary-color) !important;
+  text-transform: capitalize !important;
 }
 
 .left{
@@ -189,9 +190,152 @@ textarea{
   padding: 0.5rem 0;
 }
 
+
+
 .wrap_invoice_pesanan{
-  background-color: var(--bs-white);
+  display: flex;
+  gap: 1rem;
+  flex: 4;
 }
+
+.gambar{
+  width: 100%;
+}
+
+.pesanan_left{
+  background-color: var(--bs-white);
+  padding: 1rem;
+  flex: 1.5;
+}
+
+.pesanan_right{
+  flex: 2.5;
+}
+
+.pesanan{
+  margin-top: 1rem;
+}
+
+.total_harga, .pcs, .harga, .total_harga, .catatan{
+  display: flex;
+  justify-content: space-between;
+}
+
+.grey {
+  text-transform: capitalize !important;
+  background-color: var(--primary-color) !important;
+}
+
+.action_discount{
+  display: flex;
+  gap: 0.5rem;
+}
+
+p{
+  margin: 0;
+}
+
+.input_discount{
+  width: 60%;
+  height: 35px;
+  border: 1px solid rgb(199, 199, 199)
+  ;
+  outline: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: var(--font-outfit);
+}
+
+.vat{
+  width: 40%;
+  height: 35px;
+  border: 1px solid rgb(199, 199, 199)
+  ;
+  outline: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: var(--font-outfit);
+}
+
+.select_vat{
+  width: 40%;
+}
+
+h3, h2{
+  margin: 0;
+}
+
+.discount{
+  margin-bottom: 1rem;
+}
+
+.wrap_left{
+  display: flex;
+  gap: 0.5rem;
+}
+
+.ringkasan_produk{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+  background-color: var(--bs-white);
+  border-radius: 12px;
+  padding: 3rem 0;
+  margin-bottom: 2rem;
+
+}
+
+.list_produk{
+  background-color: var(--bs-white);
+  border-radius: 12px;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.wrap_list_produk{
+  max-height: 560px;
+  overflow-y: auto;
+}
+
+/* CSS untuk mengkustomisasi scrollbar */
+.wrap_list_produk::-webkit-scrollbar {
+  width: 0px; /* Lebar scrollbar horizontal */
+}
+
+.wrap_list_produk::-webkit-scrollbar-thumb {
+  background-color: #ffffff; /* Warna thumb (pegangan scrollbar) */
+  border-radius: 12px; /* Bentuk thumb */
+}
+
+.wrap_list_produk::-webkit-scrollbar-track {
+  background-color: #ffffff; /* Warna track (jalur scrollbar) */
+}
+
+.wrap_list_produk::-webkit-scrollbar-button {
+  display: none; /* Sembunyikan tombol panah jika ada */
+}
+.btn_hapus{
+  font-size: 34px;
+  padding: 0;
+  background-color: var(--bs-danger) !important;
+  height: 30px;
+}
+
+.action_data{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
 
 @media (max-width: 600px) {
   .allWrap {

@@ -1,6 +1,6 @@
 .invoice {
   border-radius: 12px;
-  padding: 1rem;
+  /* padding: 0 1rem 1rem 1rem ; */
   flex: 3;
   animation: fade-up-pages 600ms ease-in-out;
 }
@@ -61,7 +61,7 @@
 .headInvoice {
   font-size: 32px;
   font-weight: 400;
-  margin: 0.5em 0;
+  /* margin: 0.5em 0; */
 }
 
 .hr {
@@ -100,6 +100,8 @@
   margin: 0;
   padding: 0;
 }
+
+
 
 @media (max-width: 762px) {
 
