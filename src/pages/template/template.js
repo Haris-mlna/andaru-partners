@@ -1,3 +1,4 @@
+import * as React from "react";
 import styles from "./template.module.css";
 
 import {
@@ -106,16 +107,17 @@ const Template = () => {
         <Feed />
         <CardGroup name={"Travel Moon"} member={"30k member"} />
         <CardMarketplace price={"$84"} text={`Men's Watch`} />
-        <DropdownAvatar/>
-        <SidebarGallery/>
-        <SidebarContact/>
-        <GroupContainer/>
-        <BasicTextFields/>
-        <Katalog/>
-        <Loading/>
-        <PieColor/>
-        <PostFeed/>
+        <DropdownAvatar />
+        <SidebarGallery />
+        <SidebarContact />
+        <GroupContainer />
+        <BasicTextFields />
+        <Katalog />
+        <Loading />
+        <PieColor />
+        <PostFeed />
       </div>
+      
     </div>
   );
 };

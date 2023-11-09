@@ -1,7 +1,7 @@
 import styles from "./sidebar.module.css";
 import * as React from "react";
 import { AvatarSidebar } from "../../Atom/image-placeholder/image-placeholder";
-import { Atag181, Ptag18 } from "../../Atom/text/text";
+import { Atag181 } from "../../Atom/text/text";
 
 // Redux
 import { useSelector } from "react-redux";
@@ -15,7 +15,6 @@ import GroupsOutlinedIcon from "@mui/icons-material/GroupsOutlined";
 import StoreOutlinedIcon from "@mui/icons-material/StoreOutlined";
 import PaymentOutlinedIcon from "@mui/icons-material/PaymentOutlined";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
-import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
 
 const iconSize = "medium";
 
