@@ -20,9 +20,6 @@ import Loading from "../../components/loading/loading";
 // Pages -------------------------------------------------------------------
 const Dashboard = React.lazy(() => import("../dashboard/dashboard"));
 const Invoice = React.lazy(() => import("../invoice/invoice"));
-const InvoiceReceiptPage = React.lazy(() =>
-  import("../invoice-receipt/invoiceReceipt")
-);
 const Payments = React.lazy(() => import("../payments/payments"));
 const Katalog = React.lazy(() => import("../katalog-produk/katalog-produk"));
 const Settings = React.lazy(() => import("../settings/settings"));
@@ -82,12 +79,11 @@ const Home = () => {
           )}
           {changeMain === 1 && <Dashboard />}
           {changeMain === 2 && <Invoice />}
-          {changeMain === 3 && <InvoiceReceiptPage />}
-          {changeMain === 4 && <Delivery />}
-          {changeMain === 5 && <GroupContainer />}
-          {changeMain === 6 && <Katalog />}
-          {changeMain === 7 && <Payments />}
-          {changeMain === 8 && <Settings />}
+          {changeMain === 3 && <Delivery />}
+          {changeMain === 4 && <GroupContainer />}
+          {changeMain === 5 && <Katalog />}
+          {changeMain === 6 && <Payments />}
+          {changeMain === 7 && <Settings />}
         </React.Suspense>
       </div>
       <div className={styles.dev_only}>
