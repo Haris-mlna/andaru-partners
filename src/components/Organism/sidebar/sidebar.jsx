@@ -41,12 +41,6 @@ const sidebarData = {
       ),
     },
     {
-      name: "Invoice Reciept",
-      icons: (
-        <ReceiptOutlinedIcon fontSize={iconSize} className={styles.icons} />
-      ),
-    },
-    {
       name: "Delivery",
       icons: (
         <LocalShippingOutlinedIcon
@@ -86,10 +80,9 @@ const Sidebar = ({
   setSidebarIsOpen,
   contactIsOpen,
   setContactIsOpen,
+  changeMain,
 }) => {
   const user = useSelector((state) => state.user.value);
-
-  const [isActive, setIsActive] = React.useState("Home");
 
   const handleOpen = (component, direction, isOpen, setOpen) => {
     const componentElement = document.querySelector(component);
@@ -137,7 +130,7 @@ const Sidebar = ({
               <li
                 key={index}
                 className={`${styles.navigation} ${
-                  isActive === icon.name ? styles.active : ""
+                  changeMain === index ? styles.active : ""
                 }`}
                 onClick={() => {
                   setChangeMain(index);
@@ -147,7 +140,6 @@ const Sidebar = ({
                     sidebarIsOpen,
                     setSidebarIsOpen
                   );
-                  setIsActive(icon.name);
                 }}
               >
                 {icon.icons}
