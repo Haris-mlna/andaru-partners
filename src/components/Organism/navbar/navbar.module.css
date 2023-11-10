@@ -92,8 +92,6 @@ Middle SCT
   color: var(--bs-primary);
 }
 
-
-
 /*========================
 Middle SCT Ends
 ==========================*/
@@ -120,17 +118,22 @@ Right SCT
 
 .avatar_button {
   display: flex;
-  padding: 0;
+  padding: 8px 6px;
   border: none;
   cursor: pointer;
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: 4px;
+  background-color: var(--bs-gray-100);
 
   transition: 150ms ease-in-out;
 }
 
 .avatar_button:hover {
   transform: scale(98%);
+}
+
+.avatar {
+  width: 40px;
 }
 
 @media (max-width: 762px) {

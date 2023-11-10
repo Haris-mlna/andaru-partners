@@ -303,7 +303,7 @@ const dataDelivery = {
       metode_pengiriman: "Cargo",
       alamat_pengiriman: "JL RAWA BUAYA OUTER RING ROAD",
       tanggal_pembuatan: "09 December 2023",
-      status_pesanan: "OnDelivery",
+      status_pesanan: "on delivery",
       detail_pesanan_produk: [
         {
           product: "V. Sock AW 6 x 5, Rucika",
@@ -319,35 +319,14 @@ const dataDelivery = {
         },
       ],
     },
+
     {
       no_Do: "DO/223/33164",
       pembeli: "TUNAS WIKARYA PERWITA",
       metode_pengiriman: "Cargo",
       alamat_pengiriman: "JL KH WAHID HASYIM",
       tanggal_pembuatan: "09 December 2023",
-      status_pesanan: "Delivered",
-      detail_pesanan_produk: [
-        {
-          product: "Knie 90 AW 3, Rucika",
-          kuantitas_1: 0,
-          kuantitas_2: 0,
-          kuantitas_3: 12,
-        },
-        {
-          product: "Knie 90 AW 3, Rucika",
-          kuantitas_1: 0,
-          kuantitas_2: 0,
-          kuantitas_3: 12,
-        },
-      ],
-    },
-    {
-      no_Do: "DO/223/33164",
-      pembeli: "TUNAS WIKARYA PERWITA",
-      metode_pengiriman: "Cargo",
-      alamat_pengiriman: "JL KH WAHID HASYIM",
-      tanggal_pembuatan: "09 December 2023",
-      status_pesanan: "Delivered",
+      status_pesanan: "on delivery",
       detail_pesanan_produk: [
         {
           product: "Knie 90 AW 3, Rucika",
@@ -369,7 +348,7 @@ const dataDelivery = {
       metode_pengiriman: "Cargo",
       alamat_pengiriman: "Container address 1",
       tanggal_pembuatan: "09 December 2023",
-      status_pesanan: "Delivered",
+      status_pesanan: "on delivery",
       detail_pesanan_produk: [
         {
           product: "Coupler conduit 20mm, Andaru",
@@ -391,7 +370,7 @@ const dataDelivery = {
       metode_pengiriman: "Cargo",
       alamat_pengiriman: "Container address 1",
       tanggal_pembuatan: "09 December 2023",
-      status_pesanan: "Delivered",
+      status_pesanan: "on delivery",
       detail_pesanan_produk: [
         {
           product: "Pipa PVC D 3, Supramas",
@@ -413,7 +392,7 @@ const dataDelivery = {
       metode_pengiriman: "Cargo",
       alamat_pengiriman: "Container address 1",
       tanggal_pembuatan: "09 December 2023",
-      status_pesanan: "Delivered",
+      status_pesanan: "on delivery",
       detail_pesanan_produk: [
         {
           product: "Dop AW 2, Rucika",
@@ -435,7 +414,7 @@ const dataDelivery = {
       metode_pengiriman: "Cargo",
       alamat_pengiriman: "Container address 1",
       tanggal_pembuatan: "09 December 2023",
-      status_pesanan: "Delivered",
+      status_pesanan: "on delivery",
       detail_pesanan_produk: [
         {
           product: "Knie 90 D 2, Rucika",

@@ -80,3 +80,18 @@
     transform: perspective(500px) rotateY(-12deg) rotateX(0deg) translateX(0);
   }
 }
+
+@media (max-width:1200px) {
+  .pages {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .lt {
+    width: 100%;
+  }
+
+  .rt {
+    display: none;
+  }
+}

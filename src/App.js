@@ -25,6 +25,7 @@ function App() {
           email: tokeEmail,
           password: tokenPass,
           username: "Admin Pasti Group",
+          role : 'admin'
         })
       );
     } else if (tokeEmail === "haris@pasti" && tokenPass === "1234") {
@@ -33,6 +34,7 @@ function App() {
           email: tokeEmail,
           password: tokenPass,
           username: "Haris Maulana",
+          role : 'user'
         })
       );
     } else {

@@ -2,6 +2,9 @@ import { useState } from "react";
 import styles from "./navbar.module.css";
 import { useNavigate } from "react-router-dom";
 
+import harisImg from "../../../assets/images/harispp.png";
+import pastiImg from "../../../assets/background/logo-pasti.png";
+
 // Components
 import logo from "../../../assets/images/business-partner-logo1.png";
 import { IconsFA } from "../../Atom/icons/icons";
@@ -36,7 +39,7 @@ const SearchBar = () => {
 };
 
 const DropdownAvatar = ({ isActive, isInitial }) => {
-  const user = useSelector((state) => state.user.value)
+  const user = useSelector((state) => state.user.value);
 
   const navigate = useNavigate();
 
@@ -45,8 +48,8 @@ const DropdownAvatar = ({ isActive, isInitial }) => {
   };
 
   const signOut = () => {
-    window.sessionStorage.clear()
-    navigate('/login')
+    window.sessionStorage.clear();
+    navigate("/login");
   };
 
   return (
@@ -115,6 +118,8 @@ const DropdownAvatar = ({ isActive, isInitial }) => {
 export { DropdownAvatar };
 
 const Navbar = ({ setChangeMain }) => {
+  const user = useSelector((state) => state.user.value);
+
   const navigate = useNavigate();
   const [isActive, setIsActive] = useState(false);
   const [isInitial, setIsInitial] = useState(true);
@@ -172,7 +177,11 @@ const Navbar = ({ setChangeMain }) => {
                   setIsInitial(false);
                 }}
               >
-                <AvatarNavbar new_className={styles.avatar} />
+                <img
+                  src={user.email === "admin@pasti" ? pastiImg : harisImg}
+                  alt="avatar"
+                  className={styles.avatar}
+                />
               </button>
               <DropdownAvatar isActive={isActive} isInitial={isInitial} />
             </div>

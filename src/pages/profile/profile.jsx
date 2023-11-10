@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import styles from "./profile.module.css";
 import haris from "../../assets/images/harispp.png";
+import logoPasti from "../../assets/background/logo-pasti.png";
 import { infoProfilee } from "../../../src/data/layout";
 
 // Atom
-import { H4tag, Span14 ,H6tag, Ptag16 } from "../../components/Atom/text/text";
+import { H4tag, Span14, H6tag, Ptag16 } from "../../components/Atom/text/text";
 import { ButtonPrimary } from "../../components/Atom/button/button";
 import {
   ProfileBanner,
   TigaRoda,
 } from "../../components/Atom/image-placeholder/image-placeholder";
-
 
 // Organism
 import { ResponsiveButtonProfile } from "../../components/Organism/responsive-button/responsive-button";
@@ -40,7 +40,7 @@ const Profile = () => {
     <div className={styles.profile}>
       <div className={styles.navbar}>
         <Navbar />
-        <NavbarMobile/>
+        <NavbarMobile />
       </div>
 
       <div className={styles.containerMobile}>
@@ -50,7 +50,11 @@ const Profile = () => {
           <ProfileBanner new_className={styles.profileBanner} />
           <div className={styles.detailProfile}>
             <div className={styles.detailProfilee}>
-              <img className={styles.resImg} src={haris} alt="" />
+              <img
+                className={styles.resImg}
+                src={user.role === "admin" ? logoPasti : haris}
+                alt=""
+              />
               <div className={styles.wrapDetailProfile}>
                 <H4tag new_className={styles.resh4} text={user.username} />
                 <div className={styles.detailProf}>

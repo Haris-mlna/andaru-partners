@@ -16,6 +16,9 @@ import StoreOutlinedIcon from "@mui/icons-material/StoreOutlined";
 import PaymentOutlinedIcon from "@mui/icons-material/PaymentOutlined";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 
+import harisImg from '../../../assets/images/harispp.png'
+import pastiImg from '../../../assets/background/logo-pasti.png'
+
 const iconSize = "medium";
 
 const sidebarData = {
@@ -115,7 +118,7 @@ const Sidebar = ({
       <div className={styles.sidebar} id="sidebar-res">
         <div className={styles.top}>
           <div className={styles.avatar_container}>
-            <AvatarSidebar new_className={styles.avatar} />
+            <img src={user.email === 'admin@pasti' ? pastiImg : harisImg} alt="avatar" className={styles.avatar} />
           </div>
           <div className={styles.info}>
             <p className={styles.username}>{user.username} </p>

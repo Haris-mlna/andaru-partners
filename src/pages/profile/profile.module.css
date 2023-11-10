@@ -15,6 +15,10 @@
   margin-left: 1rem;
 }
 
+.resImg {
+  width: 80px;
+}
+
 .detailProfile {
   display: flex;
   padding: 0.5rem 0;
