@@ -12,6 +12,9 @@ import { login } from "../../redux/user";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+// SWAL
+import Swal from "sweetalert2";
+
 // images
 import feed from "../../assets/background/feed.png";
 import contact from "../../assets/background/contact.png";
@@ -34,6 +37,7 @@ const Login = () => {
             username={username}
             password={password}
             setPassword={setPassword}
+            setIsAuthorized={setIsAuthorized}
           />
         ) : (
           <LoginUsername
@@ -64,9 +68,25 @@ const LoginUsername = ({ username, setUsername, setIsAuthorized }) => {
   };
 
   return (
-    <form className={styles_usernames.content}>
+    <form
+      className={styles_usernames.content}
+      onSubmit={(e) => {
+        e.preventDefault();
+        if (username === "admin@pasti") {
+          setIsAuthorized(true);
+        } else if (username === "haris@pasti") {
+          setIsAuthorized(true);
+        } else {
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Username belum terdaftar",
+          });
+        }
+      }}
+    >
       <p data-aos="fade-right" data-aos-duration="2000" data-aos-delay="200">
-        Welcome to
+        Selamat datang
       </p>
       <h1 data-aos="fade-right" data-aos-duration="2000" data-aos-delay="200">
         Andaru Partner
@@ -88,17 +108,7 @@ const LoginUsername = ({ username, setUsername, setIsAuthorized }) => {
         placeholder="pasti@examples.com"
       />
       <br />
-      <button
-        onClick={() => {
-          if (username === "admin@pasti") {
-            setIsAuthorized(true);
-          } else if (username === "haris@pasti") {
-            setIsAuthorized(true);
-          }
-        }}
-      >
-        Berikutnya
-      </button>
+      <button>Berikutnya</button>
       <br />
       <div
         onClick={() => {
@@ -108,16 +118,24 @@ const LoginUsername = ({ username, setUsername, setIsAuthorized }) => {
       >
         lupa kata sandi?
       </div>
-      <div onClick={() => {
-        navigate('/register')
-      }} className={styles_usernames.forgot_password}>
+      <div
+        onClick={() => {
+          navigate("/register");
+        }}
+        className={styles_usernames.forgot_password}
+      >
         belum punya akun?
       </div>
     </form>
   );
 };
 
-const LoginPassword = ({ password, setPassword, username }) => {
+const LoginPassword = ({
+  password,
+  setPassword,
+  username,
+  setIsAuthorized,
+}) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -126,36 +144,60 @@ const LoginPassword = ({ password, setPassword, username }) => {
   };
 
   const handleSubmit = (email, pass) => {
-    window.sessionStorage.setItem("login-email", email);
-    window.sessionStorage.setItem("login-pass", pass);
+    if (
+      (email === "admin@pasti" && password === "1234") ||
+      (email === "haris@pasti" && password === "1234")
+    ) {
+      const body = {
+        email: email,
+        pass: pass,
+        username:
+          (email === "admin@pasti" && "Admin Pasti Group") ||
+          (email === "haris@pasti" && "Haris Maulana"),
+        role:
+          (email === "admin@pasti" && "admin") ||
+          (email === "haris@pasti" && "user"),
+      };
+      window.sessionStorage.setItem("login-email", email);
+      window.sessionStorage.setItem("login-pass", pass);
+      dispatch(login(body));
+      let timerInterval;
+      Swal.fire({
+        icon: "success",
+        title: "Success",
+        timer: 2000,
+        timerProgressBar: true,
+        showConfirmButton: false,
+        willClose: () => {
+          clearInterval(timerInterval);
+        },
+      }).then((result) => {
+        /* Read more about handling dismissals below */
+        if (result.dismiss === Swal.DismissReason.timer) {
+          console.log("I was closed by the timer");
+        }
+      });
 
-    if (email === "admin@pasti") {
-      const body = {
-        email: email,
-        pass: pass,
-        username: "Admin Pasti Group",
-      };
-      dispatch(login(body));
-      navigate("/");
-    } else if (email === "haris@pasti") {
-      const body = {
-        email: email,
-        pass: pass,
-        username: "Haris Maulana",
-      };
-      dispatch(login(body));
-      navigate("/");
+      setTimeout(() => {
+        navigate("/");
+      }, 2000);
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Password salah",
+      });
     }
   };
 
   return (
     <form className={styles_password.content}>
-      <p data-aos="fade-right" data-aos-duration="2000" data-aos-delay="200">
-        Welcome to
-      </p>
       <h1 data-aos="fade-right" data-aos-duration="2000" data-aos-delay="200">
         Andaru Partner
       </h1>
+      <p data-aos="fade-right" data-aos-duration="2000" data-aos-delay="200">
+        Silahkan masukkan password
+      </p>
       <label
         data-aos="fade-right"
         data-aos-duration="2000"
@@ -175,12 +217,23 @@ const LoginPassword = ({ password, setPassword, username }) => {
       />
       <br />
       <button
+        type="submit"
         onClick={(e) => {
           e.preventDefault();
           handleSubmit(username, password);
         }}
+        className={styles_password.login}
       >
         Masuk
+      </button>
+      <br />
+      <button
+        onClick={() => {
+          setIsAuthorized = false;
+        }}
+        className={styles_password.back}
+      >
+        Kembali
       </button>
       <br />
       <div
@@ -191,9 +244,12 @@ const LoginPassword = ({ password, setPassword, username }) => {
       >
         lupa kata sandi?
       </div>
-      <div onClick={() => {
-        navigate('/register')
-      }} className={styles_usernames.forgot_password}>
+      <div
+        onClick={() => {
+          navigate("/register");
+        }}
+        className={styles_usernames.forgot_password}
+      >
         belum punya akun?
       </div>
     </form>

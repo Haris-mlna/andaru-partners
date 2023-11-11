@@ -103,7 +103,7 @@ const Dashboard = () => {
               {toggle === 2 && "pesanan untuk dikonfirmasi :"}
             </p>
             <div className={styles.card_container}>
-              {toggle === 0 && <Datapengiriman/>}
+              {toggle === 0 && <Datapengiriman />}
             </div>
           </div>
         </div>
@@ -140,7 +140,10 @@ const Dashboard = () => {
               {user.email === "admin@pasti" && adminBIO}
             </p>
             <div className={styles.button_bio}>
-              <button>BEST SELLER</button>
+              <button>
+                {(user.role === "admin" && "BEST SELLER") ||
+                  (user.role === "user" && "STAR USER")}
+              </button>
             </div>
           </div>
         </div>

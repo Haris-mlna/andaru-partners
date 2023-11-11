@@ -87,10 +87,13 @@ LEFT SECTION
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--bs-white);
+  border-radius: 4px;
+  cursor:default;
 }
 
 .top_lt h1 {
-  color: var(--bs-white);
+  color: var(--bs-gray-500);
   font-weight: 300;
 }
 

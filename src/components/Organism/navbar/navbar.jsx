@@ -66,7 +66,14 @@ const DropdownAvatar = ({ isActive, isInitial }) => {
       >
         <div className={styles.dropdown_avatar_info_container}>
           <div className={styles.dropdown_avatar_image_container}>
-            <img alt="avatar" src={user.role === 'admin' ? pastiImg : harisImg} className={styles.dropdown_image} />
+            <img
+              alt="avatar"
+              src={
+                (user.role === "admin" && pastiImg) ||
+                (user.role === "user" && harisImg)
+              }
+              className={styles.dropdown_image}
+            />
           </div>
           <div className={styles.dropdown_avatar_info}>
             <H6tag
