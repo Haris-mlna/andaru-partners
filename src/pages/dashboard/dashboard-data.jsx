@@ -1,7 +1,7 @@
 import { dataDelivery } from "../../data/data";
 import styles from "./dashboard.module.css";
 
-const Data_pengiriman = () => {
+const Datapengiriman = () => {
   return (
     <div>
       {dataDelivery.rows.map((data, index) => (
@@ -31,4 +31,4 @@ const Data_pengiriman = () => {
   );
 };
 
-export { Data_pengiriman };
+export { Datapengiriman };

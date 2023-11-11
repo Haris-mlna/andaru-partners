@@ -3,27 +3,28 @@ import styles from "./home.module.css";
 import { useNavigate } from "react-router-dom";
 
 // Atom --------------------------------------------------------------------
-import { ButtonPrimary } from "../../components/Atom/button/button";
+import { ButtonPrimary } from "../../components/Atom/button/button.jsx";
 
 // Organism ----------------------------------------------------------------
-import { ResponsiveButton } from "../../components/Organism/responsive-button/responsive-button";
-import { GroupContainer } from "../../components/Organism/group/group";
-import { SidebarContact } from "../../components/Organism/contact/contact";
+import { ResponsiveButton } from "../../components/Organism/responsive-button/responsive-button.jsx";
+import { GroupContainer } from "../../components/Organism/group/group.jsx";
+import { SidebarContact } from "../../components/Organism/contact/contact.jsx";
 import Navbar from "../../components/Organism/navbar/navbar.jsx";
-import NavbarMobile from "../../components/Organism/navbar-mobile/navbar-mobile";
-import Sidebar from "../../components/Organism/sidebar/sidebar";
-import Feed from "../../components/Organism/feed/feed";
-import Loading from "../../components/loading/loading";
+import NavbarMobile from "../../components/Organism/navbar-mobile/navbar-mobile.jsx";
+import Sidebar from "../../components/Organism/sidebar/sidebar.jsx";
+import Feed from "../../components/Organism/feed/feed.jsx";
+import Loading from "../../components/loading/loading.jsx";
+import Footer from "../../components/Organism/footer/footer.jsx";
 
 // Redux
 
 // Pages -------------------------------------------------------------------
-const Dashboard = React.lazy(() => import("../dashboard/dashboard"));
-const Invoice = React.lazy(() => import("../invoice/invoice"));
-const Payments = React.lazy(() => import("../payments/payments"));
-const Katalog = React.lazy(() => import("../katalog-produk/katalog-produk"));
-const Settings = React.lazy(() => import("../settings/settings"));
-const Delivery = React.lazy(() => import("../delivery/delivery"));
+const Dashboard = React.lazy(() => import("../dashboard/dashboard.jsx"));
+const Invoice = React.lazy(() => import("../invoice/invoice.jsx"));
+const Payments = React.lazy(() => import("../payments/payments.jsx"));
+const Katalog = React.lazy(() => import("../katalog-produk/katalog-produk.jsx"));
+const Settings = React.lazy(() => import("../settings/settings.js"));
+const Delivery = React.lazy(() => import("../delivery/delivery.jsx"));
 
 const Home = () => {
   const [changeMain, setChangeMain] = React.useState(0);
@@ -86,10 +87,7 @@ const Home = () => {
           {changeMain === 7 && <Settings />}
         </React.Suspense>
       </div>
-      <div className={styles.dev_only}>
-        <p>Developer only</p>
-        <ButtonPrimary text={"Confirm"} onPress={openDev} />
-      </div>
+      <Footer/>
     </div>
   );
 };

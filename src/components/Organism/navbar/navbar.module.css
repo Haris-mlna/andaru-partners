@@ -183,7 +183,10 @@ Right SCT Ends
 }
 
 .dropdown_image {
-  border-radius: 50%;
+  width: 40px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 4px;
   margin-right: 10px;
 }
 

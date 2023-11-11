@@ -76,7 +76,7 @@ const Card = ({ data }) => {
             </div>
              <div className={styles.fill}>
                 <h6 className={styles.row}>Total</h6>
-                <p className={styles.col}>1111111111</p>
+                <p className={styles.col}>{detailProduct.kuantitas_1 + detailProduct.kuantitas_2 + detailProduct.kuantitas_3}</p>
             </div>
             <hr />
           </div>

@@ -15,15 +15,6 @@
   margin-top: 10px;
 }
 
-.dev_only {
-  padding: 100px 0;
-}
-
-.dev_only p {
-  font-family: var(--font-outfit);
-  margin: 20px 0;
-}
-
 @media (max-width:762px) {
   .content {
     overflow-x: hidden ;

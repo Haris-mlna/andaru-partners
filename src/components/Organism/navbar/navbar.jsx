@@ -8,7 +8,6 @@ import pastiImg from "../../../assets/background/logo-pasti.png";
 // Components
 import logo from "../../../assets/images/business-partner-logo1.png";
 import { IconsFA } from "../../Atom/icons/icons";
-import { AvatarNavbar } from "../../Atom/image-placeholder/image-placeholder";
 import { Atag181, H6tag, Ptag16 } from "../../Atom/text/text";
 import { ButtonView } from "../../Atom/button/button";
 
@@ -67,7 +66,7 @@ const DropdownAvatar = ({ isActive, isInitial }) => {
       >
         <div className={styles.dropdown_avatar_info_container}>
           <div className={styles.dropdown_avatar_image_container}>
-            <AvatarNavbar new_className={styles.dropdown_image} />
+            <img alt="avatar" src={user.role === 'admin' ? pastiImg : harisImg} className={styles.dropdown_image} />
           </div>
           <div className={styles.dropdown_avatar_info}>
             <H6tag

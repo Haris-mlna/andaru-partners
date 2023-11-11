@@ -20,8 +20,8 @@ const Delivery = () => {
     const off = "off";
     const half = "half";
     const full = "full";
-    const ondelivery = "OnDelivery";
-    const delivered = "Delivered";
+    const ondelivery = "on delivery";
+    const delivered = "delivered";
     setDataDetail(data);
     setDetail(true);
 
@@ -200,8 +200,8 @@ const Card = ({ setStatus }) => {
           </div>
           <div
             className={`${styles.status_delivery_card} ${
-              (data.status_pesanan === "OnDelivery" && styles.yellow) ||
-              (data.status_pesanan === "Delivered" && styles.green)
+              (data.status_pesanan === "on delivery" && styles.yellow) ||
+              (data.status_pesanan === "delivered" && styles.green)
             }`}
           >
             {data.status_pesanan}

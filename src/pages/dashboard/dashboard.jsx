@@ -15,7 +15,7 @@ import { useSelector } from "react-redux";
 
 // Material UI
 import AutorenewIcon from "@mui/icons-material/Autorenew";
-import { Data_pengiriman } from "./dashboard-data";
+import { Datapengiriman } from "./dashboard-data";
 
 const Dashboard = () => {
   const user = useSelector((state) => state.user.value);
@@ -103,7 +103,7 @@ const Dashboard = () => {
               {toggle === 2 && "pesanan untuk dikonfirmasi :"}
             </p>
             <div className={styles.card_container}>
-              {toggle === 0 && <Data_pengiriman/>}
+              {toggle === 0 && <Datapengiriman/>}
             </div>
           </div>
         </div>
