@@ -22,7 +22,6 @@ import Footer from "../../components/Organism/footer/footer.jsx";
 const Dashboard = React.lazy(() => import("../dashboard/dashboard.jsx"));
 const Invoice = React.lazy(() => import("../invoice/invoice.jsx"));
 const Payments = React.lazy(() => import("../payments/payments.jsx"));
-const Katalog = React.lazy(() => import("../katalog-produk/katalog-produk.jsx"));
 const Settings = React.lazy(() => import("../settings/settings.js"));
 const Delivery = React.lazy(() => import("../delivery/delivery.jsx"));
 
@@ -33,10 +32,6 @@ const Home = () => {
   const [contactIsOpen, setContactIsOpen] = React.useState(false);
 
   const navigate = useNavigate();
-
-  const openDev = () => {
-    navigate("/template-dev");
-  };
 
   React.useEffect(() => {
     const adminEmail = window.sessionStorage.getItem("login-email");
@@ -82,9 +77,8 @@ const Home = () => {
           {changeMain === 2 && <Invoice />}
           {changeMain === 3 && <Delivery />}
           {changeMain === 4 && <GroupContainer />}
-          {changeMain === 5 && <Katalog />}
-          {changeMain === 6 && <Payments />}
-          {changeMain === 7 && <Settings />}
+          {changeMain === 5 && <Payments />}
+          {changeMain === 6 && <Settings />}
         </React.Suspense>
       </div>
       <Footer/>

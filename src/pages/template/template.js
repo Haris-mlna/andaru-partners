@@ -51,7 +51,6 @@ import { SidebarGallery } from "../../components/Organism/right-sidebar/right-si
 import { SidebarContact } from "../../components/Organism/contact/contact";
 // import { GroupContainer } from "../../components/Organism/group/group";
 import BasicTextFields from "../../components/Atom/input/input";
-import Katalog from "../katalog-produk/katalog-produk";
 import Loading from "../../components/loading/loading";
 import PieColor from "../../components/Molekul/chart/pie";
 import PostFeed from "../post-feed/post-feed";
@@ -112,7 +111,6 @@ const Template = () => {
         <SidebarContact />
         {/* <GroupContainer /> */}
         <BasicTextFields />
-        <Katalog />
         <Loading />
         <PieColor />
         <PostFeed />
