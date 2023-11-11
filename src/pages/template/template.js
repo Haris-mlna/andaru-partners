@@ -49,7 +49,7 @@ import {
 import { DropdownAvatar } from "../../components/Organism/navbar/navbar.jsx";
 import { SidebarGallery } from "../../components/Organism/right-sidebar/right-sidebar";
 import { SidebarContact } from "../../components/Organism/contact/contact";
-import { GroupContainer } from "../../components/Organism/group/group";
+// import { GroupContainer } from "../../components/Organism/group/group";
 import BasicTextFields from "../../components/Atom/input/input";
 import Katalog from "../katalog-produk/katalog-produk";
 import Loading from "../../components/loading/loading";
@@ -110,7 +110,7 @@ const Template = () => {
         <DropdownAvatar />
         <SidebarGallery />
         <SidebarContact />
-        <GroupContainer />
+        {/* <GroupContainer /> */}
         <BasicTextFields />
         <Katalog />
         <Loading />

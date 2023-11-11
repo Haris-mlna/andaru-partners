@@ -27,7 +27,7 @@
 
 .btnBiruGelap {
   background-color: #282e6b !important;
-  border-radius: 20px !important;
+  border-radius: 4px !important;
   font-size: 12px !important;
   text-transform: capitalize !important;
 }
@@ -40,7 +40,7 @@
 .grey {
   background-color: transparent;
   background-color: gray !important;
-  border-radius: 20px !important;
+  border-radius: 4px !important;
   font-size: 12px !important;
   text-transform: capitalize !important;
 }

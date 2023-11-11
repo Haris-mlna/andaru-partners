@@ -318,7 +318,7 @@ const DaftarProdukPesanan = ({ handleInvoice }) => {
             </Button>
           </div>
           <div className={styles.wrap_list_produk}>
-            <div className={styles.list_produk}>
+            <div className={styles.active_list_produk}>
               <div className={styles.wrap_list}>
                 <h3>Tee SGP 3/4, RICON</h3>
                 <p>Rp. 10.000</p>

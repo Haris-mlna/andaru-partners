@@ -300,6 +300,17 @@ h3, h2{
   margin-bottom: 1rem;
 }
 
+.active_list_produk{
+  background-color: var(--bs-primary);
+  border-radius: 12px;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  color: var(--bs-white);
+}
+
 .wrap_list_produk{
   max-height: 560px;
   overflow-y: auto;
